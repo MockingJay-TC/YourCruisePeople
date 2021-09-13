@@ -1,0 +1,185 @@
+import React, { Component, useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import parse from "html-react-parser";
+import Axios from "axios";
+import axios from "axios";
+
+const Contact = () => {
+  let publicUrl = process.env.PUBLIC_URL + "/";
+  const [contact, setContact] = useState(null);
+  const [sendInfo, setSendInfo] = useState();
+  const [name, setName] = useState("");
+  const [tel, setTel] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const data = {
+    name: name,
+    tel: tel,
+    email: email,
+    message: email,
+  };
+
+  const validateMessage = (data) => {
+    if (
+      data.name === "" ||
+      data.message === "" ||
+      data.email === "" ||
+      data.tel === ""
+    ) {
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateMessage(data)) {
+      const url = "https://your-cruise-people-cms.herokuapp.com/contacts";
+      Axios.post(url, data).then((res) => {
+        console.log(res);
+        console.log(res.status);
+      });
+    } else {
+      console.log("Please fill the form");
+    }
+  };
+
+  useEffect(() => {
+    fetch("https://your-cruise-people-cms.herokuapp.com/contact-info")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setContact(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      <div className="contact-area pd-top-108">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="section-title text-lg-center text-left">
+                <h2 className="title">Get In Touch!</h2>
+                <p>
+                  Vestibulum blandit viverra convallis. Pellentesque ligula
+                  urna, fermentum ut semper in, tincidunt nec dui. Morbi mauris
+                  lacus, consequat eget justo in
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xl-5 offset-xl-1 col-lg-6">
+              <div className="thumb">
+                <img src={publicUrl + "assets/img/others/11.png"} alt="img" />
+              </div>
+            </div>
+            <div className="col-xl-5 col-lg-6">
+              <form className="tp-form-wrap" onSubmit={(e) => handleSubmit(e)}>
+                <div className="row">
+                  <div className="col-md-6">
+                    <label className="single-input-wrap style-two">
+                      <span className="single-input-title">Name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="single-input-wrap style-two">
+                      <span className="single-input-title">Number</span>
+                      <input
+                        type="text"
+                        name="number"
+                        value={tel}
+                        onChange={(e) => setTel(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                  <div className="col-lg-12">
+                    <label className="single-input-wrap style-two">
+                      <span className="single-input-title">Email</span>
+                      <input
+                        type="text"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                  <div className="col-lg-12">
+                    <label className="single-input-wrap style-two">
+                      <span className="single-input-title">Message</span>
+                      <textarea
+                        defaultValue={""}
+                        name="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                      />
+                    </label>
+                  </div>
+                  <div className="col-12">
+                    <input
+                      type="submit"
+                      className="btn btn-yellow"
+                      value="Send Message"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="contact-info-area pd-top-120">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8 order-lg-12">
+              <iframe
+                className="contact-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55137.3051325513!2d-97.76825118838518!3d30.263256963734733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sbd!4v1572085289886!5m2!1sen!2sbd"
+              />
+            </div>
+            <div className="col-xl-3 col-lg-4 order-lg-1">
+              <div className="contact-info bg-gray">
+                <p>
+                  <i className="fa fa-map-marker" />
+                  <span>{contact && contact.address}</span>
+                </p>
+                {/* <p>
+                  <i className="fa fa-clock-o" />
+                  <span>Office Hour 9:00 to 7:00 Sunday 10:00 to 5:00</span>
+                </p> */}
+                <p>
+                  <i className="fa fa-envelope" />
+                  <span>
+                    Email: <span>{contact && contact.email}</span>
+                  </span>
+                </p>
+                <p>
+                  <i className="fa fa-phone" />
+                  <span>
+                    sell phone: <span>{contact && contact.telephone1}</span>
+                    <br />
+                    telephone: <span>{contact && contact.telephone2}</span>
+                    <br />
+                    whatsapp: <span>{contact && contact.whatsapp}</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
