@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6">
               <div className="section-title text-lg-center text-left">
-                <h2 className="title">Get In Touch!</h2>
+                <h2 className="title">Get In Touch!!!</h2>
                 <p>
                   Vestibulum blandit viverra convallis. Pellentesque ligula
                   urna, fermentum ut semper in, tincidunt nec dui. Morbi mauris
@@ -118,7 +118,7 @@ const Contact = () => {
                     <label className="single-input-wrap style-two">
                       <span className="single-input-title">Message</span>
                       <textarea
-                        defaultValue={""}
+                        // defaultValue={""}
                         name="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
@@ -144,7 +144,7 @@ const Contact = () => {
             <div className="col-xl-7 col-lg-8 order-lg-12">
               <iframe
                 className="contact-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55137.3051325513!2d-97.76825118838518!3d30.263256963734733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sbd!4v1572085289886!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1985.5212642895121!2d-0.1993528!3d5.5607153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf909d0bc5e4bf%3A0x878222581c1fc765!2sVALCO%20Trust%20House%2C%20Castle%20Road%2C%20Accra!5e0!3m2!1sen!2sgh!4v1631544882074!5m2!1sen!2sgh"
               />
             </div>
             <div className="col-xl-3 col-lg-4 order-lg-1">
