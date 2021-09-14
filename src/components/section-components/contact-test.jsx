@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 // import parse from "html-react-parser";
 import Axios from "axios";
-import axios from "axios";
 
 const Contact = () => {
   let publicUrl = process.env.PUBLIC_URL + "/";
@@ -153,10 +152,10 @@ const Contact = () => {
                   <i className="fa fa-map-marker" />
                   <span>{contact && contact.address}</span>
                 </p>
-                {/* <p>
+                <p>
                   <i className="fa fa-clock-o" />
-                  <span>Office Hour 9:00 to 7:00 Sunday 10:00 to 5:00</span>
-                </p> */}
+                  <span>{contact && contact.officeHour}</span>
+                </p>
                 <p>
                   <i className="fa fa-envelope" />
                   <span>

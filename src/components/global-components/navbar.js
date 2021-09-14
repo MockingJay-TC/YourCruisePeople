@@ -59,19 +59,20 @@ class Navbar extends Component {
 			        </Link>
 			      </div>
 			      <ul className="navbar-nav">
-			        <li className="menu-item-has-children">
+			        {/* <li className="menu-item-has-children"> */}
+					<li>
 			          <Link to="/">Home</Link>
-			          <ul className="sub-menu">
+			          {/* <ul className="sub-menu">
 			            <li><Link to="/">Home 01</Link></li>
 			            <li><Link to="/home-v2">Home 02</Link></li>
 			            <li><Link to="/home-v3">Home 03</Link></li>
-			          </ul>
+			          </ul> */}
 			        </li>
 			        <li>
 			          <Link to="/about">About Us</Link>
 			        </li>
 			        <li className="menu-item-has-children">
-			          <a href="#">Pages</a>
+			          <a href="#">Destinations</a>
 			          <ul className="sub-menu">
 			            <li><Link to="/tour-list">Tours List</Link></li>
 			            <li><Link to="/tour-list-v2">Tours List 02</Link></li>

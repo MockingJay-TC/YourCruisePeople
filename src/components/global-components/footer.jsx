@@ -1,7 +1,10 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 
 const Footer_v1 = () => {
+  const [contact, setContact] = useState(null);
+
   useEffect(() => {
     let publicUrl = process.env.PUBLIC_URL + "/";
     const minscript = document.createElement("script");
@@ -9,7 +12,13 @@ const Footer_v1 = () => {
     minscript.src = publicUrl + "assets/js/main.js";
 
     document.body.appendChild(minscript);
-  });
+    const url = "https://your-cruise-people-cms.herokuapp.com/contact-info";
+    Axios.get(url).then((res) => {
+      // return res.json();
+      console.log(res.data);
+      setContact(res.data)
+    });
+  }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
   let imgattr = "Footer logo";
   return (
@@ -31,13 +40,13 @@ const Footer_v1 = () => {
                 <p>
                   We believe brand interaction is key in commu- nication. Real
                   innovations and a positive customer experience are the heart
-                  of successful communication.
+                  of successful communication....
                 </p>
                 <ul className="social-icon">
                   <li>
                     <a
                       className="facebook"
-                      href="https://www.facebook.com/codingeek.net/"
+                      href={contact && contact.facebook}
                       target="_blank"
                     >
                       <i className="fa fa-facebook  " />
@@ -46,7 +55,7 @@ const Footer_v1 = () => {
                   <li>
                     <a
                       className="twitter"
-                      href="https://twitter.com/codingeeknet"
+                      href={contact && contact.twitter}
                       target="_blank"
                     >
                       <i className="fa fa-twitter  " />
@@ -55,7 +64,7 @@ const Footer_v1 = () => {
                   <li>
                     <a
                       className="pinterest"
-                      href="https://www.instagram.com/codingeeknet/"
+                      href={contact && contact.instagram}
                       target="_blank"
                     >
                       <i className="fa fa-instagram" />
@@ -71,17 +80,15 @@ const Footer_v1 = () => {
                 <h4 className="widget-title">Contact us</h4>
                 <p>
                   <i className="fa fa-map-marker" />
-                  <span>
-                    Manama Tower, Badda Link Road, Badda Dhaka, Bangladesh
-                  </span>
+                  <span>{contact && contact.address}</span>
                 </p>
                 <p className="location">
                   <i className="fa fa-envelope-o" />
-                  <span>travelpoint@gmail.com</span>
+                  <span>{contact && contact.email}</span>
                 </p>
                 <p className="telephone">
                   <i className="fa fa-phone base-color" />
-                  <span>+088 012121240</span>
+                  <span>{contact && contact.telephone1}</span>
                 </p>
               </div>
             </div>
@@ -170,10 +177,10 @@ const Footer_v1 = () => {
       </div>
       <div className="copyright-inner">
         <div className="copyright-text">
-          © Viaje 2019 All rights reserved. Powered with by{" "}
-          <a href="https://codingeek.net/" target="_blank">
-            <i className="fa fa-heart" />
-            <span>Codingeek.</span>
+          © YourCruisePeople 2021 All rights reserved. Crafted by{" "}
+          <a href="https://wonchunii.com" target="_blank">
+            {/* <i className="fas fa-code" /> */}
+            <span>Wonchunii</span>
           </a>
         </div>
       </div>
