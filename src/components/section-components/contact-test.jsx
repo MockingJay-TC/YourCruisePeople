@@ -50,7 +50,7 @@ const Contact = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        
         setContact(data);
       });
   }, []);
@@ -74,7 +74,7 @@ const Contact = () => {
           <div className="row">
             <div className="col-xl-5 offset-xl-1 col-lg-6">
               <div className="thumb">
-                <img src={publicUrl + "assets/img/others/11.png"} alt="img" />
+                <img src={contact && contact.side_image.url} />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6">

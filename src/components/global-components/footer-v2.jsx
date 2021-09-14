@@ -94,9 +94,9 @@ const Footer_v2 = () => {
                 <li>
                   <Link to="/destination-list">Destination</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/tour-details">Tours</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/blog">Blog</Link>
                 </li>
