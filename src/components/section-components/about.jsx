@@ -6,11 +6,10 @@ const About = () => {
 
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/about";
-    Axios.get(url)
-      .then((res) => {
-        console.log(res.data.title);
-        setAbout(res.data)
-      });
+    Axios.get(url).then((res) => {
+      console.log(res.data.side_image_big);
+      setAbout(res.data);
+    });
   }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
   //   let imagealt = "image";
@@ -20,18 +19,16 @@ const About = () => {
         <div className="row">
           <div className="col-lg-5 align-self-center">
             <div className="section-title mb-lg-0">
-              <h2 className="title">
-                {about && about.title}
-              </h2>
+              <h2 className="title">{about && about.title}</h2>
               <p>{about && about.message}</p>
             </div>
           </div>
           <div className="col-lg-5 offset-lg-2">
             <div className="thumb about-section-right-thumb">
-              <img src={publicUrl + "assets/img/others/9.png"} alt="img" />
+              <img src={about && about.side_image_big.url} alt="img" />
               <img
                 className="about-absolute-thumb"
-                src={publicUrl + "assets/img/others/10.png"}
+                src={about && about.side_image_small.url}
                 alt="img"
               />
             </div>

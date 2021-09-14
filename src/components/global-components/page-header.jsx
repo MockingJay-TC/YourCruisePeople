@@ -11,7 +11,7 @@ const Page_header = (props) => {
         return res.json();
       })
       .then((data) => {
-          console.log("doing this")
+        console.log("doing this");
         console.log(data);
         console.log(data.banner_image.url);
         setImage(data);
@@ -25,7 +25,7 @@ const Page_header = (props) => {
   return (
     <div
       className="breadcrumb-area jarallax"
-      style={{ backgroundImage: "url(`{image && image.banner_image.url}`)" }}
+      style={{ backgroundImage: `url(${image && image.banner_image.url})` }}
     >
       <div className="container">
         <div className="row">

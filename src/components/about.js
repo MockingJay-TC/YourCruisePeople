@@ -13,7 +13,7 @@ const AboutPage = () => {
         <PageHeader headertitle="About Us"  />
         <Intro />
         <About />
-        <History />
+        {/* <History /> */}
         <Team />
         <Footer />
     </div>
