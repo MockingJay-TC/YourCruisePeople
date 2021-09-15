@@ -16,14 +16,14 @@ const Home_V1 = () => {
     return <div>
         <Navbar />
         <Banner />
-        <Search />
+        {/* <Search /> */}
         <Intro />
         <Offer />
         <Video />
-        <HolidayPlan />
-        <Review />
-        <BlogSection />
-        <Ads />
+        {/* <HolidayPlan /> */}
+        {/* <Review /> */}
+        {/* <BlogSection /> */}
+        {/* <Ads /> */}
         <Subscribe />
         <Footer />
     </div>

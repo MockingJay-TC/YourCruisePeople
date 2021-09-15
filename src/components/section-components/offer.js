@@ -30,9 +30,9 @@ class Offer extends Component {
 			                  <span className="d-list-tag">Special Offer</span>
 			                  <img src={publicUrl+"assets/img/destination-list/1.png"} alt="list" />
 			                  <div className="d-list-btn-wrap">
-			                    <div className="d-list-btn viaje-go-top">
+			                    {/* <div className="d-list-btn viaje-go-top">
 			                      <Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-			                    </div>
+			                    </div> */}
 			                  </div>
 			                </div>
 			                <div className="details">
@@ -43,11 +43,11 @@ class Offer extends Component {
 			                    <li><i className="fa fa-clock-o" /> 4 days</li>
 			                    <li><i className="fa fa-star" /> 4.3</li>
 			                  </ul>
-			                  <div className="tp-price-meta tp-price-meta-cl">
+			                  {/* <div className="tp-price-meta tp-price-meta-cl">
 			                    <p>Price</p>
 			                    <h2>620 <small>$</small></h2>
 			                    <del>620<span>$</span></del>
-			                  </div>
+			                  </div> */}
 			                </div>
 			              </div>
 			            </div>
@@ -56,24 +56,24 @@ class Offer extends Component {
 			                <div className="thumb">
 			                  <img src={publicUrl+"assets/img/destination-list/2.png"} alt="list" />
 			                  <div className="d-list-btn-wrap">
-			                    <div className="d-list-btn viaje-go-top">
+			                    {/* <div className="d-list-btn viaje-go-top">
 			                      <Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-			                    </div>
+			                    </div> */}
 			                  </div>
 			                </div>
 			                <div className="details">
-			                  <h4 className="title">Italy</h4>
+			                  <h4 className="title">Athens</h4>
 			                  <p className="content">Atmosphere of the sunny country</p>
 			                  <ul className="tp-list-meta border-bt-dot">
 			                    <li><i className="fa fa-calendar-o" /> 8oct</li>
 			                    <li><i className="fa fa-clock-o" /> 4 days</li>
 			                    <li><i className="fa fa-star" /> 4.3</li>
 			                  </ul>
-			                  <div className="tp-price-meta tp-price-meta-cl">
+			                  {/* <div className="tp-price-meta tp-price-meta-cl">
 			                    <p>Price</p>
 			                    <h2>620 <small>$</small></h2>
 			                    <del>620<span>$</span></del>
-			                  </div>
+			                  </div> */}
 			                </div>
 			              </div>
 			            </div>
@@ -83,24 +83,24 @@ class Offer extends Component {
 			                  <span className="d-list-tag">Special Offer</span>
 			                  <img src={publicUrl+"assets/img/destination-list/3.png"} alt="list" />
 			                  <div className="d-list-btn-wrap">
-			                    <div className="d-list-btn viaje-go-top">
+			                    {/* <div className="d-list-btn viaje-go-top">
 			                      <Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-			                    </div>
+			                    </div> */}
 			                  </div>
 			                </div>
 			                <div className="details">
-			                  <h4 className="title">Canada</h4>
+			                  <h4 className="title">Santorini</h4>
 			                  <p className="content">Atmosphere of the sunny country</p>
 			                  <ul className="tp-list-meta border-bt-dot">
 			                    <li><i className="fa fa-calendar-o" /> 8oct</li>
 			                    <li><i className="fa fa-clock-o" /> 4 days</li>
 			                    <li><i className="fa fa-star" /> 4.3</li>
 			                  </ul>
-			                  <div className="tp-price-meta tp-price-meta-cl">
+			                  {/* <div className="tp-price-meta tp-price-meta-cl">
 			                    <p>Price</p>
 			                    <h2>620 <small>$</small></h2>
 			                    <del>620<span>$</span></del>
-			                  </div>
+			                  </div> */}
 			                </div>
 			              </div>
 			            </div>
@@ -110,9 +110,9 @@ class Offer extends Component {
 			                  <span className="d-list-tag">Special Offer</span>
 			                  <img src={publicUrl+"assets/img/destination-list/1.png"} alt="list" />
 			                  <div className="d-list-btn-wrap">
-			                    <div className="d-list-btn viaje-go-top" >
+			                    {/* <div className="d-list-btn viaje-go-top" >
 			                      <Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-			                    </div>
+			                    </div> */}
 			                  </div>
 			                </div>
 			                <div className="details">
@@ -123,11 +123,11 @@ class Offer extends Component {
 			                    <li><i className="fa fa-clock-o" /> 4 days</li>
 			                    <li><i className="fa fa-star" /> 4.3</li>
 			                  </ul>
-			                  <div className="tp-price-meta tp-price-meta-cl">
+			                  {/* <div className="tp-price-meta tp-price-meta-cl">
 			                    <p>Price</p>
 			                    <h2>620 <small>$</small></h2>
 			                    <del>620<span>$</span></del>
-			                  </div>
+			                  </div> */}
 			                </div>
 			              </div>
 			            </div>
