@@ -98,7 +98,7 @@ const Footer_v1 = () => {
               <h4 className="widget-title">Quick Link</h4>
               <ul className="widget_nav_menu  viaje-go-top">
                 <li>
-                  <Link to="/home-v2">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <Link to="/about">About Us</Link>

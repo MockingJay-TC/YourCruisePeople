@@ -48,7 +48,7 @@ class Video extends Component {
                 </div>
                 <div className="video-popup-btn">
                   <a
-                    href="https://www.youtube.com/watch?v=c7XEhXZ_rsk"
+                    href="https://www.youtube.com"
                     className="video-play-btn mfp-iframe"
                   >
                     <i className="fa fa-play" />
