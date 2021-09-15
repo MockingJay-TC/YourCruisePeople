@@ -33,7 +33,7 @@ const Footer_v1 = () => {
               <div className="about_us_widget">
                 <Link to="/" className="footer-logo">
                   <img
-                    src={publicUrl + "assets/img/logo.png"}
+                    src={publicUrl + "assets/img/logos/ycr.png"}
                     alt="footer logo"
                   />
                 </Link>

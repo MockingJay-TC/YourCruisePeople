@@ -13,7 +13,7 @@ class Navbar extends Component {
 			    <div className="responsive-mobile-menu">
 			      <div className="mobile-logo">
 			        <Link to="/">
-			          <img src={publicUrl+"assets/img/sticky-logo.png"} alt={ imgattr } />
+			          <img src={publicUrl+"assets/img/logos/ycr.png"} alt={ imgattr } />
 			        </Link>
 			      </div>
 			      <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#tp_main_menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +52,10 @@ class Navbar extends Component {
 			    <div className="collapse navbar-collapse" id="tp_main_menu">
 			      <div className="logo-wrapper desktop-logo">
 			        <Link to="/" className="main-logo">
-			          <img src={publicUrl+"assets/img/logo.png"} alt="logo" />
+			          <img src={publicUrl+"assets/img/logos/ycr.png"} alt="logo" />
 			        </Link>
 			        <Link to="/" className="sticky-logo">
-			          <img src={publicUrl+"assets/img/sticky-logo.png"} alt="logo" />
+			          <img src={publicUrl+"assets/img/logos/ycr.png"} alt="logo" />
 			        </Link>
 			      </div>
 			      <ul className="navbar-nav">
@@ -78,7 +78,7 @@ class Navbar extends Component {
 			            <li><Link to="/tour-list-v2">Tours List 02</Link></li>
 			            <li><Link to="/tour-list-v3">Tours List 03</Link></li>
 			            <li><Link to="/tour-details">Tours Details</Link></li>
-			            <li><Link to="/destination-list">Destination List</Link></li>
+			            {/* <li><Link to="/destination-list">Destination List</Link></li>
 			            <li><Link to="/destination-list-v2">Destination List 2</Link></li>
 			            <li><Link to="/destination-details">Destination Details</Link></li>
 			            <li><Link to="/gallery">Gallery</Link></li>
@@ -86,7 +86,7 @@ class Navbar extends Component {
 			            <li><Link to="/comming-soon">Comming soon</Link></li>
 			            <li><Link to="/error">404</Link></li>
 			            <li><Link to="/faq">FAQ</Link></li>
-			            <li><Link to="/user-profile">User Profile</Link></li>
+			            <li><Link to="/user-profile">User Profile</Link></li> */}
 			          </ul>
 			        </li>
 			        <li className="menu-item-has-children">
