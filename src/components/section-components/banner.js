@@ -116,7 +116,7 @@ class Banner extends Component {
 			              </div>
 			              <div className="col-lg-3 col-sm-4">
 			                <div className="video-popup-btn s-animate-video">
-			                  <a href="https://www.youtube.com/watch?v=c7XEhXZ_rsk" className="video-play-btn mfp-iframe"><i className="fa fa-play" /></a>
+			                  <a href="https://www.youtube.com" className="video-play-btn mfp-iframe"><i className="fa fa-play" /></a>
 			                </div>
 			              </div>
 			              <div className="col-lg-12 banner-tour-package">
