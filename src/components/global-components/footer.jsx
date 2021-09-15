@@ -16,7 +16,7 @@ const Footer_v1 = () => {
     Axios.get(url).then((res) => {
       // return res.json();
       console.log(res.data);
-      setContact(res.data)
+      setContact(res.data);
     });
   }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
@@ -38,9 +38,9 @@ const Footer_v1 = () => {
                   />
                 </Link>
                 <p>
-                  We believe brand interaction is key in commu- nication. Real
-                  innovations and a positive customer experience are the heart
-                  of successful communication....
+                  Cruise People Limited (Your Cruise People) offers personalized
+                  cruise holiday packages to all our clients to experience the
+                  pleasures of cruising. 
                 </p>
                 <ul className="social-icon">
                   <li>
@@ -110,7 +110,7 @@ const Footer_v1 = () => {
                   <Link to="/tour-details">Tours</Link>
                 </li> */}
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="#">Blog</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>
@@ -124,48 +124,48 @@ const Footer_v1 = () => {
               <ul className="widget-instagram-feed">
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/1.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/one.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/2.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/two.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/3.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/three.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/4.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/four.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/5.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/five.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src={publicUrl + "assets/img/instagram/6.png"}
+                    <img width="90" height="70"
+                      src={publicUrl + "assets/img/instagram/six.jpg"}
                       alt="img"
                     />
                   </a>
