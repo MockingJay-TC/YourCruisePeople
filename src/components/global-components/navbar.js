@@ -83,7 +83,7 @@ class Navbar extends Component {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/tour-list">Destinations</Link>
+                <Link to="#">Destinations</Link>
               </li>
 
               {/* <li className="menu-item-has-children">
