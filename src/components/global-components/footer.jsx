@@ -104,7 +104,7 @@ const Footer_v1 = () => {
                   <Link to="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/destination-list">Destination</Link>
+                  <Link to="#">Destination</Link>
                 </li>
                 {/* <li>
                   <Link to="/tour-details">Tours</Link>
