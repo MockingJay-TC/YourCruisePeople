@@ -19,7 +19,7 @@ class Banner extends Component {
 			              <div className="col-lg-9 col-sm-8">
 			                <div className="banner-inner">
 			                  <p className="banner-cat s-animate-1">Hot Places</p>
-			                  <h2 className="banner-title s-animate-2">Abu Dhabi <br /> Beach</h2>
+			                  <h2 className="banner-title s-animate-2">Abu Dhabi </h2>
 			                </div>
 			              </div>
 			              <div className="col-lg-3 col-sm-4">
@@ -111,7 +111,7 @@ class Banner extends Component {
 			              <div className="col-lg-9 col-sm-8">
 			                <div className="banner-inner">
 			                  <p className="banner-cat s-animate-1">Hot Places</p>
-			                  <h2 className="banner-title s-animate-2">Navagio <br /> Beach</h2>
+			                  <h2 className="banner-title s-animate-2">Abu Dhabi</h2>
 			                </div>
 			              </div>
 			              <div className="col-lg-3 col-sm-4">
