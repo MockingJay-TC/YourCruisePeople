@@ -154,13 +154,13 @@ class Banner extends Component {
 			    <div className="banner-slider-dots" />
 			    <ul className="social-icon">
 			      <li>
-			        <a className="facebook" href="https://www.facebook.com/codingeek.net/" target="_blank"><i className="fa fa-facebook" /></a>
+			        <a className="facebook" href="https://www.facebook.com" target="_blank"><i className="fa fa-facebook" /></a>
 			      </li>
 			      <li>
-			        <a className="twitter" href="https://twitter.com/codingeeknet" target="_blank"><i className="fa fa-twitter" /></a>
+			        <a className="twitter" href="https://twitter.com" target="_blank"><i className="fa fa-twitter" /></a>
 			      </li>
 			      <li>
-			        <a className="pinterest" href="https://www.instagram.com/codingeeknet/" target="_blank"><i className="fa fa-instagram" /></a>
+			        <a className="pinterest" href="https://www.instagram.com" target="_blank"><i className="fa fa-instagram" /></a>
 			      </li>
 			    </ul>
 			  </div>
