@@ -30,7 +30,7 @@ class Error extends Component {
                         <h1>404</h1>
                         <div className="error-page-info-details">
                           <h2>Page not found</h2>
-                          <p>We're sorry, the page you requested could not be found. pleases go back tho the homepage or contact us at Viaje@gmail.com</p>
+                          <p>We're sorry, the page you requested could not be found. pleases go back tho the homepage or contact us at YourCruisePeopel@gmail.com</p>
                           <Link className="btn btn-yellow" to="/">Back To Home</Link>
                         </div>
                       </div>
