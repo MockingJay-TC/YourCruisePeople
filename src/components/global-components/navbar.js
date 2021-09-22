@@ -82,15 +82,17 @@ class Navbar extends Component {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="#">Destinations</Link>
-              </li>
+              </li> */}
 
-              {/* <li className="menu-item-has-children">
-                <a href="/tour-list">Destinations</a>
+              <li className="menu-item-has-children">
+                <a href="/tour-list">Packages</a>
                 <ul className="sub-menu">
                   <li>
-                    <Link to="/tour-list">Tours List</Link>
+                    <Link to="/seven-days-iconic-aegean">
+                      7 Days Iconic Aegean
+                    </Link>
                   </li>
                   <li>
                     <Link to="/tour-list-v2">Tours List 02</Link>
@@ -101,17 +103,35 @@ class Navbar extends Component {
                   <li>
                     <Link to="/tour-details">Tours Details</Link>
                   </li>
-                  <li><Link to="/destination-list">Destination List</Link></li>
-			            <li><Link to="/destination-list-v2">Destination List 2</Link></li>
-			            <li><Link to="/destination-details">Destination Details</Link></li>
-			            <li><Link to="/gallery">Gallery</Link></li>
-			            <li><Link to="/gallery-details">Gallery Details</Link></li>
-			            <li><Link to="/comming-soon">Comming soon</Link></li>
-			            <li><Link to="/error">404</Link></li>
-			            <li><Link to="/faq">FAQ</Link></li>
-			            <li><Link to="/user-profile">User Profile</Link></li>
+                  <li>
+                    <Link to="/destination-list">Destination List</Link>
+                  </li>
+                  <li>
+                    <Link to="/destination-list-v2">Destination List 2</Link>
+                  </li>
+                  <li>
+                    <Link to="/destination-details">Destination Details</Link>
+                  </li>
+                  <li>
+                    <Link to="/gallery">Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/gallery-details">Gallery Details</Link>
+                  </li>
+                  <li>
+                    <Link to="/comming-soon">Comming soon</Link>
+                  </li>
+                  <li>
+                    <Link to="/error">404</Link>
+                  </li>
+                  <li>
+                    <Link to="/faq">FAQ</Link>
+                  </li>
+                  <li>
+                    <Link to="/user-profile">User Profile</Link>
+                  </li>
                 </ul>
-              </li> */}
+              </li>
               <li className="menu-item-has-children">
                 <Link to="/blog">Blog</Link>
                 {/* <ul className="sub-menu">
