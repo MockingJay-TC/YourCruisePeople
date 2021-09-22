@@ -95,22 +95,37 @@ class Navbar extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/tour-list-v2">Tours List 02</Link>
+                    <Link to="/seven-days-iconic-discovery">
+                      7 Days Iconic Discovery
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/tour-list-v3">Tours List 03</Link>
+                    <Link to="/eight-days-iconic-aegean">
+                      8 Days Iconic Aegean
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/tour-details">Tours Details</Link>
+                    <Link to="/eight-days-iconic-discovery">
+                      8 Days Iconic Discovery
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/destination-list">Destination List</Link>
+                    <Link to="/ten-days-3continents">10 Days 3 Continents</Link>
                   </li>
                   <li>
-                    <Link to="/destination-list-v2">Destination List 2</Link>
+                    <Link to="/ten-days-eclectic-aegean">
+                      10 Days Eclectic Aegean
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/destination-details">Destination Details</Link>
+                    <Link to="/ten-days-idyllic-aegean">
+                      10 Days Idyllic Aegean
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ten-days-steps-of-paul">
+                      10 Days Steps of Paul
+                    </Link>
                   </li>
                   <li>
                     <Link to="/gallery">Gallery</Link>

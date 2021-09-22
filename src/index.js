@@ -29,6 +29,13 @@ import BlogV2 from "./components/blog-v2";
 import BlogV3 from "./components/blog-v3";
 import BlogDetails from "./components/blog-details";
 import SevenDaysIconicAegean from "./components/seven-days-iconic-aegean";
+import SevenDaysIconicDiscovery from "./components/seven-days-iconic-discovery";
+import EightDaysIconicAegean from "./components/eight-days-iconic-aegean";
+import EightDaysIconicDiscovery from "./components/eight-days-iconic-discovery";
+import TenDays3Continents from "./components/ten-days-3continents";
+import TenDaysEclecticAegean from "./components/ten-days-eclectic-aegean";
+import TenDaysIdyllicAegean from './components/ten-days-idyllic-aegean';
+import TenDaysStepsOfPaul from './components/ten-days-steps-of-paul';
 
 class Root extends Component {
   render() {
@@ -47,6 +54,34 @@ class Root extends Component {
             <Route
               path="/seven-days-iconic-aegean"
               component={SevenDaysIconicAegean}
+            />
+            <Route
+              path="/seven-days-iconic-discovery"
+              component={SevenDaysIconicDiscovery}
+            />
+            <Route
+              path="/eight-days-iconic-aegean"
+              component={EightDaysIconicAegean}
+            />
+            <Route
+              path="/eight-days-iconic-discovery"
+              component={EightDaysIconicDiscovery}
+            />
+            <Route
+              path="/ten-days-3continents"
+              component={TenDays3Continents}
+            />
+            <Route
+              path="/ten-days-eclectic-aegean"
+              component={TenDaysEclecticAegean}
+            />
+            <Route
+              path="/ten-days-idyllic-aegean"
+              component={TenDaysIdyllicAegean}
+            />
+            <Route
+              path="/ten-days-steps-of-paul"
+              component={TenDaysStepsOfPaul}
             />
             <Route path="/destination-list" component={DestinationLIst} />
             <Route path="/destination-list-v2" component={DestinationLIstV2} />
