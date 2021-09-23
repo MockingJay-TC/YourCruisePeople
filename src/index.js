@@ -34,8 +34,9 @@ import EightDaysIconicAegean from "./components/eight-days-iconic-aegean";
 import EightDaysIconicDiscovery from "./components/eight-days-iconic-discovery";
 import TenDays3Continents from "./components/ten-days-3continents";
 import TenDaysEclecticAegean from "./components/ten-days-eclectic-aegean";
-import TenDaysIdyllicAegean from './components/ten-days-idyllic-aegean';
-import TenDaysStepsOfPaul from './components/ten-days-steps-of-paul';
+import TenDaysIdyllicAegean from "./components/ten-days-idyllic-aegean";
+import TenDaysStepsOfPaul from "./components/ten-days-steps-of-paul";
+import MyPage from "./components/myPage";
 
 class Root extends Component {
   render() {
@@ -51,6 +52,7 @@ class Root extends Component {
             <Route path="/tour-list-v2" component={TourListV2} />
             <Route path="/tour-list-v3" component={TourListV3} />
             <Route path="/tour-details" component={TourDetails} />
+            <Route path="/myPage" component={MyPage} />
             <Route
               path="/seven-days-iconic-aegean"
               component={SevenDaysIconicAegean}

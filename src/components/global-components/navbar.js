@@ -82,9 +82,9 @@ class Navbar extends Component {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              {/* <li>
-                <Link to="#">Destinations</Link>
-              </li> */}
+              <li>
+                <Link to="/myPage">MyPage</Link>
+              </li>
 
               <li className="menu-item-has-children">
                 <a href="/tour-list">Packages</a>
