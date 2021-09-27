@@ -20,8 +20,8 @@ const Home_V1 = () => {
         <Intro />
         <Offer />
         <Video />
-        {/* <HolidayPlan /> */}
-        {/* <Review /> */}
+        <HolidayPlan />
+        <Review />
         {/* <BlogSection /> */}
         {/* <Ads /> */}
         <Subscribe />

@@ -147,6 +147,9 @@ class Navbar extends Component {
                   </li>
                 </ul>
               </li>
+              <li>
+                <Link to="/faq">FAQ</Link>
+              </li>
               <li className="menu-item-has-children">
                 <Link to="/blog">Blog</Link>
                 {/* <ul className="sub-menu">
