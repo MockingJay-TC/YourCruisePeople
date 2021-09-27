@@ -3,71 +3,74 @@ import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 import Axios from "axios";
 
-const SevenDaysIconicAegean = () => {
-  const [cruisePackage, setCruisePackage] = useState(null);
-  useEffect(() => {
-    const url = "https://your-cruise-people-cms.herokuapp.com/packages";
-    Axios.get(url).then((res) => {
-      console.log(res.data);
-      console.log(res.data.length);
-      if (res.data[0].name === "7 Days Iconic Aegean") {
-        setCruisePackage(res.data[0]);
-        console.log("true");
-      } else {
-        console.log("false");
-      }
-    });
-  }, []);
+const MyPage = () => {
+  let products = JSON.parse(localStorage.getItem("package"));
+  const [newPackage, setNewPackage] = useState(
+    products !== null ? products : []
+  );
+  // const [cruisePackage, setCruisePackage] = useState(null);
+  // useEffect(() => {
+  //   const url = "https://your-cruise-people-cms.herokuapp.com/packages";
+  //   Axios.get(url).then((res) => {
+  //     console.log(res.data);
+  //     console.log(res.data.length);
+  //     // if (res.data[0].name === "7 Days Iconic Aegean") {
+  //     //   setCruisePackage(res.data[0]);
+  //     //   console.log("true");
+  //     // } else {
+  //     //   console.log("false");
+  //     console.log(newPackage);
+  //     setCruisePackage(res.data);
+  //     // }
+  //   });
+  // }, []);
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   let imagealt = "image";
+
   return (
     <div>
       <div className="destinations-details-page mg-top-30 pd-top-90">
         <div className="container">
           <div className="row justify-content-center destinations-details-location-name">
             <div className="col-lg-12">
-              <h3>{cruisePackage && cruisePackage.name}</h3>
+              <h3>{newPackage.name}</h3>
               <p>
-                <i>{cruisePackage && cruisePackage.sub_title}</i>
+                <i>{newPackage?.sub_title}</i>
               </p>
               <p>
-                {" "}
                 Vessel:
-                <strong> {cruisePackage && cruisePackage.vessel.name} </strong>
+                <strong> {newPackage.vessel && newPackage.vessel.name} </strong>
               </p>
             </div>
             <div className="col-lg-12">
-              <p>
-                {cruisePackage && cruisePackage.description.description_text}
-              </p>
+              <p>{newPackage?.description?.description_text}</p>
             </div>
           </div>
           {/* destinations-client-review-slider start */}
           <h4 className="single-page-small-title">Package Destinations</h4>
           <div className="destinations-client-review-slider tp-common-slider-style">
-            {cruisePackage &&
-              cruisePackage.cities.map((city) => (
-                <div
-                  className="d-client-review-slider-item"
-                  key={city && city.id}
-                >
-                  <div className="single-destination-grid">
-                    <div className="thumb">
-                      {/* {console.log(city.images[0] && city.images[0].url)} */}
-                      <img
-                        src={city.images[0] && city.images[0].url}
-                        alt="img"
-                        width="470"
-                        height="200"
-                      />
-                    </div>
-                    <div className="details">
-                      <h4 className="title">{city && city.name}</h4>
-                    </div>
+            {newPackage?.cities?.map((city) => (
+              <div
+                className="d-client-review-slider-item"
+                key={city && city.id}
+              >
+                <div className="single-destination-grid">
+                  <div className="thumb">
+                    {/* {console.log(city.images[0] && city.images[0].url)} */}
+                    <img
+                      src={city.images[0] && city.images[0].url}
+                      alt="img"
+                      width="470"
+                      height="200"
+                    />
+                  </div>
+                  <div className="details">
+                    <h4 className="title">{city && city.name}</h4>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
           {/* destinations-client-review-slider end */}
 
@@ -178,46 +181,130 @@ const SevenDaysIconicAegean = () => {
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[0].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[0].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[0].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[0].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary[0] &&
+                                  newPackage.itinerary[0].day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage.itinerary[0]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[0]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[0]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[1].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[1].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[1].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[1].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[1]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[1]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[1]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[1]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[2].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[2].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[2].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[2].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[2]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[2]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[2]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[2]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[3].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[3].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[3].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[3].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[3]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[3]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[3]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[3]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[4].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[4].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[4].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[4].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[4]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[4]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[4]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[4]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[5].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[5].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[5].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[5].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[5]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[5]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[5]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[5]?.departure}
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">{cruisePackage && cruisePackage.itinerary[6].day}</th>
-                              <td>{cruisePackage && cruisePackage.itinerary[6].portActivity}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[6].arrival}</td>
-                              <td>{cruisePackage && cruisePackage.itinerary[6].departure}</td>
+                              <th scope="row">
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[6]?.day}
+                              </th>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[6]?.portActivity}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[6]?.arrival}
+                              </td>
+                              <td>
+                                {newPackage.itinerary &&
+                                  newPackage?.itinerary[6]?.departure}
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -711,4 +798,4 @@ const SevenDaysIconicAegean = () => {
   );
 };
 
-export default SevenDaysIconicAegean;
+export default MyPage;

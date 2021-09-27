@@ -83,11 +83,10 @@ class Navbar extends Component {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/myPage">MyPage</Link>
+                <Link to="/tour-list-v2">Packages</Link>
               </li>
-
-              <li className="menu-item-has-children">
-                <Link to="/tour-list">Packages</Link>
+              {/* <li className="menu-item-has-children">
+                <Link to="/tour-list-v2">Packages</Link>
                 <ul className="sub-menu">
                   <li>
                     <Link to="/seven-days-iconic-aegean">
@@ -134,7 +133,7 @@ class Navbar extends Component {
                     <Link to="/gallery-details">Gallery Details</Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
                 <Link to="/faq">FAQ</Link>
               </li>
