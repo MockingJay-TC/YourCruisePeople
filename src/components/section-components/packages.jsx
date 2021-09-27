@@ -19,7 +19,7 @@ const Packages = () => {
           <div className="col-xl-12 col-lg-12 order-lg-12">
             <div className="tp-tour-list-search-area"></div>
             <div className="tour-list-area">
-            {myPackages &&
+              {myPackages &&
                 myPackages.map((myPackage) => (
                   <div
                     className="single-destinations-list style-three"
@@ -27,25 +27,23 @@ const Packages = () => {
                   >
                     <div className="thumb">
                       <img
-                        src={myPackage.banner_image[0] && myPackage?.banner_image[0].url}
+                        src={
+                          myPackage.banner_image[0] &&
+                          myPackage.banner_image[0].url
+                        }
                         alt="list"
                       />
                     </div>
                     <div className="details">
-                      <div className="tp-review-meta">
-                        <i className="ic-yellow fa fa-star" />
-                        <i className="ic-yellow fa fa-star" />
-                        <i className="ic-yellow fa fa-star" />
-                        <i className="ic-yellow fa fa-star" />
-                        <i className="fa fa-star" />
-                        <span>4.0</span>
-                      </div>
                       <p className="location">
                         <img
                           src={publicUrl + "assets/img/icons/1.png"}
                           alt="map"
                         />
-                        {myPackage.cities}
+                        {myPackage &&
+                          myPackage.cities.map((city) => (
+                            <span>{city.name}, </span>
+                          ))}
                       </p>
                       <h4
                         className="title"
@@ -59,9 +57,9 @@ const Packages = () => {
                         <Link to="/myPage">{myPackage && myPackage.name}</Link>
                       </h4>
                       <p className="content">
-                        {/* {myPackage.description &&
+                        {myPackage.description &&
                           myPackage.description.description_text.slice(0, 300) +
-                            "..."} */}
+                            "..."}
                       </p>
                       <div className="list-price-meta">
                         <ul className="tp-list-meta d-inline-block">
