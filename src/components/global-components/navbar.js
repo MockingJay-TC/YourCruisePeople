@@ -87,7 +87,7 @@ class Navbar extends Component {
               </li>
 
               <li className="menu-item-has-children">
-                <a href="/tour-list">Packages</a>
+                <Link to="/tour-list">Packages</Link>
                 <ul className="sub-menu">
                   <li>
                     <Link to="/seven-days-iconic-aegean">
@@ -132,18 +132,6 @@ class Navbar extends Component {
                   </li>
                   <li>
                     <Link to="/gallery-details">Gallery Details</Link>
-                  </li>
-                  <li>
-                    <Link to="/comming-soon">Comming soon</Link>
-                  </li>
-                  <li>
-                    <Link to="/error">404</Link>
-                  </li>
-                  <li>
-                    <Link to="/faq">FAQ</Link>
-                  </li>
-                  <li>
-                    <Link to="/user-profile">User Profile</Link>
                   </li>
                 </ul>
               </li>
