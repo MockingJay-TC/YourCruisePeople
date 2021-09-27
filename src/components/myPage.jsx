@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
 import MyPage from "./section-components/myPage";
 import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 
-const myPage = () => {
+const MyPageDoc = () => {
+  let element = JSON.parse(localStorage.getItem("package"));
+  const [title, setTitle] = useState(element !== null ? element : []);
   return (
     <div>
       <Navbar />
-      <PageHeader headertitle="My Page" />
+      <PageHeader headertitle={title.name} />
       <MyPage />
       <Subscribe />
       <Footer />
@@ -17,4 +19,4 @@ const myPage = () => {
   );
 };
 
-export default myPage;
+export default MyPageDoc;

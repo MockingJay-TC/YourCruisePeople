@@ -8,22 +8,6 @@ const MyPage = () => {
   const [newPackage, setNewPackage] = useState(
     products !== null ? products : []
   );
-  // const [cruisePackage, setCruisePackage] = useState(null);
-  // useEffect(() => {
-  //   const url = "https://your-cruise-people-cms.herokuapp.com/packages";
-  //   Axios.get(url).then((res) => {
-  //     console.log(res.data);
-  //     console.log(res.data.length);
-  //     // if (res.data[0].name === "7 Days Iconic Aegean") {
-  //     //   setCruisePackage(res.data[0]);
-  //     //   console.log("true");
-  //     // } else {
-  //     //   console.log("false");
-  //     console.log(newPackage);
-  //     setCruisePackage(res.data);
-  //     // }
-  //   });
-  // }, []);
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   let imagealt = "image";

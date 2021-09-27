@@ -70,14 +70,8 @@ class Navbar extends Component {
               </Link>
             </div>
             <ul className="navbar-nav">
-              {/* <li className="menu-item-has-children"> */}
               <li>
                 <Link to="/">Home</Link>
-                {/* <ul className="sub-menu">
-			            <li><Link to="/">Home 01</Link></li>
-			            <li><Link to="/home-v2">Home 02</Link></li>
-			            <li><Link to="/home-v3">Home 03</Link></li>
-			          </ul> */}
               </li>
               <li>
                 <Link to="/about">About Us</Link>
@@ -85,74 +79,11 @@ class Navbar extends Component {
               <li>
                 <Link to="/tour-list-v2">Packages</Link>
               </li>
-              {/* <li className="menu-item-has-children">
-                <Link to="/tour-list-v2">Packages</Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link to="/seven-days-iconic-aegean">
-                      7 Days Iconic Aegean
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/seven-days-iconic-discovery">
-                      7 Days Iconic Discovery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/eight-days-iconic-aegean">
-                      8 Days Iconic Aegean
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/eight-days-iconic-discovery">
-                      8 Days Iconic Discovery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/ten-days-3continents">10 Days 3 Continents</Link>
-                  </li>
-                  <li>
-                    <Link to="/ten-days-eclectic-aegean">
-                      10 Days Eclectic Aegean
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/ten-days-idyllic-aegean">
-                      10 Days Idyllic Aegean
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/ten-days-steps-of-paul">
-                      10 Days Steps of Paul
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/gallery">Gallery</Link>
-                  </li>
-                  <li>
-                    <Link to="/gallery-details">Gallery Details</Link>
-                  </li>
-                </ul>
-              </li> */}
               <li>
                 <Link to="/faq">FAQ</Link>
               </li>
-              <li className="menu-item-has-children">
-                <Link to="/blog">Blog</Link>
-                {/* <ul className="sub-menu">
-                  <li>
-                    <Link to="/blog">Blog</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog-v2">Blog 02</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog-v3">Blog 03</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog-details">Blog Details</Link>
-                  </li>
-                </ul> */}
+              <li>
+                <Link to="/gallery-details">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
