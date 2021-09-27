@@ -67,16 +67,15 @@ const Packages = () => {
                             <i className="fa fa-calendar-o" /> 8oct
                           </li>
                           <li>
-                            <i className="fa fa-clock-o" /> 4 days
-                          </li>
-                          <li>
-                            <i className="fa fa-star" /> 4.3
+                            <i className="fa fa-clock-o" /> 10 days
                           </li>
                         </ul>
                         <div className="tp-price-meta d-inline-block">
-                          <p>Price</p>
+                          <p>Starting Price</p>
                           <h2>
-                            620 <span>$</span>
+                            {myPackage.prices[0] &&
+                              myPackage.prices[0].starting_price}{" "}
+                            <span>$</span>
                           </h2>
                         </div>
                       </div>
