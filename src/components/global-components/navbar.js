@@ -83,7 +83,7 @@ class Navbar extends Component {
                 <Link to="/faq">FAQ</Link>
               </li>
               <li>
-                <Link to="/gallery-details">Gallery</Link>
+                <Link to="#">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
