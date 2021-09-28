@@ -14,19 +14,19 @@ const MyPage = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   let element = JSON.parse(localStorage.getItem("package"));
-  const [package_name, setPackage_name] = useState(
-    element.name !== null ? element.name : " "
+  const [package_id, setPackage_name] = useState(
+    element._id !== null ? element._id : " "
   );
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   let imagealt = "image";
 
   const data = {
-    package_name: package_name,
+    _id: package_id,
     name: name,
     tel: tel,
     email: email,
-    message: message,
+    note: message,
   };
   const validateMessage = (data) => {
     if (
@@ -44,7 +44,7 @@ const MyPage = () => {
     e.preventDefault();
     setLoading(true);
     if (validateMessage(data)) {
-      const url = "https://your-cruise-people-cms.herokuapp.com/contacts";
+      const url = "https://your-cruise-people-cms.herokuapp.com/bookings";
       Axios.post(url, data).then((res) => {
         console.log(data);
         setTimeout(() => {
@@ -155,7 +155,7 @@ const MyPage = () => {
                           Pricing
                         </a>
                       </li>
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <a
                           className="nav-link"
                           data-toggle="tab"
@@ -164,8 +164,8 @@ const MyPage = () => {
                           <i className="fa fa-credit-card-alt" />
                           Payment Methods
                         </a>
-                      </li>
-                      <li className="nav-item">
+                      </li> */}
+                      {/* <li className="nav-item">
                         <a
                           className="nav-link"
                           data-toggle="tab"
@@ -174,9 +174,9 @@ const MyPage = () => {
                           <i className="fa fa-star-o" />
                           Reviews
                         </a>
-                      </li>
+                      </li> */}
                       <li className="d-flex justify-content-around">
-                        <a 
+                        <a
                           className="btn btn-yellow"
                           data-target="#exampleModal"
                           data-toggle="modal"
@@ -312,7 +312,6 @@ const MyPage = () => {
                   <div className="col-xl-7 col-lg-8 offset-xl-1">
                     <div className="tab-content user-tab-content">
                       <div className="tab-pane fade show active" id="tabs_1">
-                    
                         <table className="table table-hover">
                           <thead className="thead-light">
                             <tr>
@@ -459,7 +458,7 @@ const MyPage = () => {
                         </table>
                       </div>
                       <div className="tab-pane fade" id="tabs_2">
-                        <div className="user-verification">
+                        {/* <div className="user-verification">
                           <div className="row">
                             <div className="col-lg-7">
                               <h3 className="user-details-title">
@@ -472,10 +471,10 @@ const MyPage = () => {
                               <span>imshuvo97@gmail.com</span>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="tab-pane fade" id="tabs_3">
-                        <div className="user-settings">
+                        {/* <div className="user-settings">
                           <h3 className="user-details-title">Settings</h3>
                           <div className="row">
                             <div className="col-lg-7">
@@ -497,10 +496,10 @@ const MyPage = () => {
                               </label>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="tab-pane fade" id="tabs_4">
-                        <div className="user-recent-view">
+                        {/* <div className="user-recent-view">
                           <h3 className="user-details-title">
                             Recently Viewed
                           </h3>
@@ -570,10 +569,10 @@ const MyPage = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="tab-pane fade" id="tabs_5">
-                        <div className="user-payment-method">
+                        {/* <div className="user-payment-method">
                           <div className="location-review-area">
                             <h3 className="user-details-title">
                               Payment Methods
@@ -632,10 +631,10 @@ const MyPage = () => {
                               </div>
                             </form>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="tab-pane fade" id="tabs_6">
-                        <div className="user-tour-details">
+                        {/* <div className="user-tour-details">
                           <h3 className="user-details-title">Reviews</h3>
                           <span className="user-tour-details-title">
                             Reviews About You
@@ -677,7 +676,7 @@ const MyPage = () => {
                               </li>
                             </ul>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -687,7 +686,7 @@ const MyPage = () => {
           </div>
 
           {/* Itinerary end */}
-    
+
           {/* location-review-area start */}
           <div className="location-review-area mg-top-100">
             <div className="row">
@@ -723,10 +722,10 @@ const MyPage = () => {
                       </label>
                     </div>
                     <div className="col-12">
-                      <a className="btn btn-blue" href="#">
+                      {/* <a className="btn btn-blue" href="#">
                         + Add Photo
-                      </a>
-                      <a className="btn btn-yellow float-right" href="#">
+                      </a> */}
+                      <a className="btn btn-yellow float-right">
                         Send
                       </a>
                     </div>
@@ -744,7 +743,7 @@ const MyPage = () => {
         </div>
       </div>
       <div className="destination-area pd-top-120">
-        <div className="container">
+        {/* <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">
               <div className="single-destination-grid text-center">
@@ -846,7 +845,7 @@ const MyPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
