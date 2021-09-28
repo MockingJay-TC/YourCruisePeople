@@ -35,7 +35,7 @@ class Banner extends Component {
                       <div className="row">
                         <div className="col-sm-4 s-animate-3">
                           <div className="tp-price-meta">
-                            <p>Price</p>
+                            <p>Starting Price</p>
                             <h2>
                               620 <small>$</small>
                             </h2>
@@ -46,10 +46,10 @@ class Banner extends Component {
                         </div>
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
-                            <p>5 Star</p>
-                            <h2>Hotel</h2>
+                            {/* <p>5 Star</p> */}
+                            <h2>Cruise</h2>
                             <p className="tp-price-meta-details">
-                              Hotels <span>to choice</span>
+                              Cruises <span>to choice</span>
                             </p>
                           </div>
                         </div>
@@ -94,7 +94,7 @@ class Banner extends Component {
                       <div className="row">
                         <div className="col-sm-4 s-animate-3">
                           <div className="tp-price-meta">
-                            <p>Price</p>
+                            <p>Starting Price</p>
                             <h2>
                               720 <span>$</span>
                             </h2>
