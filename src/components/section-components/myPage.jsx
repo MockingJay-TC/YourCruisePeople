@@ -175,8 +175,8 @@ const MyPage = () => {
                           Reviews
                         </a>
                       </li>
-                      <li className="text-center">
-                        <a
+                      <li className="d-flex justify-content-around">
+                        <a 
                           className="btn btn-yellow"
                           data-target="#exampleModal"
                           data-toggle="modal"
@@ -184,6 +184,17 @@ const MyPage = () => {
                         >
                           <i className="fa fa-sign-in" aria-hidden="true" />
                           <span>Contact Us</span>
+                        </a>
+                        <a
+                          className="btn btn-yellow"
+                          href={newPackage.brochure_url}
+                          // href="https://drive.google.com/u/0/uc?id=1Mnr-fM92hGB2JbHCvSspbRIPdLrgOmpw&export=download"
+                          download
+                        >
+                          <span>
+                            Pdf Download
+                            <i className="ti-download" />
+                          </span>
                         </a>
                       </li>
                       {/* testing a theory start*/}
@@ -301,17 +312,7 @@ const MyPage = () => {
                   <div className="col-xl-7 col-lg-8 offset-xl-1">
                     <div className="tab-content user-tab-content">
                       <div className="tab-pane fade show active" id="tabs_1">
-                        {/* <div className="widget widget_categories mb-0">
-                          {/* <h2 className="widget-title">Category</h2>
-                          <ul>
-                            <li><a href="#">Software</a> <span className="mr-5 pr-5">33</span> <span className="ml-5 pl-5">hello</span></li>
-                            <li><a href="#">App Landing</a> 81</li>
-                            <li><a href="#">Saas Landing</a> 12</li>
-                            <li><a href="#">Design Studio</a> 17</li>
-                            <li><a href="#">Product Showcase</a> 62</li>
-                          </ul>
-                        </div> */}
-
+                    
                         <table className="table table-hover">
                           <thead className="thead-light">
                             <tr>
@@ -686,99 +687,9 @@ const MyPage = () => {
           </div>
 
           {/* Itinerary end */}
-          {/* location-details start */}
-
-          <div className="location-details">
-            <h4 className="single-page-small-title">Good To Know</h4>
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="location-details-table">
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td className="title">Country</td>
-                        <td>Africa</td>
-                      </tr>
-                      <tr>
-                        <td className="title">Visa Requirements</td>
-                        <td>Visa Requirements</td>
-                      </tr>
-                      <tr>
-                        <td className="title">Languages Spoken</td>
-                        <td>Afroasiatic languages</td>
-                      </tr>
-                      <tr>
-                        <td className="title">Currency Used</td>
-                        <td>Rant</td>
-                      </tr>
-                      <tr>
-                        <td className="title">Ares (km2)</td>
-                        <td>30.37 million km²</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div className="btn-wrap text-center">
-                    <a
-                      className="btn btn-yellow"
-                      href="https://drive.google.com/u/0/uc?id=1Mnr-fM92hGB2JbHCvSspbRIPdLrgOmpw&export=download"
-                      download
-                    >
-                      <span>
-                        Pdf Download
-                        <i className="ti-download" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <div className="location-details-map">
-                  <div
-                    style={{
-                      maxWidth: "100%",
-                      listStyle: "none",
-                      transition: "none",
-                      overflow: "hidden",
-                      width: "654px",
-                      height: "400px",
-                    }}
-                  >
-                    <div
-                      id="display-googlemap"
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        maxWidth: "100%",
-                      }}
-                    >
-                      <iframe
-                        style={{ height: "100%", width: "100%", border: 0 }}
-                        frameBorder={0}
-                        src="https://www.google.com/maps/embed/v1/place?q=london&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                      />
-                    </div>
-                    <a
-                      className="googlehtml"
-                      rel="nofollow"
-                      href="https://www.embed-map.com"
-                      id="get-mapdata"
-                    >
-                      https://www.embed-map.com
-                    </a>
-                    <style
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          "#display-googlemap img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* location-details end */}
+    
           {/* location-review-area start */}
-          <div className="location-review-area">
+          <div className="location-review-area mg-top-100">
             <div className="row">
               <div className="col-lg-8">
                 <form className="tp-form-wrap bg-gray tp-form-wrap-one">
@@ -790,12 +701,7 @@ const MyPage = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="tp-review-meta text-lg-right">
-                        <span className="ml-0">Assigned Rating</span>
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
+                        {/* Reviews */}
                       </div>
                     </div>
                     <div className="col-md-6">
