@@ -8,9 +8,58 @@ const MyPage = () => {
   const [newPackage, setNewPackage] = useState(
     products !== null ? products : []
   );
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [tel, setTel] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  let element = JSON.parse(localStorage.getItem("package"));
+  const [package_name, setPackage_name] = useState(
+    element.name !== null ? element.name : " "
+  );
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   let imagealt = "image";
+
+  const data = {
+    package_name: package_name,
+    name: name,
+    tel: tel,
+    email: email,
+    message: message,
+  };
+  const validateMessage = (data) => {
+    if (
+      data.name === "" ||
+      data.message === "" ||
+      data.email === "" ||
+      data.tel === ""
+    ) {
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    if (validateMessage(data)) {
+      const url = "https://your-cruise-people-cms.herokuapp.com/contacts";
+      Axios.post(url, data).then((res) => {
+        console.log(data);
+        setTimeout(() => {
+          setLoading(false);
+          window.location.reload(true);
+          setName("");
+          setTel("");
+          setEmail("");
+          setMessage("");
+        }, 2000);
+      });
+    } else {
+      console.log("Please fill the form");
+    }
+  };
 
   return (
     <div>
@@ -127,11 +176,126 @@ const MyPage = () => {
                         </a>
                       </li>
                       <li className="text-center">
-                        <a className="btn btn-yellow" href="#">
-                          <i className="fa fa-sign-in" aria-hidden="true" />{" "}
-                          <span>Log Out</span>
+                        <a
+                          className="btn btn-yellow"
+                          data-target="#exampleModal"
+                          data-toggle="modal"
+                          data-whatever="@mdo"
+                        >
+                          <i className="fa fa-sign-in" aria-hidden="true" />
+                          <span>Contact Us</span>
                         </a>
                       </li>
+                      {/* testing a theory start*/}
+
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div className="modal-dialog" role="document">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              <h5
+                                className="modal-title"
+                                id="exampleModalLabel"
+                              >
+                                New message
+                              </h5>
+                              <button
+                                type="button"
+                                className="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div className="modal-body">
+                              <form
+                                className="tp-form-wrap"
+                                onSubmit={(e) => handleSubmit(e)}
+                              >
+                                <div className="row">
+                                  <div className="col-md-6">
+                                    <label className="single-input-wrap style-two">
+                                      <span className="single-input-title">
+                                        Name
+                                      </span>
+                                      <input
+                                        type="text"
+                                        name="name"
+                                        value={name}
+                                        onChange={(e) =>
+                                          setName(e.target.value)
+                                        }
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-6">
+                                    <label className="single-input-wrap style-two">
+                                      <span className="single-input-title">
+                                        Number
+                                      </span>
+                                      <input
+                                        type="text"
+                                        name="number"
+                                        value={tel}
+                                        onChange={(e) => setTel(e.target.value)}
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="col-lg-12">
+                                    <label className="single-input-wrap style-two">
+                                      <span className="single-input-title">
+                                        Email
+                                      </span>
+                                      <input
+                                        type="text"
+                                        name="email"
+                                        value={email}
+                                        required
+                                        onChange={(e) =>
+                                          setEmail(e.target.value)
+                                        }
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="col-lg-12">
+                                    <label className="single-input-wrap style-two">
+                                      <span className="single-input-title">
+                                        Message
+                                      </span>
+                                      <textarea
+                                        // defaultValue={""}
+                                        required
+                                        name="message"
+                                        value={message}
+                                        onChange={(e) =>
+                                          setMessage(e.target.value)
+                                        }
+                                      />
+                                    </label>
+                                  </div>
+                                  <div className="col-12">
+                                    <input
+                                      type="submit"
+                                      className="btn btn-yellow"
+                                      value={
+                                        loading ? "sending..." : "Send Message"
+                                      }
+                                    />
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* testing a theory ending */}
                     </ul>
                   </div>
                   <div className="col-xl-7 col-lg-8 offset-xl-1">

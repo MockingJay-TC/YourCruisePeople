@@ -1,10 +1,10 @@
 import React, { Component, useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import parse from "html-react-parser";
+import { ScaleLoader } from "react-spinners";
 import Axios from "axios";
 
 const Contact = () => {
   let publicUrl = process.env.PUBLIC_URL + "/";
+  const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(null);
   const [sendInfo, setSendInfo] = useState();
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ const Contact = () => {
     name: name,
     tel: tel,
     email: email,
-    message: email,
+    message: message,
   };
 
   const validateMessage = (data) => {
@@ -33,10 +33,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     if (validateMessage(data)) {
       const url = "https://your-cruise-people-cms.herokuapp.com/contacts";
       Axios.post(url, data).then((res) => {
         console.log(res);
+        setTimeout(() => {
+          setLoading(false);
+          window.location.reload(true);
+          setName("");
+          setTel("");
+          setEmail("");
+          setMessage("");
+        }, 2000);
         console.log(res.status);
       });
     } else {
@@ -50,7 +59,6 @@ const Contact = () => {
         return res.json();
       })
       .then((data) => {
-        
         setContact(data);
       });
   }, []);
@@ -109,6 +117,7 @@ const Contact = () => {
                         type="text"
                         name="email"
                         value={email}
+                        required
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </label>
@@ -118,6 +127,7 @@ const Contact = () => {
                       <span className="single-input-title">Message</span>
                       <textarea
                         // defaultValue={""}
+                        required
                         name="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
@@ -128,7 +138,7 @@ const Contact = () => {
                     <input
                       type="submit"
                       className="btn btn-yellow"
-                      value="Send Message"
+                      value={loading ? "sending..." : "Send Message"}
                     />
                   </div>
                 </div>
