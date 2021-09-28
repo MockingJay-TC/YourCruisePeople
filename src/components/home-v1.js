@@ -18,7 +18,7 @@ const Home_V1 = () => {
         <Banner />
         {/* <Search /> */}
         <Intro />
-        <Offer />
+        {/* <Offer /> */}
         <Video />
         <HolidayPlan />
         <Review />
