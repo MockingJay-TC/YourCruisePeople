@@ -743,7 +743,7 @@ const MyPage = () => {
         </div>
       </div>
       <div className="destination-area pd-top-120">
-        {/* <div className="container">
+        <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">
               <div className="single-destination-grid text-center">
@@ -845,7 +845,7 @@ const MyPage = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

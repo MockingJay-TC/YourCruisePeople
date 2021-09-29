@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import parse from "html-react-parser";
 
 class Banner extends Component {
   render() {
-    let publicUrl = process.env.PUBLIC_URL + "/";
-    let imagealt = "image";
-
     return (
       <div className="banner-area viaje-go-top">
         <div className="banner-slider">
@@ -106,15 +101,15 @@ class Banner extends Component {
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
                             <p>5 Star</p>
-                            <h2>Hotel</h2>
+                            <h2>Cruise</h2>
                             <p className="tp-price-meta-details">
-                              Hotels <span>to choice</span>
+                              Cruises <span>to choice</span>
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-5">
                           <div className="tp-price-meta">
-                            <p>Flight date</p>
+                            <p>Cruise date</p>
                             <h2>17</h2>
                             <p className="tp-price-meta-details">
                               September <span>or later</span>

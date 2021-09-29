@@ -80,10 +80,7 @@ class Navbar extends Component {
                 <Link to="/tour-list-v2">Packages</Link>
               </li>
               <li>
-                <Link to="/faq">FAQ</Link>
-              </li>
-              <li>
-                <Link to="#">Gallery</Link>
+                <Link to="/gallery-details">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -97,19 +94,7 @@ class Navbar extends Component {
                   Book Now <i className="fa fa-paper-plane" />
                 </Link>
               </li>
-              <li className="tp-lang">
-                <div className="tp-lang-wrap">
-                  <select className="select single-select">
-                    <option value={1}>ENG</option>
-                    <option value={2}>BAN</option>
-                    <option value={3}>Chinese</option>
-                    <option value={3}>Spanish</option>
-                  </select>
-                </div>
-              </li>
-              <li className="search">
-                <i className="ti-search" />
-              </li>
+              <li className="search"></li>
             </ul>
           </div>
         </div>
