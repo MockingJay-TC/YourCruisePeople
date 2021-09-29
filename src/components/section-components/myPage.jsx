@@ -5,9 +5,18 @@ import Axios from "axios";
 
 const MyPage = () => {
   let products = JSON.parse(localStorage.getItem("package"));
+  const [filteredPackage, setFilteredPackage] = useState([]);
   const [newPackage, setNewPackage] = useState(
     products !== null ? products : []
   );
+
+  useEffect(() => {
+    const url = "https://your-cruise-people-cms.herokuapp.com/packages";
+    Axios.get(url).then((res) => {
+      console.log(res.data);
+      setFilteredPackage(res.data);
+    });
+  }, []);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [tel, setTel] = useState("");
@@ -725,9 +734,7 @@ const MyPage = () => {
                       {/* <a className="btn btn-blue" href="#">
                         + Add Photo
                       </a> */}
-                      <a className="btn btn-yellow float-right">
-                        Send
-                      </a>
+                      <a className="btn btn-yellow float-right">Send</a>
                     </div>
                   </div>
                 </form>
@@ -745,105 +752,48 @@ const MyPage = () => {
       <div className="destination-area pd-top-120">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="single-destination-grid text-center">
-                <div className="thumb">
-                  <img
-                    src={publicUrl + "assets/img/destination-list/8.png"}
-                    alt="img"
-                  />
-                </div>
-                <div className="details">
-                  <div className="tp-review-meta">
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="fa fa-star" />
-                    <span>4.0</span>
+            {filteredPackage
+              .filter((myPackage) => {
+                if (myPackage.id !== newPackage._id) {
+                  return true;
+                } else {
+                  return false;
+                }
+              })
+              .map((pack) => (
+                <div className="col-lg-4 col-md-6" key={pack._id}>
+                  <div className="single-destination-grid text-center">
+                    <div className="thumb">
+                      <img
+                        src={publicUrl + "assets/img/destination-list/10.png"}
+                        alt="img"
+                      />
+                    </div>
+                    <div className="details">
+                      <div className="tp-review-meta">
+                        <i className="ic-yellow fa fa-star" />
+                        <i className="ic-yellow fa fa-star" />
+                        <i className="ic-yellow fa fa-star" />
+                        <i className="ic-yellow fa fa-star" />
+                        <i className="fa fa-star" />
+                        <span>4.0</span>
+                      </div>
+                      <h3 className="title">{pack.name}</h3>
+                      <p className="content">
+                        {pack.description &&
+                          pack.description.description_text.slice(0, 233) +
+                            "..."}
+                      </p>
+                      <a className="btn btn-gray" href="#">
+                        <span>
+                          Explore
+                          <i className="la la-arrow-right" />
+                        </span>
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="title">Africa</h3>
-                  <p className="content">
-                    Africa is the world's second largest and second most-
-                    populous continent, being behind Asia in both categories. At
-                    about 30.3 million km² including adjacent islands, it covers
-                    6% Earth's total surface area and 20% land area.
-                  </p>
-                  <a className="btn btn-gray" href="#">
-                    <span>
-                      Explore
-                      <i className="la la-arrow-right" />
-                    </span>
-                  </a>
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="single-destination-grid text-center">
-                <div className="thumb">
-                  <img
-                    src={publicUrl + "assets/img/destination-list/9.png"}
-                    alt="img"
-                  />
-                </div>
-                <div className="details">
-                  <div className="tp-review-meta">
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="fa fa-star" />
-                    <span>4.0</span>
-                  </div>
-                  <h3 className="title">Africa</h3>
-                  <p className="content">
-                    Africa is the world's second largest and second most-
-                    populous continent, being behind Asia in both categories. At
-                    about 30.3 million km² including adjacent islands, it covers
-                    6% Earth's total surface area and 20% land area.
-                  </p>
-                  <a className="btn btn-gray" href="#">
-                    <span>
-                      Explore
-                      <i className="la la-arrow-right" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="single-destination-grid text-center">
-                <div className="thumb">
-                  <img
-                    src={publicUrl + "assets/img/destination-list/10.png"}
-                    alt="img"
-                  />
-                </div>
-                <div className="details">
-                  <div className="tp-review-meta">
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="ic-yellow fa fa-star" />
-                    <i className="fa fa-star" />
-                    <span>4.0</span>
-                  </div>
-                  <h3 className="title">Africa</h3>
-                  <p className="content">
-                    Africa is the world's second largest and second most-
-                    populous continent, being behind Asia in both categories. At
-                    about 30.3 million km² including adjacent islands, it covers
-                    6% Earth's total surface area and 20% land area.
-                  </p>
-                  <a className="btn btn-gray" href="#">
-                    <span>
-                      Explore
-                      <i className="la la-arrow-right" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </div>

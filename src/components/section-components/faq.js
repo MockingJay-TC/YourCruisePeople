@@ -6,6 +6,8 @@ const Faq = () => {
 
   console.log("FAQ");
   console.log(questions);
+
+  
   let publicUrl = process.env.PUBLIC_URL + "/";
 
   return (
