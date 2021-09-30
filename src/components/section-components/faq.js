@@ -7,7 +7,6 @@ const Faq = () => {
   console.log("FAQ");
   console.log(questions);
 
-  
   let publicUrl = process.env.PUBLIC_URL + "/";
 
   return (
@@ -76,10 +75,7 @@ const Faq = () => {
                 >
                   <div className="tab-pane fade show active" id="tabs_1">
                     <div className="faq-details">
-                      <h6>
-                        01 I have special dietary requirements – will they be
-                        catered for?
-                      </h6>
+                      <h6>YourCruisePeople</h6>
                       <p>
                         We will try our very hardest to accommodate all dietary
                         requirements but in some out-of-the-way places it can be
@@ -104,7 +100,7 @@ const Faq = () => {
                     <div className="faq-details">
                       <h6>
                         02 I have special dietary requirements – will they be
-                        catered for?
+                        catered for?????/
                       </h6>
                       <p>
                         We will try our very hardest to accommodate all dietary

@@ -751,6 +751,9 @@ const MyPage = () => {
       </div>
       <div className="destination-area pd-top-120">
         <div className="container">
+          <h2 className="m-5" style={{ textAlign: "center" }}>
+            OTHER PACKAGES
+          </h2>
           <div className="row justify-content-center">
             {filteredPackage
               .filter((myPackage) => {
@@ -765,8 +768,9 @@ const MyPage = () => {
                   <div className="single-destination-grid text-center">
                     <div className="thumb">
                       <img
-                        src={publicUrl + "assets/img/destination-list/10.png"}
+                        src={pack.banner_image[0] && pack.banner_image[0].url}
                         alt="img"
+                        // style={{ maxWidth: 400 }}
                       />
                     </div>
                     <div className="details">
