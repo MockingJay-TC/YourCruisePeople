@@ -109,6 +109,14 @@ const MyPage = () => {
                   </div>
                   <div className="details">
                     <h4 className="title">{city && city.name}</h4>
+                    <p className="content" style={{ textAlign: "justify" }}>
+                      <strong>
+                        {city.description && city.description.split("**")[1]}
+                      </strong>
+                      <br />
+                      {city.description &&
+                        city.description.split("**")[2].slice(0, 180) + "..."}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -201,7 +209,7 @@ const MyPage = () => {
                           download
                         >
                           <span>
-                            Pdf Download
+                            Available Excursions
                             <i className="ti-download" />
                           </span>
                         </a>

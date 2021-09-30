@@ -1,48 +1,99 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import parse from "html-react-parser";
 
 class Intro extends Component {
+  render() {
+    let publicUrl = process.env.PUBLIC_URL + "/";
 
-    render() {
-
-        let publicUrl = process.env.PUBLIC_URL+'/'
-
-    return  <div className="intro-area pd-top-112">
-				  <div className="container">
-				    <div className="row">
-				      <div className="col-md-4">
-				        <div className="single-intro wow animated fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
-				          <h4 className="intro-title">
-				            <span className="intro-count">01</span>
-				            <Link className="intro-cat" to="/about">Travel</Link>
-				          </h4>
-				          <p>Sponsorships are like unicorns or leprechauns, talked about often but they don’t actually exist. There is only dollars and cents, the ...</p>
-				        </div>
-				      </div>
-				      <div className="col-md-4">
-				        <div className="single-intro wow animated fadeInUp" data-wow-duration="1.0s" data-wow-delay="0.2s">
-				          <h4 className="intro-title">
-				            <span className="intro-count">02</span>
-				            <Link className="intro-cat" to="/about">Experience</Link>
-				          </h4>
-				          <p>My response is usually harsh. Offended at the suggestion that a career that’s taken more than a decade to create could be...</p>
-				        </div>
-				      </div>
-				      <div className="col-md-4">
-				        <div className="single-intro wow animated fadeInUp" data-wow-duration="1.6s" data-wow-delay="0.3s">
-				          <h4 className="intro-title">
-				            <span className="intro-count">03</span>
-				            <Link className="intro-cat" to="/about">Relax</Link>
-				          </h4>
-				          <p>I have always made a living to make movies, never the other way around. When I first started I washed in a seafood restaurant....</p>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-        }
+    return (
+      <div className="intro-area pd-top-112">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <div
+                className="single-intro wow animated fadeInUp"
+                data-wow-duration="0.6s"
+                data-wow-delay="0.1s"
+              >
+                <h4
+                  style={{
+                    textAlign: "center",
+                    fontWeight: 600,
+                    padding: 0,
+                    margin: 10,
+                  }}
+                >
+                  {/* <span className="intro-count">01</span> */}
+                  <Link to="/about">QUALITY & SERVICE</Link>
+                </h4>
+                <p style={{ textAlign: "justify" }}>
+                  At Cruise People, quality and service go hand-in-hand. We go
+                  above and beyond to ensure these two hallmarks are met at
+                  every step of your journey. To help achieve these core values,
+                  we closely monitor client satisfaction and are consistently
+                  seeking new ways to exceed our clients’ expectations
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div
+                className="single-intro wow animated fadeInUp"
+                data-wow-duration="1.0s"
+                data-wow-delay="0.2s"
+              >
+                <h4
+                  style={{
+                    textAlign: "center",
+                    fontWeight: 600,
+                    padding: 0,
+                    margin: 10,
+                  }}
+                >
+                  {/* <span className="intro-count">02</span> */}
+                  <Link to="/about">A PERSONAL TOUCH</Link>
+                </h4>
+                <p style={{ textAlign: "justify" }}>
+                  From first contact, through the duration of your cruise, and
+                  until you are safely home again, we are with you. You will
+                  know your personal cruise or travel advisor both by name and
+                  by face, as we make it a practice to greet our clients
+                  personally and go through the entire trip.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div
+                className="single-intro wow animated fadeInUp"
+                data-wow-duration="1.6s"
+                data-wow-delay="0.3s"
+              >
+                <h4
+                  style={{
+                    textAlign: "center",
+                    fontWeight: 600,
+                    padding: 0,
+                    margin: 10,
+                  }}
+                >
+                  {/* <span className="intro-count">03</span> */}
+                  <Link to="/about">FRIENDLY & KNOWLEDGEABLE STAFF</Link>
+                </h4>
+                <p style={{ textAlign: "justify" }}>
+                  Since we began in 2018, we’ve created unforgettable travel
+                  experiences in the Mediterranean, Southern Africa and
+                  Southeast Asia region for hundreds of clients from the West
+                  African sub-region. That’s down to the quality of our people.
+                  Our staff members have extensive and first-hand knowledge of
+                  the region and are passionate about what they do
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Intro
+export default Intro;
