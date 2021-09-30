@@ -781,15 +781,23 @@ const MyPage = () => {
                       <h3 className="title">{pack.name}</h3>
                       <p className="content">
                         {pack.description &&
-                          pack.description.description_text.slice(0, 233) +
+                          pack.description.description_text.slice(0, 230) +
                             "..."}
                       </p>
-                      <a className="btn btn-gray" href="#">
-                        <span>
-                          Explore
-                          <i className="la la-arrow-right" />
-                        </span>
-                      </a>
+                      <Link
+                        to="/myPage"
+                        onClick={() => {
+                          localStorage.setItem("package", JSON.stringify(pack));
+                          window.location.reload();
+                        }}
+                      >
+                        <a className="btn btn-gray">
+                          <span>
+                            Explore
+                            <i className="la la-arrow-right" />
+                          </span>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

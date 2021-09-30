@@ -14,7 +14,7 @@ const MyPageDoc = () => {
       <Navbar />
       <PageHeader headertitle={title.name} />
       <MyPage />
-      <Faq/>
+      {/* <Faq/> */}
       <Subscribe />
       <Footer />
     </div>
