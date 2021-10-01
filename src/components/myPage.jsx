@@ -5,6 +5,7 @@ import MyPage from "./section-components/myPage";
 import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 import Faq from './section-components/faq';
+import Video from "./section-components/video";
 
 const MyPageDoc = () => {
   let element = JSON.parse(localStorage.getItem("package"));
@@ -15,6 +16,7 @@ const MyPageDoc = () => {
       <PageHeader headertitle={title.name} />
       <MyPage />
       <Faq/>
+      <Video />
       <Subscribe />
       <Footer />
     </div>

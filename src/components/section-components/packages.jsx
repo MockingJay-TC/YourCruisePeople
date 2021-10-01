@@ -42,7 +42,7 @@ const Packages = () => {
                         />
                         {myPackage &&
                           myPackage.cities.map((city) => (
-                            <span>{city.name}, </span>
+                            <span key={city.id}>{city.name}, </span>
                           ))}
                       </p>
                       <h4

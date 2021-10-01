@@ -37,6 +37,7 @@ import TenDaysEclecticAegean from "./components/ten-days-eclectic-aegean";
 import TenDaysIdyllicAegean from "./components/ten-days-idyllic-aegean";
 import TenDaysStepsOfPaul from "./components/ten-days-steps-of-paul";
 import MyPage from "./components/myPage";
+import City from "./components/city";
 
 class Root extends Component {
   render() {
@@ -88,6 +89,7 @@ class Root extends Component {
             <Route path="/destination-list" component={DestinationLIst} />
             <Route path="/destination-list-v2" component={DestinationLIstV2} />
             <Route path="/destination-details" component={DestinationDetails} />
+            <Route path="/city" component={City} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/gallery-details" component={GalleryDetails} />
             <Route path="/faq" component={Faq} />

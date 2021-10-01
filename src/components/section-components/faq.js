@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
 const Faq = () => {
   let quiz = JSON.parse(localStorage.getItem("package"));
@@ -6,7 +7,13 @@ const Faq = () => {
 
   console.log("FAQ");
   console.log(questions);
-
+  useEffect(() => {
+    const url = "https://your-cruise-people-cms.herokuapp.com/faqs";
+    Axios.get(url).then((res) => {
+      console.log(res.data);
+      setQuestions(res.data);
+    });
+  },[]);
   let publicUrl = process.env.PUBLIC_URL + "/";
 
   return (

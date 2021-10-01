@@ -108,7 +108,15 @@ const MyPage = () => {
                     />
                   </div>
                   <div className="details">
-                    <h4 className="title">{city && city.name}</h4>
+                    <Link
+                      to="/city"
+                      onClick={() => {
+                        console.log(city.name);
+                        localStorage.setItem("city", JSON.stringify(city));
+                      }}
+                    >
+                      <h4 className="title">{city && city.name}</h4>
+                    </Link>
                     <p className="content" style={{ textAlign: "justify" }}>
                       <strong>
                         {city.description && city.description.split("**")[1]}
@@ -219,7 +227,7 @@ const MyPage = () => {
                       <div
                         className="modal fade"
                         id="exampleModal"
-                        tabindex="-1"
+                        tabIndex="-1"
                         role="dialog"
                         aria-labelledby="exampleModalLabel"
                         aria-hidden="true"
@@ -802,13 +810,12 @@ const MyPage = () => {
                           localStorage.setItem("package", JSON.stringify(pack));
                           window.location.reload();
                         }}
+                        className="btn btn-gray"
                       >
-                        <a className="btn btn-gray">
-                          <span>
-                            Explore
-                            <i className="la la-arrow-right" />
-                          </span>
-                        </a>
+                        <span>
+                          Explore
+                          <i className="la la-arrow-right" />
+                        </span>
                       </Link>
                     </div>
                   </div>
