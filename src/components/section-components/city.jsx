@@ -30,25 +30,20 @@ const City = () => {
             <div className="col-xl-10">
               <div className="destinations-details-main-slider-wrap">
                 <div className="destinations-details-main-slider">
-                  {city.images && city.images.map((citi) => {})}
-                  <div className="d-details-main-slider-item">
-                    <img
-                      src={publicUrl + "assets/img/others/3.png"}
-                      alt="img"
-                    />
-                  </div>
-                  <div className="d-details-main-slider-item">
-                    <img
-                      src={publicUrl + "assets/img/others/2.png"}
-                      alt="img"
-                    />
-                  </div>
-                  <div className="d-details-main-slider-item">
-                    <img
-                      src={publicUrl + "assets/img/others/4.png"}
-                      alt="img"
-                    />
-                  </div>
+                  {city.images &&
+                    city.images.map((citi) => (
+                      <div className="d-details-main-slider-item">
+                        <img
+                          src={citi.url}
+                          alt="img"
+                          style={{
+                            height: 700,
+                            width: 1350,
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                    ))}
                 </div>
                 <div className="destinations-details-main-slider-controls">
                   <div className="slider-nav tp-control-nav" />
@@ -108,12 +103,17 @@ const City = () => {
                         <img
                           src={otherCity.images[0] && otherCity.images[0].url}
                           alt="img"
+                          style={{ height: 270, objectFit: "cover" }}
                         />
                       </div>
                       <div className="details">
                         <Link
                           to="/city"
                           onClick={() => {
+                            localStorage.setItem(
+                              "city",
+                              JSON.stringify(otherCity)
+                            );
                             window.location.reload();
                           }}
                         >
