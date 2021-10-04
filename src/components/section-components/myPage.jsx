@@ -4,16 +4,18 @@ import parse from "html-react-parser";
 import Axios from "axios";
 
 const MyPage = () => {
-  let products = JSON.parse(localStorage.getItem("package"));
+  // let products = JSON.parse(localStorage.getItem("package"));
   const [filteredPackage, setFilteredPackage] = useState([]);
   const [newPackage, setNewPackage] = useState(
-    products !== null ? products : []
+    JSON.parse(localStorage.getItem("package")) !== null
+      ? JSON.parse(localStorage.getItem("package"))
+      : []
   );
 
+  console.log(newPackage + "Victor is doing well");
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
-      console.log(res.data);
       setFilteredPackage(res.data);
     });
   }, []);
@@ -821,6 +823,25 @@ const MyPage = () => {
                   </div>
                 </div>
               ))}
+          </div>
+          <div
+            className="col-xl-5 col-lg-6 wow animated fadeInLeft mx-auto pt-5"
+            data-wow-duration="1s"
+            data-wow-delay="0.3s"
+          >
+            <div className="video-popup-wrap">
+              <div className="thumb">
+                <img src={newPackage && newPackage.banner_image[0].url} />
+              </div>
+              <div className="video-popup-btn">
+                <a
+                  href={newPackage && newPackage.video_url}
+                  className="video-play-btn mfp-iframe"
+                >
+                  <i className="fa fa-play" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

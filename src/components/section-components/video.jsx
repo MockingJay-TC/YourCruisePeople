@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 
-const Video = () => {
+const Video = (props) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const [about, setAbout] = useState("");
 
@@ -17,6 +17,8 @@ const Video = () => {
   let newText = `${about && about.message}`;
   newText = newText.slice(0, 253) + "...";
   console.log(newText);
+  let Image = props.image;
+  let Video_url = props.video_url;
 
   return (
     <div
@@ -50,13 +52,10 @@ const Video = () => {
           >
             <div className="video-popup-wrap">
               <div className="thumb">
-                <img src={about && about.side_image_small.url} />
+                <img src={Image} />
               </div>
               <div className="video-popup-btn">
-                <a
-                  href="https://www.youtube.com"
-                  className="video-play-btn mfp-iframe"
-                >
+                <a href={Video_url} className="video-play-btn mfp-iframe">
                   <i className="fa fa-play" />
                 </a>
               </div>
