@@ -119,9 +119,10 @@ const MyPage = () => {
                     >
                       <h4 className="title">{city && city.name}</h4>
                     </Link>
-                    <p className="content" style={{ textAlign: "justify" }}>
+                    <p className="content">
                       <strong>
-                        {city.description && city.description.split("**")[1]}
+                        {city.description &&
+                          city.description.split("**")[1].slice(0, 25) + "..."}
                       </strong>
                       <br />
                       {city.description &&
@@ -715,55 +716,7 @@ const MyPage = () => {
           {/* Itinerary end */}
 
           {/* location-review-area start */}
-          <div className="location-review-area mg-top-100">
-            <div className="row">
-              <div className="col-lg-8">
-                <form className="tp-form-wrap bg-gray tp-form-wrap-one">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <h4 className="single-page-small-title">
-                        Write A Review
-                      </h4>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="tp-review-meta text-lg-right">
-                        {/* Reviews */}
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <label className="single-input-wrap">
-                        <span className="single-input-title">Name</span>
-                        <input type="text" />
-                      </label>
-                    </div>
-                    <div className="col-md-6">
-                      <label className="single-input-wrap">
-                        <span className="single-input-title">Email</span>
-                        <input type="text" />
-                      </label>
-                    </div>
-                    <div className="col-lg-12">
-                      <label className="single-input-wrap">
-                        <span className="single-input-title">comments</span>
-                        <textarea defaultValue={""} />
-                      </label>
-                    </div>
-                    <div className="col-12">
-                      {/* <a className="btn btn-blue" href="#">
-                        + Add Photo
-                      </a> */}
-                      <a className="btn btn-yellow float-right">Send</a>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div className="col-xl-3 col-lg-4 offset-xl-1 mt-5 mt-lg-0 hidden-md">
-                <a href="#">
-                  <img src={publicUrl + "assets/img/others/01.png"} alt="ads" />
-                </a>
-              </div>
-            </div>
-          </div>
+
           {/* location-review-area start */}
         </div>
       </div>
