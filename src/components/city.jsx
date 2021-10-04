@@ -12,7 +12,7 @@ const CityPage = () => {
       <Navbar />
       <PageHeader headertitle={cityName.name} />
       <City />
-      <Subscribe />
+      {/* <Subscribe /> */}
       <Footer />
     </div>
   );
