@@ -784,7 +784,7 @@ const MyPage = () => {
           >
             <div className="video-popup-wrap">
               <div className="thumb">
-                <img src={newPackage && newPackage.banner_image[0].url} />
+                <img src={newPackage.banner_image[0] && newPackage.banner_image[0].url} />
               </div>
               <div className="video-popup-btn">
                 <a
