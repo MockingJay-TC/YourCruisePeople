@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 const Vessel = () => {
   const element = JSON.parse(localStorage.getItem("package"));
-  const [vessel, setVessel] = useState(element.vessel !== null ? element.vessel : []);
+  const [vessel, setVessel] = useState(
+    element.vessel !== null ? element.vessel : []
+  );
   const [otherVessels, setVessels] = useState(
     JSON.parse(localStorage.getItem("otherVessels"))
   );
@@ -75,8 +77,21 @@ const Vessel = () => {
               {/* <p>Continen</p> */}
             </div>
             <div className="col-lg-12">
+              <p>{vessel.description}</p>
+
               <p>
-                {vessel.description}
+                <strong style={{ fontSize: 20, fontWeight: 600 }}>
+                  {vessel && vessel.more_details.split("**")[1]}
+                </strong>
+                <br />
+                {vessel && vessel.more_details.split("**")[2]}
+              </p>
+              <p>
+                <strong style={{ fontSize: 20, fontWeight: 600 }}>
+                  {vessel && vessel.more_details.split("**")[3]}
+                </strong>
+                <br />
+                {vessel && vessel.more_details.split("**")[4]}
               </p>
             </div>
           </div>
