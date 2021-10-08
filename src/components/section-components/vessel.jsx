@@ -80,10 +80,6 @@ const Vessel = () => {
               </p>
             </div>
           </div>
-          {/* destinations-client-review-slider start */}
-          {/* <h4 className="single-page-small-title">Other Cities</h4> */}
-
-          {/* destinations-client-review-slider end */}
         </div>
       </div>
     </div>

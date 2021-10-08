@@ -84,7 +84,7 @@ const MyPage = () => {
               </p>
               <p>
                 Vessel:
-               <Link to='/vessel'> <strong> {newPackage.vessel && newPackage.vessel.name} </strong></Link>
+                <Link to='/vessel'> <strong> {newPackage.vessel && newPackage.vessel.name} </strong></Link>
               </p>
             </div>
             <div className="col-lg-12">
@@ -502,29 +502,21 @@ const MyPage = () => {
                         </div> */}
                       </div>
                       <div className="tab-pane fade" id="tabs_3">
-                        {/* <div className="user-settings">
-                          <h3 className="user-details-title">Settings</h3>
-                          <div className="row">
-                            <div className="col-lg-7">
-                              <label className="single-input-wrap style-two">
-                                <span className="single-input-title mb-3">
-                                  Change your password
-                                </span>
-                                <input type="text" placeholder="Old password" />
-                              </label>
-                            </div>
-                            <div className="col-lg-7">
-                              <label className="single-input-wrap style-two">
-                                <input type="text" placeholder="New password" />
-                              </label>
-                            </div>
-                            <div className="col-lg-7">
-                              <label className="single-input-wrap style-two">
-                                <input type="text" placeholder="New password" />
-                              </label>
-                            </div>
-                          </div>
-                        </div> */}
+                        <div className="details">
+                    
+                          <h4
+                            className="title"
+                            
+                          >
+                            <Link to="/vessel">{newPackage.vessel && newPackage.vessel.name}</Link>
+                          </h4>
+                          <p className="content">
+                            {newPackage.vessel.description &&
+                              newPackage.vessel.description.slice(0, 500) +
+                              "..."}
+                          </p>
+                       
+                        </div>
                       </div>
                       <div className="tab-pane fade" id="tabs_4">
                         {/* <div className="user-recent-view">
@@ -741,7 +733,7 @@ const MyPage = () => {
                       <img
                         src={pack.banner_image[0] && pack.banner_image[0].url}
                         alt="img"
-                        // style={{ maxWidth: 400 }}
+                      // style={{ maxWidth: 400 }}
                       />
                     </div>
                     <div className="details">
@@ -757,7 +749,7 @@ const MyPage = () => {
                       <p className="content">
                         {pack.description &&
                           pack.description.description_text.slice(0, 230) +
-                            "..."}
+                          "..."}
                       </p>
                       <Link
                         to="/myPage"
