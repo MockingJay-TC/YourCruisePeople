@@ -84,7 +84,7 @@ const MyPage = () => {
               </p>
               <p>
                 Vessel:
-                <strong> {newPackage.vessel && newPackage.vessel.name} </strong>
+               <Link to='/vessel'> <strong> {newPackage.vessel && newPackage.vessel.name} </strong></Link>
               </p>
             </div>
             <div className="col-lg-12">

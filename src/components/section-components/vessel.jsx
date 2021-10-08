@@ -3,10 +3,10 @@ import Axios from "axios";
 import { Link } from "react-router-dom";
 
 const Vessel = () => {
-  const element = JSON.parse(localStorage.getItem("city"));
-  const [city, setCity] = useState(element !== null ? element : []);
-  const [otherCities, setOtherCities] = useState(
-    JSON.parse(localStorage.getItem("package"))
+  const element = JSON.parse(localStorage.getItem("package"));
+  const [vessel, setVessel] = useState(element.vessel !== null ? element.vessel : []);
+  const [otherVessels, setVessels] = useState(
+    JSON.parse(localStorage.getItem("otherVessels"))
   );
 
   // useEffect(() => {
@@ -30,8 +30,8 @@ const Vessel = () => {
             <div className="col-xl-10">
               <div className="destinations-details-main-slider-wrap">
                 <div className="destinations-details-main-slider">
-                  {city.images &&
-                    city.images.map((citi) => (
+                  {vessel.images &&
+                    vessel.images.map((citi) => (
                       <div className="d-details-main-slider-item">
                         <img
                           src={citi.url}
@@ -71,73 +71,18 @@ const Vessel = () => {
           {/* destinations-details-main-slider End */}
           <div className="row destinations-details-location-name">
             <div className="col-lg-12">
-              <h3>{city.name}</h3>
-              <p>Continen</p>
+              <h3>{vessel.name}</h3>
+              {/* <p>Continen</p> */}
             </div>
             <div className="col-lg-12">
               <p>
-                <strong style={{ fontSize: 20, fontWeight: 600 }}>
-                  {city && city.description.split("**")[1]}
-                </strong>
-                <br />
-                {city && city.description.split("**")[2]}
+                {vessel.description}
               </p>
             </div>
           </div>
           {/* destinations-client-review-slider start */}
-          <h4 className="single-page-small-title">Other Cities</h4>
-          <div className="destinations-client-review-slider tp-common-slider-style">
-            {otherCities.cities &&
-              otherCities.cities
-                .filter((ele) => {
-                  if (ele.id !== city.id) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                })
-                .map((otherCity) => (
-                  <div className="d-client-review-slider-item">
-                    <div className="single-destination-grid text-center">
-                      <div className="thumb">
-                        <img
-                          src={otherCity.images[0] && otherCity.images[0].url}
-                          alt="img"
-                          style={{ height: 270, objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="details">
-                        <Link
-                          to="/city"
-                          onClick={() => {
-                            localStorage.setItem(
-                              "city",
-                              JSON.stringify(otherCity)
-                            );
-                            window.location.reload();
-                          }}
-                        >
-                          <h4 className="title">
-                            {otherCity && otherCity.name}
-                          </h4>
-                        </Link>
-                        <p className="content">
-                          <strong style={{ fontSize: 16, fontWeight: 600 }}>
-                            {otherCity.description &&
-                              otherCity.description
-                                .split("**")[1]
-                                .slice(0, 25) + "..."}
-                          </strong>
-                          <br />
-                          {otherCity.description &&
-                            otherCity.description.split("**")[2].slice(0, 180) +
-                              "..."}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-          </div>
+          {/* <h4 className="single-page-small-title">Other Cities</h4> */}
+
           {/* destinations-client-review-slider end */}
         </div>
       </div>
