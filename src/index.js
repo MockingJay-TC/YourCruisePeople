@@ -11,7 +11,7 @@ import HomeV2 from "./components/home-v2";
 import HomeV3 from "./components/home-v3";
 import AboutUs from "./components/about";
 import TourList from "./components/tour-list";
-import TourListV2 from "./components/tour-list-v2";
+import Packages from "./components/packages";
 import TourListV3 from "./components/tour-list-v3";
 import TourDetails from "./components/tour-details";
 import DestinationLIst from "./components/destination-list";
@@ -50,7 +50,7 @@ class Root extends Component {
             <Route path="/home-v3" component={HomeV3} />
             <Route path="/about" component={AboutUs} />
             <Route path="/tour-list" component={TourList} />
-            <Route path="/tour-list-v2" component={TourListV2} />
+            <Route path="/packages" component={Packages} />
             <Route path="/tour-list-v3" component={TourListV3} />
             <Route path="/tour-details" component={TourDetails} />
             <Route path="/myPage" component={MyPage} />

@@ -77,7 +77,7 @@ class Navbar extends Component {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/tour-list-v2">Packages</Link>
+                <Link to="/packages">Packages</Link>
               </li>
               <li>
                 <Link to="/gallery-details">Gallery</Link>
