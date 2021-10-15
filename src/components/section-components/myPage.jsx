@@ -84,7 +84,13 @@ const MyPage = () => {
               </p>
               <p>
                 Vessel:
-                <Link to='/vessel'> <strong> {newPackage.vessel && newPackage.vessel.name} </strong></Link>
+                <Link to="/vessel">
+                  {" "}
+                  <strong>
+                    {" "}
+                    {newPackage.vessel && newPackage.vessel.name}{" "}
+                  </strong>
+                </Link>
               </p>
             </div>
             <div className="col-lg-12">
@@ -503,19 +509,22 @@ const MyPage = () => {
                       </div>
                       <div className="tab-pane fade" id="tabs_3">
                         <div className="details">
-                    
-                          <h4
-                            className="title"
-                            
-                          >
-                            <Link to="/vessel">{newPackage.vessel && newPackage.vessel.name}</Link>
+                          <h4 className="title">
+                            <Link to="/vessel">
+                              {newPackage.vessel && newPackage.vessel.name}
+                            </Link>
                           </h4>
                           <p className="content">
                             {newPackage.vessel.description &&
                               newPackage.vessel.description.slice(0, 500) +
-                              "..."}
+                                "..."}
                           </p>
-                       
+                          <Link to="/vessel" className="btn btn-yellow">
+                            <span>
+                              Go to Vessel
+                              <i className="ti-arrow-right" />
+                            </span>
+                          </Link>
                         </div>
                       </div>
                       <div className="tab-pane fade" id="tabs_4">
@@ -733,7 +742,7 @@ const MyPage = () => {
                       <img
                         src={pack.banner_image[0] && pack.banner_image[0].url}
                         alt="img"
-                      // style={{ maxWidth: 400 }}
+                        // style={{ maxWidth: 400 }}
                       />
                     </div>
                     <div className="details">
@@ -749,7 +758,7 @@ const MyPage = () => {
                       <p className="content">
                         {pack.description &&
                           pack.description.description_text.slice(0, 230) +
-                          "..."}
+                            "..."}
                       </p>
                       <Link
                         to="/myPage"
@@ -776,7 +785,11 @@ const MyPage = () => {
           >
             <div className="video-popup-wrap">
               <div className="thumb">
-                <img src={newPackage.banner_image[0] && newPackage.banner_image[0].url} />
+                <img
+                  src={
+                    newPackage.banner_image[0] && newPackage.banner_image[0].url
+                  }
+                />
               </div>
               <div className="video-popup-btn">
                 <a
