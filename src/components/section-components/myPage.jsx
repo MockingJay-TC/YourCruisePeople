@@ -509,14 +509,14 @@ const MyPage = () => {
                       </div>
                       <div className="tab-pane fade" id="tabs_3">
                         <div className="details">
-                          <h4 className="title">
+                          <h3 className="title" style={{fontWeight: 700}}>
                             <Link to="/vessel">
                               {newPackage.vessel && newPackage.vessel.name}
                             </Link>
-                          </h4>
+                          </h3>
                           <p className="content">
                             {newPackage.vessel.description &&
-                              newPackage.vessel.description.slice(0, 500) +
+                              newPackage.vessel.description.slice(0, 600) +
                                 "..."}
                           </p>
                           <Link to="/vessel" className="btn btn-yellow">
@@ -528,7 +528,7 @@ const MyPage = () => {
                         </div>
                       </div>
                       <div className="tab-pane fade" id="tabs_4">
-                        {/* <div className="user-recent-view">
+                        <div className="user-recent-view">
                           <h3 className="user-details-title">
                             Recently Viewed
                           </h3>
@@ -598,7 +598,7 @@ const MyPage = () => {
                               </div>
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                       <div className="tab-pane fade" id="tabs_5">
                         {/* <div className="user-payment-method">

@@ -11,6 +11,13 @@ const Vessel = () => {
     JSON.parse(localStorage.getItem("otherVessels"))
   );
 
+  useEffect(()=>{
+    const url = ""
+    Axios.get(url)
+    .then((res)=> {
+      console.log (res.data);
+    })
+  })
   // useEffect(() => {
   //   const url = "https://your-cruise-people-cms.herokuapp.com/cities";
   //   // Axios.get(url).then((res) => {
@@ -73,21 +80,45 @@ const Vessel = () => {
           {/* destinations-details-main-slider End */}
           <div className="row destinations-details-location-name">
             <div className="col-lg-12">
-              <h3>{vessel.name}</h3>
+              <h2>{vessel.name}</h2>
               {/* <p>Continen</p> */}
             </div>
             <div className="col-lg-12">
               <p>{vessel.description}</p>
 
               <p>
-                <strong style={{ fontSize: 20, fontWeight: 600 }}>
+                <strong style={{ fontSize: 24, fontWeight: 600 }}>
                   {vessel && vessel.more_details.split("**")[1]}
                 </strong>
                 <br />
                 {vessel && vessel.more_details.split("**")[2]}
               </p>
+              <div className="user-recent-view">
+                <div className="row mb-5">
+                  <div className="col-sm-3">
+                    <div className="single-destinations-list style-two">
+                      <div className="thumb">
+                        <img
+                          src={publicUrl + "assets/img/destination-list/4.png"}
+                          alt="list"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-3">
+                    <div className="single-destinations-list style-two">
+                      <div className="thumb">
+                        <img
+                          src={publicUrl + "assets/img/destination-list/5.png"}
+                          alt="list"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p>
-                <strong style={{ fontSize: 20, fontWeight: 600 }}>
+                <strong style={{ fontSize: 24, fontWeight: 600 }}>
                   {vessel && vessel.more_details.split("**")[3]}
                 </strong>
                 <br />
