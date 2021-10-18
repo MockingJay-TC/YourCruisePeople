@@ -21,7 +21,7 @@ const Home_V1 = () => {
         {/* <Offer /> */}
         <Video />
         <HolidayPlan />
-        <Review />
+        {/* <Review /> */}
         {/* <BlogSection /> */}
         {/* <Ads /> */}
         <Subscribe />

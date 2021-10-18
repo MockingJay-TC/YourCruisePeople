@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import parse from "html-react-parser";
+
 
 class IntroV3 extends Component {
   render() {
@@ -14,15 +14,7 @@ class IntroV3 extends Component {
             </h2>
           </div>
           <div className="row">
-            {/* <div className="col-lg-3 col-md-6">
-			        <div className="single-intro style-two">
-			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/icons/9.png"} alt="img" />
-			          </div>
-			          <h4 className="intro-title">Private Transport</h4>
-			          <p>Sponsorships are like unicorns or leprechauns, talked about often but they don’t exist. There is one dollars</p>
-			        </div>
-			      </div> */}
+           
             <div className="col-lg-4 col-md-6 pt-5">
               <div className="single-intro style-two">
                 <div className="thumb pt-5">
@@ -33,8 +25,6 @@ class IntroV3 extends Component {
                     />
                   </a>
                 </div>
-                {/* <h4 className="intro-title">Diverse Destinations</h4>
-			          <p>My response usually harsh. Offended at the that a career that’s taken more than a decade to create could be</p> */}
               </div>
             </div>
             <div className="col-lg-4 col-md-6">

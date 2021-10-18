@@ -11,8 +11,6 @@ const About = () => {
       setAbout(res.data);
     });
   }, []);
-  let publicUrl = process.env.PUBLIC_URL + "/";
-  //   let imagealt = "image";
   return (
     <div className="about-section pd-top-80">
       <div className="container">

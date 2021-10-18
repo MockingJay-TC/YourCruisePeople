@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
 import { Link } from "react-router-dom";
 
 const Page_header = (props) => {
@@ -19,7 +18,6 @@ const Page_header = (props) => {
   }, []);
 
   let HeaderTitle = props.headertitle;
-  let publicUrl = process.env.PUBLIC_URL + "/";
   let Subheader = props.subheader ? props.subheader : HeaderTitle;
 
   return (

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 
@@ -14,13 +14,12 @@ const Footer_v1 = () => {
     document.body.appendChild(minscript);
     const url = "https://your-cruise-people-cms.herokuapp.com/contact-info";
     Axios.get(url).then((res) => {
-      // return res.json();
       console.log(res.data);
       setContact(res.data);
     });
   }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
-  let imgattr = "Footer logo";
+
   return (
     <footer
       className="footer-area"
@@ -106,9 +105,6 @@ const Footer_v1 = () => {
                 <li>
                   <Link to="#">Destination</Link>
                 </li>
-                {/* <li>
-                  <Link to="/tour-details">Tours</Link>
-                </li> */}
                 <li>
                   <Link to="#">Blog</Link>
                 </li>
@@ -178,8 +174,7 @@ const Footer_v1 = () => {
       <div className="copyright-inner">
         <div className="copyright-text">
           © YourCruisePeople 2021 All rights reserved. Crafted by{" "}
-          <a href="https://wonchunii.com" target="_blank">
-            {/* <i className="fas fa-code" /> */}
+          <a href="https://wonchunii.com" target="_blank" rel="noopener">
             <span>Wonchunii</span>
           </a>
         </div>

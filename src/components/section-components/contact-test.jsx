@@ -1,12 +1,11 @@
-import React, { Component, useState, useEffect } from "react";
-import { ScaleLoader } from "react-spinners";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 const Contact = () => {
-  let publicUrl = process.env.PUBLIC_URL + "/";
+
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(null);
-  const [sendInfo, setSendInfo] = useState();
+
   const [name, setName] = useState("");
   const [tel, setTel] = useState("");
   const [email, setEmail] = useState("");

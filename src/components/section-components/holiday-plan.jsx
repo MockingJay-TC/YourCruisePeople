@@ -7,7 +7,6 @@ const HolidayPlan = () => {
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
-      console.log(res.data);
       setHoliday(res.data);
     });
   }, []);
@@ -58,7 +57,7 @@ const HolidayPlan = () => {
                   <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
                   {holiday[1] &&
                     holiday[1].cities.map((city) => (
-                      <span> {city.name}, </span>
+                      <span key={city.id}> {city.name}, </span>
                     ))}
                 </p>
                 <h4 className="title">{holiday && holiday[1].name}</h4>
@@ -89,7 +88,7 @@ const HolidayPlan = () => {
                   <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
                   {holiday[0] &&
                     holiday[0].cities.map((city) => (
-                      <span> {city.name}, </span>
+                      <span key={city.id}> {city.name}, </span>
                     ))}
                 </p>
                 <h4 className="title">{holiday && holiday[0].name}</h4>
@@ -120,7 +119,7 @@ const HolidayPlan = () => {
                   <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
                   {holiday[0] &&
                     holiday[0].cities.map((city) => (
-                      <span> {city.name}, </span>
+                      <span key={city.id}> {city.name}, </span>
                     ))}
                 </p>
                 <h4 className="title">{holiday && holiday[0].name}</h4>
@@ -151,7 +150,7 @@ const HolidayPlan = () => {
                   <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
                   {holiday[0] &&
                     holiday[0].cities.map((city) => (
-                      <span> {city.name}, </span>
+                      <span key={city.id}> {city.name}, </span>
                     ))}
                 </p>
                 <h4 className="title">{holiday && holiday[0].name}</h4>

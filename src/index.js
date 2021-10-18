@@ -7,8 +7,6 @@ import {
   Switch,
 } from "react-router-dom";
 import HomeV1 from "./components/home-v1";
-import HomeV2 from "./components/home-v2";
-import HomeV3 from "./components/home-v3";
 import AboutUs from "./components/about";
 import TourList from "./components/tour-list";
 import Packages from "./components/packages";
@@ -28,14 +26,6 @@ import Blog from "./components/blog";
 import BlogV2 from "./components/blog-v2";
 import BlogV3 from "./components/blog-v3";
 import BlogDetails from "./components/blog-details";
-import SevenDaysIconicAegean from "./components/seven-days-iconic-aegean";
-import SevenDaysIconicDiscovery from "./components/seven-days-iconic-discovery";
-import EightDaysIconicAegean from "./components/eight-days-iconic-aegean";
-import EightDaysIconicDiscovery from "./components/eight-days-iconic-discovery";
-import TenDays3Continents from "./components/ten-days-3continents";
-import TenDaysEclecticAegean from "./components/ten-days-eclectic-aegean";
-import TenDaysIdyllicAegean from "./components/ten-days-idyllic-aegean";
-import TenDaysStepsOfPaul from "./components/ten-days-steps-of-paul";
 import MyPage from "./components/myPage";
 import City from "./components/city";
 import Vessel from './components/vessel';
@@ -47,8 +37,6 @@ class Root extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={HomeV1} />
-            <Route path="/home-v2" component={HomeV2} />
-            <Route path="/home-v3" component={HomeV3} />
             <Route path="/about" component={AboutUs} />
             <Route path="/tour-list" component={TourList} />
             <Route path="/packages" component={Packages} />
@@ -56,38 +44,6 @@ class Root extends Component {
             <Route path="/tour-details" component={TourDetails} />
             <Route path="/myPage" component={MyPage} />
             <Route path='/vessel' component={Vessel} />
-            <Route
-              path="/seven-days-iconic-aegean"
-              component={SevenDaysIconicAegean}
-            />
-            <Route
-              path="/seven-days-iconic-discovery"
-              component={SevenDaysIconicDiscovery}
-            />
-            <Route
-              path="/eight-days-iconic-aegean"
-              component={EightDaysIconicAegean}
-            />
-            <Route
-              path="/eight-days-iconic-discovery"
-              component={EightDaysIconicDiscovery}
-            />
-            <Route
-              path="/ten-days-3continents"
-              component={TenDays3Continents}
-            />
-            <Route
-              path="/ten-days-eclectic-aegean"
-              component={TenDaysEclecticAegean}
-            />
-            <Route
-              path="/ten-days-idyllic-aegean"
-              component={TenDaysIdyllicAegean}
-            />
-            <Route
-              path="/ten-days-steps-of-paul"
-              component={TenDaysStepsOfPaul}
-            />
             <Route path="/destination-list" component={DestinationLIst} />
             <Route path="/destination-list-v2" component={DestinationLIstV2} />
             <Route path="/destination-details" component={DestinationDetails} />

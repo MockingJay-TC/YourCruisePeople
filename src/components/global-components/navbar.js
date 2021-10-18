@@ -5,7 +5,6 @@ class Navbar extends Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL + "/";
     let imgattr = "logo";
-    let anchor = "#";
     return (
       <nav className="navbar navbar-area navbar-expand-lg nav-style-01 viaje-go-top">
         <div className="container nav-container">
