@@ -11,12 +11,10 @@ const Vessel = () => {
     JSON.parse(localStorage.getItem("otherVessels"))
   );
 
-  useEffect(()=>{
-    const url = ""
-    Axios.get(url)
-    .then((res)=> {
-    })
-  })
+  useEffect(() => {
+    const url = "";
+    Axios.get(url).then((res) => {});
+  });
   let publicUrl = process.env.PUBLIC_URL + "/";
   return (
     <div>
@@ -28,20 +26,22 @@ const Vessel = () => {
               <div className="destinations-details-main-slider-wrap">
                 <div className="destinations-details-main-slider">
                   {vessel.images &&
-                    vessel.images.map((citi) => (
-                      
-                      <div className="d-details-main-slider-item">
-                        <img
-                          src={citi.url}
-                          alt="img"
-                          style={{
-                            height: 700,
-                            width: 1350,
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
-                    ))}
+                    vessel.images.map((citi) => {
+                      if (citi.name.slice(0,3) === "oly")
+                        return (
+                          <div className="d-details-main-slider-item">
+                            <img
+                              src={citi.url}
+                              alt="img"
+                              style={{
+                                height: 700,
+                                width: 1350,
+                                objectFit: "cover",
+                              }}
+                            />
+                          </div>
+                        );
+                    })}
                 </div>
                 <div className="destinations-details-main-slider-controls">
                   <div className="slider-nav tp-control-nav" />
