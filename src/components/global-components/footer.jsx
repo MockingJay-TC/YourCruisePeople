@@ -129,7 +129,7 @@ const Footer_v1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="gallery-details">
+                  <a href="/gallery-details">
                     <img
                       width="90"
                       height="70"
@@ -139,7 +139,7 @@ const Footer_v1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="gallery-details">
+                  <a href="/gallery-details">
                     <img
                       width="90"
                       height="70"
@@ -149,7 +149,7 @@ const Footer_v1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="gallery-details">
+                  <a href="/gallery-details">
                     <img
                       width="90"
                       height="70"
@@ -159,7 +159,7 @@ const Footer_v1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="gallery-details">
+                  <a href="/gallery-details">
                     <img
                       width="90"
                       height="70"
@@ -169,7 +169,7 @@ const Footer_v1 = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="gallery-details">
+                  <a href="/gallery-details">
                     <img
                       width="90"
                       height="70"

@@ -24,11 +24,6 @@ const GalleryDetails = () => {
           <div className="col-lg-7">
             <div className="section-title text-center">
               <h2 className="title">Beautiful Beach of Greece</h2>
-              <p>
-                Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
-                imperdiet et leo in vulputate. Sed eleifend lacus eu posuere
-                viverra. Vestibulum id turpis lectus. Donec rhoncus quis elit
-              </p>
             </div>
           </div>
         </div>
