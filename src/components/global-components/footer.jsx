@@ -39,7 +39,7 @@ const Footer_v1 = () => {
                 <p>
                   Cruise People Limited (Your Cruise People) offers personalized
                   cruise holiday packages to all our clients to experience the
-                  pleasures of cruising. 
+                  pleasures of cruising.
                 </p>
                 <ul className="social-icon">
                   <li>
@@ -119,48 +119,60 @@ const Footer_v1 = () => {
               <h4 className="widget-title">Instagram Gallery</h4>
               <ul className="widget-instagram-feed">
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="/gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/one.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/two.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/three.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/four.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/five.jpg"}
                       alt="img"
                     />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img width="90" height="70"
+                  <a href="gallery-details">
+                    <img
+                      width="90"
+                      height="70"
                       src={publicUrl + "assets/img/instagram/six.jpg"}
                       alt="img"
                     />
