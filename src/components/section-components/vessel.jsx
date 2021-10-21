@@ -29,6 +29,7 @@ const Vessel = () => {
                 <div className="destinations-details-main-slider">
                   {vessel.images &&
                     vessel.images.map((citi) => (
+                      
                       <div className="d-details-main-slider-item">
                         <img
                           src={citi.url}

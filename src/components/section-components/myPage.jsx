@@ -155,27 +155,24 @@ const MyPage = () => {
                           data-toggle="tab"
                           href="#tabs_1"
                         >
-                          {/* <i className="fa fa-note" /> */}
                           Itinerary
                         </a>
                       </li>
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <a
                           className="nav-link"
                           data-toggle="tab"
                           href="#tabs_2"
                         >
-                          {/* <i className="fa fa-check-square-o" /> */}
                           Terms & Condition
                         </a>
-                      </li>
+                      </li> */}
                       <li className="nav-item">
                         <a
                           className="nav-link"
                           data-toggle="tab"
                           href="#tabs_3"
                         >
-                          {/* <i className="fa fa-cog" /> */}
                           Vessel
                         </a>
                       </li>
@@ -185,30 +182,10 @@ const MyPage = () => {
                           data-toggle="tab"
                           href="#tabs_4"
                         >
-                          {/* <i className="fa fa-recycle" /> */}
                           Pricing
                         </a>
                       </li>
-                      {/* <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          data-toggle="tab"
-                          href="#tabs_5"
-                        >
-                          <i className="fa fa-credit-card-alt" />
-                          Payment Methods
-                        </a>
-                      </li> */}
-                      {/* <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          data-toggle="tab"
-                          href="#tabs_6"
-                        >
-                          <i className="fa fa-star-o" />
-                          Reviews
-                        </a>
-                      </li> */}
+
                       <li className="d-flex justify-content-around">
                         <a
                           className="btn btn-yellow"
@@ -492,24 +469,11 @@ const MyPage = () => {
                         </table>
                       </div>
                       <div className="tab-pane fade" id="tabs_2">
-                        {/* <div className="user-verification">
-                          <div className="row">
-                            <div className="col-lg-7">
-                              <h3 className="user-details-title">
-                                Verification
-                              </h3>
-                              <div className="notice">
-                                <i className="fa fa-exclamation-triangle" />{" "}
-                                Your email hasn't been verified.
-                              </div>
-                              <span>imshuvo97@gmail.com</span>
-                            </div>
-                          </div>
-                        </div> */}
+                        {/* content for tab 2 oes in here */}
                       </div>
                       <div className="tab-pane fade" id="tabs_3">
                         <div className="details">
-                          <h3 className="title" style={{fontWeight: 700}}>
+                          <h3 className="title" style={{ fontWeight: 700 }}>
                             <Link to="/vessel">
                               {newPackage.vessel && newPackage.vessel.name}
                             </Link>
@@ -529,183 +493,27 @@ const MyPage = () => {
                       </div>
                       <div className="tab-pane fade" id="tabs_4">
                         <div className="user-recent-view">
-                          <h3 className="user-details-title">
-                            Recently Viewed
-                          </h3>
+                          <h2 className="user-details-title">Package Prices</h2>
                           <div className="row">
-                            <div className="col-sm-6">
+                            <div className="col-sm-12">
                               <div className="single-destinations-list style-two">
-                                <div className="thumb">
-                                  <img
-                                    src={
-                                      publicUrl +
-                                      "assets/img/destination-list/4.png"
-                                    }
-                                    alt="list"
-                                  />
-                                </div>
-                                <div className="details">
-                                  <p className="location">
-                                    <img
-                                      src={publicUrl + "assets/img/icons/1.png"}
-                                      alt="map"
-                                    />
-                                    Maldives
-                                  </p>
-                                  <h4 className="title">
-                                    <a href="#">Hurawalhi Island</a>
-                                  </h4>
-                                  <p className="content">
-                                    7Days Tour on 2 person
-                                  </p>
-                                  <div className="tp-price-meta">
-                                    <h2>
-                                      620 <small>$</small>
-                                    </h2>
+                                {newPackage?.prices?.map((price) => (
+                                  <div
+                                    className="details"
+                                    key={price && price.id}
+                                  >
+                                    <h4 className="title">
+                                      {price.description}
+                                    </h4>
+                                    <div className="tp-price-meta">
+                                      <h2>$ {price.starting_price}</h2>
+                                    </div>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-sm-6">
-                              <div className="single-destinations-list style-two">
-                                <div className="thumb">
-                                  <img
-                                    src={
-                                      publicUrl +
-                                      "assets/img/destination-list/5.png"
-                                    }
-                                    alt="list"
-                                  />
-                                </div>
-                                <div className="details">
-                                  <p className="location">
-                                    <img
-                                      src={publicUrl + "assets/img/icons/1.png"}
-                                      alt="map"
-                                    />
-                                    Indonesia
-                                  </p>
-                                  <h4 className="title">
-                                    <a href="#">Bali Province</a>
-                                  </h4>
-                                  <p className="content">4days 2 person</p>
-                                  <div className="tp-price-meta">
-                                    <h2>
-                                      780 <small>$</small>
-                                    </h2>
-                                  </div>
-                                </div>
+                                ))}
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="tab-pane fade" id="tabs_5">
-                        {/* <div className="user-payment-method">
-                          <div className="location-review-area">
-                            <h3 className="user-details-title">
-                              Payment Methods
-                            </h3>
-                            <form className="tp-form-wrap bg-gray tp-form-wrap-one">
-                              <div className="row">
-                                <div className="col-lg-7">
-                                  <label className="single-input-wrap">
-                                    <span className="single-input-title">
-                                      Credit card number
-                                    </span>
-                                    <input type="text" />
-                                  </label>
-                                  <label className="single-input-wrap">
-                                    <span className="single-input-title">
-                                      Card holder name
-                                    </span>
-                                    <input type="text" />
-                                  </label>
-                                  <label className="single-input-wrap">
-                                    <span className="single-input-title">
-                                      Expiry date (Example: 01/17)
-                                    </span>
-                                    <input type="text" />
-                                  </label>
-                                  <label className="single-input-wrap">
-                                    <span className="single-input-title">
-                                      Issuing bank
-                                    </span>
-                                    <input type="text" />
-                                  </label>
-                                </div>
-                                <div className="col-lg-5">
-                                  <div className="user-payment-card">
-                                    <img
-                                      src={
-                                        publicUrl + "assets/img/others/16.png"
-                                      }
-                                      alt="img"
-                                    />
-                                    <span>Available payment method:</span>
-                                    <div className="payment-card">
-                                      <i className="fa fa-cc-paypal" />
-                                      <i className="fa fa-cc-visa" />
-                                      <i className="fa fa-cc-mastercard" />
-                                      <i className="fa fa-credit-card-alt" />
-                                    </div>
-                                    <a className="btn btn-transparent" href="#">
-                                      Cancel
-                                    </a>
-                                    <a className="btn btn-yellow" href="#">
-                                      Save
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div> */}
-                      </div>
-                      <div className="tab-pane fade" id="tabs_6">
-                        {/* <div className="user-tour-details">
-                          <h3 className="user-details-title">Reviews</h3>
-                          <span className="user-tour-details-title">
-                            Reviews About You
-                          </span>
-                          <span>| Reviews By You</span>
-                          <div className="comments-area tour-details-review-area">
-                            <ul className="comment-list mb-0">
-                              <li>
-                                <div className="single-comment-wrap">
-                                  <div className="thumb">
-                                    <img
-                                      src={
-                                        publicUrl + "assets/img/client/2.png"
-                                      }
-                                      alt="img"
-                                    />
-                                  </div>
-                                  <div className="content">
-                                    <h4 className="title">Tyler Bailey</h4>
-                                    <span className="date">13 August 2019</span>
-                                    <div className="tp-review-meta">
-                                      <i className="ic-yellow fa fa-star" />
-                                      <i className="ic-yellow fa fa-star" />
-                                      <i className="ic-yellow fa fa-star" />
-                                      <i className="ic-yellow fa fa-star" />
-                                      <i className="ic-yellow fa fa-star" />
-                                    </div>
-                                    <p>
-                                      Lorem ipsum dolor sit amet, consetetur
-                                      sadipscing elitr, sed diam nonumy eirmod
-                                      tempor invidunt ut labore et dolore magna
-                                      aliquyam erat, sed diam voluptua. At vero
-                                      eos et accusam et justo duo dolores et ea
-                                      rebum. Stet clita kasd gubergren, no sea
-                                      takimata
-                                    </p>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div> */}
                       </div>
                     </div>
                   </div>
