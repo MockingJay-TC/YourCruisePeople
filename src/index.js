@@ -21,14 +21,9 @@ import Faq from "./components/faq";
 import Contact from "./components/contact";
 import Error from "./components/error";
 import CommingSoon from "./components/comming-soon";
-import UserProfile from "./components/user-profile";
-import Blog from "./components/blog";
-import BlogV2 from "./components/blog-v2";
-import BlogV3 from "./components/blog-v3";
-import BlogDetails from "./components/blog-details";
 import MyPage from "./components/myPage";
 import City from "./components/city";
-import Vessel from './components/vessel';
+import Vessel from "./components/vessel";
 
 class Root extends Component {
   render() {
@@ -43,7 +38,7 @@ class Root extends Component {
             <Route path="/tour-list-v3" component={TourListV3} />
             <Route path="/tour-details" component={TourDetails} />
             <Route path="/myPage" component={MyPage} />
-            <Route path='/vessel' component={Vessel} />
+            <Route path="/vessel" component={Vessel} />
             <Route path="/destination-list" component={DestinationLIst} />
             <Route path="/destination-list-v2" component={DestinationLIstV2} />
             <Route path="/destination-details" component={DestinationDetails} />
@@ -54,11 +49,6 @@ class Root extends Component {
             <Route path="/contact" component={Contact} />
             <Route path="/error" component={Error} />
             <Route path="/comming-soon" component={CommingSoon} />
-            <Route path="/user-profile" component={UserProfile} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/blog-v2" component={BlogV2} />
-            <Route path="/blog-v3" component={BlogV3} />
-            <Route path="/blog-details" component={BlogDetails} />
           </Switch>
         </div>
       </HashRouter>
@@ -68,4 +58,4 @@ class Root extends Component {
 
 export default Root;
 
-ReactDOM.render(<Root />, document.getElementById("viaje"));
+ReactDOM.render(<Root />, document.getElementById("root"));
