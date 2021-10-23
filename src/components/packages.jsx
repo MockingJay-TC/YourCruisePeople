@@ -6,7 +6,6 @@ import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 
 const TourListPageV2 = () => {
-  // let element = JSON.parse(localStorage.getItem("package"));
   return (
     <div>
       <Navbar />

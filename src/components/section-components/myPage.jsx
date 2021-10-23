@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import parse from "html-react-parser";
 import Axios from "axios";
 
 const MyPage = () => {
-  // let products = JSON.parse(localStorage.getItem("package"));
   const [filteredPackage, setFilteredPackage] = useState([]);
   const [newPackage, setNewPackage] = useState(
     JSON.parse(localStorage.getItem("package")) !== null
@@ -158,15 +156,7 @@ const MyPage = () => {
                           Itinerary
                         </a>
                       </li>
-                      {/* <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          data-toggle="tab"
-                          href="#tabs_2"
-                        >
-                          Terms & Condition
-                        </a>
-                      </li> */}
+
                       <li className="nav-item">
                         <a
                           className="nav-link"
@@ -199,7 +189,6 @@ const MyPage = () => {
                         <a
                           className="btn btn-yellow"
                           href={newPackage.brochure_url}
-                          // href="https://drive.google.com/u/0/uc?id=1Mnr-fM92hGB2JbHCvSspbRIPdLrgOmpw&export=download"
                           download
                         >
                           <span>
@@ -326,12 +315,6 @@ const MyPage = () => {
                         <table className="table table-hover">
                           <thead className="thead-light">
                             <tr>
-                              {/* {cruisePackage &&
-                                cruisePackage.itinerary.map((item) => (
-                                  <th scope="col" key={item.id}>
-                                    {item.day}
-                                  </th>
-                                ))} */}
                               <th scope="col">Day</th>
                               <th scope="col">Port/Activity</th>
                               <th scope="col">Arrival</th>

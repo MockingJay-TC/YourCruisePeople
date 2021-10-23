@@ -23,7 +23,7 @@ const GalleryDetails = () => {
         <div className="row justify-content-center">
           <div className="col-lg-7">
             <div className="section-title text-center">
-              <h2 className="title">Beautiful Beach of Greece</h2>
+              <h2 className="title">Beautiful Pictures of Clients</h2>
             </div>
           </div>
         </div>

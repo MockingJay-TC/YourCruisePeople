@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class IntroV3 extends Component {
   render() {
     let publicUrl = process.env.PUBLIC_URL + "/";
@@ -14,7 +13,6 @@ class IntroV3 extends Component {
             </h2>
           </div>
           <div className="row">
-           
             <div className="col-lg-4 col-md-6 pt-5">
               <div className="single-intro style-two">
                 <div className="thumb pt-5">
@@ -37,11 +35,6 @@ class IntroV3 extends Component {
                     />
                   </a>
                 </div>
-                {/* <h4 className="intro-title">Great Hotels</h4>
-                <p>
-                  I have always made a living to make movies, never the other
-                  way around.I first I washed dishes in a seafood
-                </p> */}
               </div>
             </div>
             <div className="col-lg-4 col-md-6 pt-5">
@@ -54,11 +47,6 @@ class IntroV3 extends Component {
                     />
                   </a>
                 </div>
-                {/* <h4 className="intro-title">Fast Booking</h4>
-                <p>
-                  Aenean sed nibh a magna posuere tempor. Nunc faucibus nunc
-                  aliquet. Donec congue, nunc vel tempor
-                </p> */}
               </div>
             </div>
           </div>

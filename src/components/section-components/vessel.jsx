@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { Link } from "react-router-dom";
 
 const Vessel = () => {
   const element = JSON.parse(localStorage.getItem("package"));
   const [vessel, setVessel] = useState(
     element.vessel !== null ? element.vessel : []
   );
-  const [otherVessels, setVessels] = useState(
-    JSON.parse(localStorage.getItem("otherVessels"))
-  );
 
   useEffect(() => {
     const url = "";
     Axios.get(url).then((res) => {});
   });
-  let publicUrl = process.env.PUBLIC_URL + "/";
   return (
     <div>
       <div className="destinations-details-page mg-top--70">

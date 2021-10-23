@@ -8,18 +8,6 @@ const City = () => {
     JSON.parse(localStorage.getItem("package"))
   );
 
-  // useEffect(() => {
-  //   const url = "https://your-cruise-people-cms.herokuapp.com/cities";
-  //   // Axios.get(url).then((res) => {
-  //   //   console.log(res.data);
-  //   //   setOtherCities(res.data);
-  //   // });
-  //   Axios.get(url).then((res) => {
-  //     localStorage.setItem("otherCities", JSON.stringify(res.data));
-  //   });
-  // }, []);
-  let publicUrl = process.env.PUBLIC_URL + "/";
-  let imagealt = "image";
   return (
     <div>
       <div className="destinations-details-page mg-top--70">

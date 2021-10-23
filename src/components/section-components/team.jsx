@@ -118,11 +118,3 @@ const Team = () => {
 };
 
 export default Team;
-//     (<div>
-//         {team.map(person=>(
-//             <div key={person.id}>
-//                 <p>{person.title}</p>
-//             </div>
-//         ))}
-//     </div>
-// )

@@ -7,7 +7,6 @@ const About = () => {
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/about";
     Axios.get(url).then((res) => {
-      console.log(res.data.side_image_big);
       setAbout(res.data);
     });
   }, []);
