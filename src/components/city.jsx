@@ -9,7 +9,7 @@ const CityPage = () => {
   return (
     <div>
       <Navbar />
-      <PageHeader headertitle={cityName.name} />
+      <PageHeader headertitle={cityName && cityName.name} />
       <City />
       <Footer />
     </div>

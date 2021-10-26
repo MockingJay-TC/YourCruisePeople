@@ -176,25 +176,36 @@ const MyPage = () => {
                         </a>
                       </li>
 
-                      <li className="d-flex justify-content-around">
+                      <li className="d-flex center justify-content-around text-center">
                         <a
-                          className="btn btn-yellow"
+                          className="btn btn-yellow text-center"
                           data-target="#exampleModal"
                           data-toggle="modal"
                           data-whatever="@mdo"
+                          style={{
+                            width: 150,
+
+                            margin: "auto",
+                            textAlign: "center",
+                          }}
                         >
-                          <i className="fa fa-sign-in" aria-hidden="true" />
                           <span>Contact Us</span>
                         </a>
                         <a
                           className="btn btn-yellow"
                           href={newPackage.brochure_url}
                           download
+                          style={{
+                            width: 160,
+                            padding: 0,
+                            paddingLeft: 5,
+                            margin: "auto",
+                            marginTop: 20,
+                            marginBottom: 20,
+                            textAlign: "center",
+                          }}
                         >
-                          <span>
-                            Available Excursions
-                            <i className="ti-download" />
-                          </span>
+                          <span>Available Excursion</span>
                         </a>
                       </li>
                       {/* testing a theory start*/}
@@ -533,7 +544,11 @@ const MyPage = () => {
                       <img
                         src={pack.banner_image[0] && pack.banner_image[0].url}
                         alt="img"
-                        // style={{ maxWidth: 400 }}
+                        style={{
+                          width: "100%",
+                          height: 300,
+                          objectFit: "cover",
+                        }}
                       />
                     </div>
                     <div className="details">

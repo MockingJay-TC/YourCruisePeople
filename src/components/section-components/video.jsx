@@ -5,6 +5,9 @@ import Axios from "axios";
 const Video = (props) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const [about, setAbout] = useState("");
+  const myVideo = "https://www.youtube.com/watch?v=GG-vJLwIYng";
+  const myImage =
+    "https://bucket-wonchunii.s3.eu-west-1.amazonaws.com/cruise-people/santorini_full_9092297778.jpg";
 
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/about";
@@ -52,10 +55,13 @@ const Video = (props) => {
           >
             <div className="video-popup-wrap">
               <div className="thumb">
-                <img src={Image} />
+                <img src={Image ? Image : myImage} />
               </div>
               <div className="video-popup-btn">
-                <a href={Video_url} className="video-play-btn mfp-iframe">
+                <a
+                  href={Video_url ? Video_url : myVideo}
+                  className="video-play-btn mfp-iframe"
+                >
                   <i className="fa fa-play" />
                 </a>
               </div>

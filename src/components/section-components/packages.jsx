@@ -15,16 +15,12 @@ const Packages = () => {
   return (
     <div className="tour-list-area pd-top-120 viaje-go-top">
       <div className="container">
-        <div className="row">
-          <div className="col-xl-12 col-lg-12 order-lg-12">
-            <div className="tp-tour-list-search-area"></div>
-            <div className="tour-list-area">
-              {myPackages &&
-                myPackages.map((myPackage) => (
-                  <div
-                    className="single-destinations-list style-three"
-                    key={myPackage.id}
-                  >
+        <div className="row justify-content-center">
+          {myPackages &&
+            myPackages.map((myPackage) => (
+              <div className="col-lg-4 col-md-6 order-lg-4">
+                <div className="tour-list-area">
+                  <div className="single-destinations-list" key={myPackage.id}>
                     <div className="thumb">
                       <img
                         src={
@@ -32,6 +28,7 @@ const Packages = () => {
                           myPackage.banner_image[0].url
                         }
                         alt="list"
+                        style={{ width: '100%', height: 300, objectFit: "cover" }}
                       />
                     </div>
                     <div className="details">
@@ -81,9 +78,9 @@ const Packages = () => {
                       </div>
                     </div>
                   </div>
-                ))}
-            </div>
-          </div>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>
