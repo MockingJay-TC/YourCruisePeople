@@ -13,7 +13,7 @@ const Faq = () => {
       console.log(res.data);
       setQuestions(res.data);
     });
-  },[]);
+  }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
 
   return (
@@ -35,13 +35,13 @@ const Faq = () => {
                     <a
                       className="nav-link active"
                       data-toggle="tab"
-                      href="#tabs_1"
+                      href="#tabs_a"
                     >
                       Trip style
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" data-toggle="tab" href="#tabs_2">
+                    <a className="nav-link" data-toggle="tab" href="#tabs_b">
                       Travelling in a group
                     </a>
                   </li>
@@ -80,7 +80,7 @@ const Faq = () => {
                       "url(" + publicUrl + "assets/img/others/12.png)",
                   }}
                 >
-                  <div className="tab-pane fade show active" id="tabs_1">
+                  <div className="tab-pane fade show active" id="tabs_a">
                     <div className="faq-details">
                       <h6>YourCruisePeople</h6>
                       <p>
@@ -103,7 +103,7 @@ const Faq = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="tab-pane fade" id="tabs_2">
+                  <div className="tab-pane fade" id="tabs_b">
                     <div className="faq-details">
                       <h6>
                         02 I have special dietary requirements – will they be
