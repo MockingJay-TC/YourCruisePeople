@@ -160,7 +160,7 @@ class Banner extends Component {
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
                             <p>5 Star</p>
-                            <h2>Hotel</h2>
+                            <h2>Cruise</h2>
                             <p className="tp-price-meta-details">
                               Hotels <span>to choice</span>
                             </p>
