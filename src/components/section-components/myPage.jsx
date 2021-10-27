@@ -96,7 +96,7 @@ const MyPage = () => {
             </div>
           </div>
           {/* destinations-client-review-slider start */}
-          <h4 className="single-page-small-title">Package Destinations</h4>
+          <h4 className="single-page-small-title">Featured Destinations</h4>
           <div className="destinations-client-review-slider tp-common-slider-style">
             {newPackage?.cities?.map((city) => (
               <div
@@ -500,6 +500,7 @@ const MyPage = () => {
                                       {price.description}
                                     </h4>
                                     <div className="tp-price-meta">
+                                      Staring From{" "}
                                       <h2>$ {price.starting_price}</h2>
                                     </div>
                                   </div>
