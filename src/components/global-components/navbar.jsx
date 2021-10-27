@@ -88,11 +88,6 @@ class Navbar extends Component {
           </div>
           <div className="nav-right-content">
             <ul>
-              <li>
-                <Link className="btn btn-yellow" to="#">
-                  Book Now <i className="fa fa-paper-plane" />
-                </Link>
-              </li>
               <li className="search"></li>
             </ul>
           </div>

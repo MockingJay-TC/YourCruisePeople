@@ -20,22 +20,21 @@ const Vessel = () => {
             <div className="col-xl-10">
               <div className="destinations-details-main-slider-wrap">
                 <div className="destinations-details-main-slider">
-                  {vessel.images &&
-                    vessel.images.map((citi) => {
-                      if (citi.name.slice(0, 3) === "oly")
-                        return (
-                          <div className="d-details-main-slider-item">
-                            <img
-                              src={citi.url}
-                              alt="img"
-                              style={{
-                                height: 700,
-                                width: 1350,
-                                objectFit: "cover",
-                              }}
-                            />
-                          </div>
-                        );
+                  {vessel.slider &&
+                    vessel.slider.map((citi) => {
+                      return (
+                        <div className="d-details-main-slider-item">
+                          <img
+                            src={citi.url}
+                            alt="img"
+                            style={{
+                              height: 700,
+                              width: 1350,
+                              objectFit: "cover",
+                            }}
+                          />
+                        </div>
+                      );
                     })}
                 </div>
                 <div className="destinations-details-main-slider-controls">
@@ -79,28 +78,24 @@ const Vessel = () => {
               </p>
               <div className="user-recent-view">
                 <div className="row mb-5">
-                  {vessel.images &&
-                    vessel.images.map((citi) => {
-                      if (
-                        citi.name.slice(0, 2) === "IA" ||
-                        citi.name.slice(0, 2) === "IC"
-                      )
-                        return (
-                          <div className="col-sm-3 mb-5">
-                            <div className="single-destinations-list style-two">
-                              <div className="thumb">
-                                <img
-                                  src={citi.url}
-                                  alt="img"
-                                  style={{
-                                    objectFit: "cover",
-                                  }}
-                                />
-                                {/* 387 x 258 */}
-                              </div>
+                  {vessel.inside_cabin &&
+                    vessel.inside_cabin.map((citi) => {
+                      return (
+                        <div className="col-sm-3 mb-5">
+                          <div className="single-destinations-list style-two">
+                            <div className="thumb">
+                              <img
+                                src={citi.url}
+                                alt="img"
+                                style={{
+                                  objectFit: "cover",
+                                }}
+                              />
+                              {/* 387 x 258 */}
                             </div>
                           </div>
-                        );
+                        </div>
+                      );
                     })}
                 </div>
               </div>
@@ -113,28 +108,24 @@ const Vessel = () => {
               </p>
               <div className="user-recent-view">
                 <div className="row mb-5">
-                  {vessel.images &&
-                    vessel.images.map((citi) => {
-                      if (
-                        citi.name.slice(0, 2) === "XA" ||
-                        citi.name.slice(0, 2) == "SB"
-                      )
-                        return (
-                          <div className="col-sm-3 mb-5">
-                            <div className="single-destinations-list style-two">
-                              <div className="thumb">
-                                <img
-                                  src={citi.url}
-                                  alt="img"
-                                  style={{
-                                    objectFit: "cover",
-                                  }}
-                                />
-                                {/* 387 x 258 */}
-                              </div>
+                  {vessel.outside_cabin &&
+                    vessel.outside_cabin.map((citi) => {
+                      return (
+                        <div className="col-sm-3 mb-5">
+                          <div className="single-destinations-list style-two">
+                            <div className="thumb">
+                              <img
+                                src={citi.url}
+                                alt="img"
+                                style={{
+                                  objectFit: "cover",
+                                }}
+                              />
+                              {/* 387 x 258 */}
                             </div>
                           </div>
-                        );
+                        </div>
+                      );
                     })}
                 </div>
               </div>
