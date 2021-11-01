@@ -28,7 +28,11 @@ const Packages = () => {
                           myPackage.banner_image[0].url
                         }
                         alt="list"
-                        style={{ width: '100%', height: 300, objectFit: "cover" }}
+                        style={{
+                          width: "100%",
+                          height: 300,
+                          objectFit: "cover",
+                        }}
                       />
                     </div>
                     <div className="details">
@@ -51,7 +55,11 @@ const Packages = () => {
                           );
                         }}
                       >
-                        <Link to="/myPage">{myPackage && myPackage.name}</Link>
+                        <Link
+                          to={`/myPage/${myPackage.name.split(" ").join("-")}`}
+                        >
+                          {myPackage && myPackage.name}
+                        </Link>
                       </h4>
                       <p className="content">
                         {myPackage.description &&

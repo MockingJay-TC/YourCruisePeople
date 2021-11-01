@@ -4,6 +4,7 @@ import Axios from "axios";
 
 const MyPage = () => {
   const [filteredPackage, setFilteredPackage] = useState([]);
+
   const [newPackage, setNewPackage] = useState(
     JSON.parse(localStorage.getItem("package")) !== null
       ? JSON.parse(localStorage.getItem("package"))
@@ -173,6 +174,15 @@ const MyPage = () => {
                           href="#tabs_4"
                         >
                           Pricing
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          data-toggle="tab"
+                          href="#tabs_5"
+                        >
+                          Terms & Conditions
                         </a>
                       </li>
 
@@ -568,9 +578,12 @@ const MyPage = () => {
                             "..."}
                       </p>
                       <Link
-                        to="/myPage"
+                        to={`/myPage/${pack.name.split(" ").join("-")}`}
                         onClick={() => {
                           localStorage.setItem("package", JSON.stringify(pack));
+                          window.location.assign(
+                            `/viaje#/myPage/${pack.name.split(" ").join("-")}`
+                          );
                           window.location.reload();
                         }}
                         className="btn btn-gray"
