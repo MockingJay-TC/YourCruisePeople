@@ -499,9 +499,9 @@ const MyPage = () => {
                         <div className="user-recent-view">
                           <h2 className="user-details-title">Package Prices</h2>
                           <div className="row">
-                            <div className="col-sm-12">
-                              <div className="single-destinations-list style-two">
-                                {newPackage?.prices?.map((price) => (
+                            {newPackage?.prices?.map((price) => (
+                              <div className="col-lg-6 d-flex" key={price.id}>
+                                <div className="single-destinations-list style-two">
                                   <div
                                     className="details"
                                     key={price && price.id}
@@ -514,9 +514,9 @@ const MyPage = () => {
                                       <h2>$ {price.starting_price}</h2>
                                     </div>
                                   </div>
-                                ))}
+                                </div>
                               </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>

@@ -111,7 +111,7 @@ const Vessel = () => {
                   {vessel.outside_cabin &&
                     vessel.outside_cabin.map((citi) => {
                       return (
-                        <div className="col-sm-3 mb-5">
+                        <div className="col-sm-3 mb-5" key={citi.id}>
                           <div className="single-destinations-list style-two">
                             <div className="thumb">
                               <img
