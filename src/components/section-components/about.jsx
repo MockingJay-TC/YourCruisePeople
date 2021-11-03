@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import {Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [about, setAbout] = useState(null);
+  const [spinner, setSpinner] = useState(false);
 
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/about";

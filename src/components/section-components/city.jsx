@@ -7,6 +7,7 @@ const City = () => {
   const [otherCities, setOtherCities] = useState(
     JSON.parse(localStorage.getItem("package"))
   );
+  const [spinner, setSpinner] = useState(false);
 
   return (
     <div>

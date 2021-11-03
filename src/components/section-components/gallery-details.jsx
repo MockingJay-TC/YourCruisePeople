@@ -7,6 +7,7 @@ const GalleryDetails = () => {
       ? JSON.parse(localStorage.getItem("gall"))
       : []
   );
+  const [spinner, setSpinner] = useState(false);
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/galleries";
     Axios.get(url).then((res) => {

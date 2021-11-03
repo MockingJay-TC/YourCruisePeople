@@ -6,6 +6,7 @@ const Vessel = () => {
   const [vessel, setVessel] = useState(
     element.vessel !== null ? element.vessel : []
   );
+  const [spinner, setSpinner] = useState(false);
 
   useEffect(() => {
     const url = "";
@@ -67,7 +68,7 @@ const Vessel = () => {
               {/* <p>Continen</p> */}
             </div>
             <div className="col-lg-12">
-              <p>{vessel.description}</p>
+              <p class="mb-5">{vessel.description}</p>
 
               <p>
                 <strong style={{ fontSize: 24, fontWeight: 600 }}>

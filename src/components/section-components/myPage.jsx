@@ -4,6 +4,7 @@ import Axios from "axios";
 
 const MyPage = () => {
   const [filteredPackage, setFilteredPackage] = useState([]);
+  const [spinner, setSpinner] = useState(false);
 
   const [newPackage, setNewPackage] = useState(
     JSON.parse(localStorage.getItem("package")) !== null

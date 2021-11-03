@@ -5,6 +5,7 @@ import Axios from "axios";
 const Packages = () => {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const [myPackages, setMyPackages] = useState([]);
+  const [spinner, setSpinner] = useState(false);
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
