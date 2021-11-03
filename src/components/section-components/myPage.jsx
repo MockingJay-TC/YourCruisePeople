@@ -520,6 +520,75 @@ const MyPage = () => {
                           </div>
                         </div>
                       </div>
+                      <div className="tab-pane fade" id="tabs_5">
+                        <div className="details">
+                          <h3 className="title" style={{ fontWeight: 700 }}>
+                            <Link to="/vessel">Terms and Condition</Link>
+                          </h3>
+                          <p className="content">
+                            Please take some time to read through this document
+                          </p>
+                          <button
+                            className="btn btn-info "
+                            data-toggle="modal"
+                            data-whatever="@mdo"
+                            data-target="#openPdf"
+                          >
+                            <span>Open Document</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div
+                        class="modal fade"
+                        id="openPdf"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="openPdfModal"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div
+                            class="modal-content"
+                            style={{ height: "800px" }}
+                          >
+                            <div class="modal-header">
+                              <h5 className="modal-title" id="openPdfModal">
+                                Terms and Conditions
+                              </h5>
+                              <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <iframe
+                                className="embed-responsive-item"
+                                src={newPackage?.tnc && newPackage.tnc.url}
+                                frameBorder="0"
+                                scrolling="auto"
+                                height="100%"
+                                width="100%"
+                                allowFullScreen
+                              >
+                                LOOK AT ME{" "}
+                              </iframe>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-warning"
+                                data-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
