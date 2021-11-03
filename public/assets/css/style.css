@@ -4635,7 +4635,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .single-destinations-list .list-price-meta .tp-price-meta {
   padding-left: 30px;
   margin-left: 20px;
-  border-left: 1px solid #cfd3de;
+  /* border-left: 1px solid #cfd3de; */
   padding-top: 0;
 }
 .single-destinations-list.style-two {

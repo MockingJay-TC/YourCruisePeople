@@ -85,7 +85,7 @@ const MyPage = () => {
               <p>
                 Vessel:
                 <Link to="/vessel">
-                  <strong>{newPackage.vessel && newPackage.vessel.name}</strong>
+                  <strong>{ newPackage.vessel && newPackage.vessel.name}</strong>
                 </Link>
               </p>
             </div>
@@ -123,11 +123,13 @@ const MyPage = () => {
                     <p className="content">
                       <strong>
                         {city.description &&
-                          city.description.split("**")[1].slice(0, 25) + "..."}
+                          city?.description?.split("**")[1]?.slice(0, 25) +
+                            "..."}
                       </strong>
                       <br />
                       {city.description &&
-                        city.description.split("**")[2].slice(0, 180) + "..."}
+                        city?.description?.split("**")[2]?.slice(0, 180) +
+                          "..."}
                     </p>
                   </div>
                 </div>
@@ -495,7 +497,7 @@ const MyPage = () => {
                   <div className="single-destination-grid text-center">
                     <div className="thumb">
                       <img
-                        src={pack.banner_image[0] && pack.banner_image[0].url}
+                        src={pack.cover_image && pack.cover_image.url}
                         alt="img"
                         style={{
                           width: "100%",
@@ -520,12 +522,10 @@ const MyPage = () => {
                             "..."}
                       </p>
                       <Link
-                        to={`/myPage/${pack.name.split(" ").join("-")}`}
+                        to={`/myPage/${pack.slug}`}
                         onClick={() => {
                           localStorage.setItem("package", JSON.stringify(pack));
-                          window.location.assign(
-                            `/viaje#/myPage/${pack.name.split(" ").join("-")}`
-                          );
+                          window.location.assign(`/viaje#/myPage/${pack.slug}`);
                           window.location.reload();
                         }}
                         className="btn btn-gray"

@@ -48,7 +48,7 @@ const HolidayPlan = () => {
             >
               <div className="thumb">
                 <img
-                  src={holiday[1] && holiday[1].banner_image[0].url}
+                  src={holiday[1] && holiday[1].cover_image.url}
                   alt="list"
                 />
               </div>
@@ -79,7 +79,7 @@ const HolidayPlan = () => {
             >
               <div className="thumb">
                 <img
-                  src={holiday[1] && holiday[1].banner_image[0].url}
+                  src={holiday[1] && holiday[1].cover_image.url}
                   alt="list"
                 />
               </div>
@@ -110,7 +110,7 @@ const HolidayPlan = () => {
             >
               <div className="thumb">
                 <img
-                  src={holiday[1] && holiday[1].banner_image[0].url}
+                  src={holiday[1] && holiday[1].cover_image.url}
                   alt="list"
                 />
               </div>
@@ -141,7 +141,7 @@ const HolidayPlan = () => {
             >
               <div className="thumb">
                 <img
-                  src={holiday[1] && holiday[1].banner_image[0].url}
+                  src={holiday[1] && holiday[1]?.cover_image.url}
                   alt="list"
                 />
               </div>

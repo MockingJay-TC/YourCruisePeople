@@ -20,9 +20,12 @@ const City = () => {
                 <div className="destinations-details-main-slider">
                   {city.images &&
                     city.images.map((citi) => (
-                      <div className="d-details-main-slider-item">
+                      <div
+                        className="d-details-main-slider-item "
+                        key={citi.id}
+                      >
                         <img
-                          src={citi.url}
+                          src={citi?.url}
                           alt="img"
                           style={{
                             height: 700,
@@ -59,13 +62,15 @@ const City = () => {
           {/* destinations-details-main-slider End */}
           <div className="row destinations-details-location-name">
             <div className="col-lg-12">
-              <h3>{city.name}</h3>
+              <h3>{city?.name}</h3>
               <p>Continen</p>
             </div>
             <div className="col-lg-12">
               <p>
                 <strong style={{ fontSize: 20, fontWeight: 600 }}>
-                  {city && city.description.split("**")[1]}
+                  {city && city.description
+                    ? city.description.split("**")[1]
+                    : ""}
                 </strong>
                 <br />
                 {city && city.description.split("**")[2]}
@@ -110,11 +115,17 @@ const City = () => {
                           </h4>
                         </Link>
                         <p className="content">
+                          {/* <strong>
+                            {city.description &&
+                              city?.description?.split("**")[1]?.slice(0, 25) +
+                                "..."}
+                          </strong> */}
                           <strong style={{ fontSize: 16, fontWeight: 600 }}>
-                            {otherCity.description &&
-                              otherCity.description
-                                .split("**")[1]
-                                .slice(0, 25) + "..."}
+                            {otherCity.description
+                              ? otherCity?.description
+                                  ?.split("**")[1]
+                                  .slice(0, 25) + "..."
+                              : ""}
                           </strong>
                           <br />
                           {otherCity.description &&
