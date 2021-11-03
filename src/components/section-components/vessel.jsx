@@ -24,7 +24,10 @@ const Vessel = () => {
                   {vessel.slider &&
                     vessel.slider.map((citi) => {
                       return (
-                        <div className="d-details-main-slider-item">
+                        <div
+                          className="d-details-main-slider-item"
+                          key={citi.id}
+                        >
                           <img
                             src={citi.url}
                             alt="img"
@@ -68,7 +71,7 @@ const Vessel = () => {
               {/* <p>Continen</p> */}
             </div>
             <div className="col-lg-12">
-              <p class="mb-5">{vessel.description}</p>
+              <p className="mb-5">{vessel.description}</p>
 
               <p>
                 <strong style={{ fontSize: 24, fontWeight: 600 }}>
