@@ -84,11 +84,7 @@ const MyPage = () => {
               <p>
                 Vessel:
                 <Link to="/vessel">
-                  {" "}
-                  <strong>
-                    {" "}
-                    {newPackage.vessel && newPackage.vessel.name}{" "}
-                  </strong>
+                  <strong>{newPackage.vessel && newPackage.vessel.name}</strong>
                 </Link>
               </p>
             </div>
@@ -106,7 +102,6 @@ const MyPage = () => {
               >
                 <div className="single-destination-grid">
                   <div className="thumb">
-                    {/* {console.log(city.images[0] && city.images[0].url)} */}
                     <img
                       src={city.images[0] && city.images[0].url}
                       alt="img"
@@ -343,132 +338,14 @@ const MyPage = () => {
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary[0] &&
-                                  newPackage.itinerary[0].day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage.itinerary[0]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[0]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[0]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[1]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[1]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[1]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[1]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[2]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[2]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[2]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[2]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[3]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[3]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[3]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[3]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[4]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[4]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[4]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[4]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[5]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[5]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[5]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[5]?.departure}
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[6]?.day}
-                              </th>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[6]?.portActivity}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[6]?.arrival}
-                              </td>
-                              <td>
-                                {newPackage.itinerary &&
-                                  newPackage?.itinerary[6]?.departure}
-                              </td>
-                            </tr>
+                            {newPackage.itinerary.map((itiner) => (
+                              <tr>
+                                <th scope="row">{itiner && itiner?.day}</th>
+                                <td>{itiner && itiner?.portActivity}</td>
+                                <td>{itiner && itiner?.arrival}</td>
+                                <td>{itiner && itiner?.departure}</td>
+                              </tr>
+                            ))}
                           </tbody>
                         </table>
                       </div>
@@ -595,12 +472,7 @@ const MyPage = () => {
               </div>
             </div>
           </div>
-
           {/* Itinerary end */}
-
-          {/* location-review-area start */}
-
-          {/* location-review-area start */}
         </div>
       </div>
       <div className="destination-area pd-top-120">
