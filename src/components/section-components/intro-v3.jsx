@@ -42,7 +42,7 @@ class IntroV3 extends Component {
                 <div className="thumb pt-5">
                   <a href="https://www.dreamcruiseline.com/en" target="_blank">
                     <img
-                      src={publicUrl + "assets/img/logos/msc.png"}
+                      src={publicUrl + "assets/img/logos/drm.png"}
                       alt="img"
                     />
                   </a>
