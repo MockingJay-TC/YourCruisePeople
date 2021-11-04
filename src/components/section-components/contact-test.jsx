@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 const Contact = () => {
-
   const [loading, setLoading] = useState(false);
   const [contact, setContact] = useState(null);
 
@@ -71,9 +70,8 @@ const Contact = () => {
               <div className="section-title text-lg-center text-left">
                 <h2 className="title">Get In Touch!!!</h2>
                 <p>
-                  Vestibulum blandit viverra convallis. Pellentesque ligula
-                  urna, fermentum ut semper in, tincidunt nec dui. Morbi mauris
-                  lacus, consequat eget justo in
+                  We’re here to help and answer any question you might have. We
+                  look forward to hearing from you 😃
                 </p>
               </div>
             </div>
@@ -174,7 +172,7 @@ const Contact = () => {
                 <p>
                   <i className="fa fa-phone" />
                   <span>
-                    sell phone: <span>{contact && contact.telephone1}</span>
+                    cell phone: <span>{contact && contact.telephone1}</span>
                     <br />
                     telephone: <span>{contact && contact.telephone2}</span>
                     <br />

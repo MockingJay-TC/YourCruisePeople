@@ -12,7 +12,6 @@ class Banner extends Component {
                   <div className="row">
                     <div className="col-lg-9 col-sm-8">
                       <div className="banner-inner">
-                        <p className="banner-cat s-animate-1">Packages</p>
                         <h2 className="banner-title s-animate-2">Abu Dhabi </h2>
                       </div>
                     </div>
@@ -30,31 +29,29 @@ class Banner extends Component {
                       <div className="row">
                         <div className="col-sm-4 s-animate-3">
                           <div className="tp-price-meta">
-                            <p>Starting Price</p>
+                            <p>Starting Price:</p>
                             <h2>
-                              620 <small>$</small>
+                              3,950 <small>$</small>
                             </h2>
                             <p className="tp-price-meta-details">
-                              7 Days Tour <span>on 4 person</span>
+                              10 Days <span>for 2 persons</span>
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
-                            {/* <p>5 Star</p> */}
-                            <h2>Cruise</h2>
+                            <p>5 Star All-Inclusive Cruise and Hotels</p>
+                            <h2>MSC Virtuosa vessel</h2>
                             <p className="tp-price-meta-details">
-                              Cruises <span>to choice</span>
+                              {/* Cruises <span>to choice</span> */}
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-5">
                           <div className="tp-price-meta">
                             <p>Cruise date</p>
-                            <h2>17</h2>
-                            <p className="tp-price-meta-details">
-                              November <span>or later</span>
-                            </p>
+                            <h2>24</h2>
+                            <p className="tp-price-meta-details">December</p>
                           </div>
                         </div>
                       </div>
@@ -71,8 +68,7 @@ class Banner extends Component {
                   <div className="row">
                     <div className="col-lg-9 col-sm-8">
                       <div className="banner-inner">
-                        <p className="banner-cat s-animate-1">Hot Places</p>
-                        <h2 className="banner-title s-animate-2">Mykonos </h2>
+                        <h2 className="banner-title s-animate-2">Mykonos</h2>
                       </div>
                     </div>
                     <div className="col-lg-3 col-sm-4">
@@ -89,30 +85,30 @@ class Banner extends Component {
                       <div className="row">
                         <div className="col-sm-4 s-animate-3">
                           <div className="tp-price-meta">
-                            <p>Starting Price</p>
+                            <p>Starting Price:</p>
                             <h2>
-                              720 <span>$</span>
+                              4,590 <span>$</span>
                             </h2>
                             <p className="tp-price-meta-details">
-                              7 Days Tour <span>on 2 person</span>
+                              10 Days <span>for 2 persons</span>
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
-                            <p>5 Star</p>
+                            <p>5 Star All-Inclusive Cruise and Hotels</p>
                             <h2>Cruise</h2>
                             <p className="tp-price-meta-details">
-                              Cruises <span>to choice</span>
+                              {/* Cruises <span>to choice</span> */}
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-5">
                           <div className="tp-price-meta">
                             <p>Cruise date</p>
-                            <h2>17</h2>
+                            <h2>24</h2>
                             <p className="tp-price-meta-details">
-                              September <span>or later</span>
+                              June <span>or later</span>
                             </p>
                           </div>
                         </div>
@@ -130,8 +126,8 @@ class Banner extends Component {
                   <div className="row">
                     <div className="col-lg-9 col-sm-8">
                       <div className="banner-inner">
-                        <p className="banner-cat s-animate-1">Hot Places</p>
-                        <h2 className="banner-title s-animate-2">Abu Dhabi</h2>
+                        {/* <p className="banner-cat s-animate-1">Hot Places</p> */}
+                        <h2 className="banner-title s-animate-2">Santorini</h2>
                       </div>
                     </div>
                     <div className="col-lg-3 col-sm-4">
@@ -148,30 +144,30 @@ class Banner extends Component {
                       <div className="row">
                         <div className="col-sm-4 s-animate-3">
                           <div className="tp-price-meta">
-                            <p>Price</p>
+                            <p>Starting Price: </p>
                             <h2>
-                              620 <small>$</small>
+                              3,900 <small>$</small>
                             </h2>
                             <p className="tp-price-meta-details">
-                              7 Days Tour <span>on 2 person</span>
+                              8 Days <span>for 2 persons</span>
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-4">
                           <div className="tp-price-meta">
-                            <p>5 Star</p>
+                            <p>5 Star All-Inclusive Cruise and Hotels</p>
                             <h2>Cruise</h2>
                             <p className="tp-price-meta-details">
-                              Hotels <span>to choice</span>
+                              {/* Hotels <span>to choice</span> */}
                             </p>
                           </div>
                         </div>
                         <div className="col-sm-4 s-animate-5">
                           <div className="tp-price-meta">
-                            <p>Flight date</p>
-                            <h2>17</h2>
+                            <p>Cruise date</p>
+                            <h2>12</h2>
                             <p className="tp-price-meta-details">
-                              September <span>or later</span>
+                              March <span>or later</span>
                             </p>
                           </div>
                         </div>

@@ -27,16 +27,14 @@ const HolidayPlan = () => {
                 data-wow-duration="0.6s"
                 data-wow-delay="0.1s"
               >
-                Perfect Holiday Plan
+                Today's Top Cruises
               </h2>
               <p
                 className="wow animated fadeInUp"
                 data-wow-duration="0.6s"
                 data-wow-delay="0.2s"
               >
-                No vis fastidii accumsan, ignota postulant ea mea. Vis et prima
-                integre, ei vis ridens moderatius reformidans cu vim doctus
-                accumsan ignota.
+                No Data yet
               </p>
             </div>
           </div>
@@ -75,7 +73,6 @@ const HolidayPlan = () => {
                             ))}
                         </p>
                         <h4 className="title">{vac && vac.name}</h4>
-                        <h6 className="content">Starting Price </h6>
                         <div className="tp-price-meta">
                           <h2>
                             {vac && vac.prices[1].starting_price}
