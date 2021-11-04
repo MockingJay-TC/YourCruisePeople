@@ -5,6 +5,7 @@ import Axios from "axios";
 const MyPage = () => {
   const [filteredPackage, setFilteredPackage] = useState([]);
   const [spinner, setSpinner] = useState(false);
+  let num = 1;
 
   const [newPackage, setNewPackage] = useState(
     JSON.parse(localStorage.getItem("package")) !== null
@@ -441,7 +442,7 @@ const MyPage = () => {
                       <div className="tab-pane fade" id="tabs_5">
                         <div className="details">
                           <h3 className="title" style={{ fontWeight: 700 }}>
-                            <Link to="/vessel">Terms and Condition</Link>
+                            Terms and Condition
                           </h3>
                           <p className="content">
                             Please take some time to read through this document
@@ -454,6 +455,41 @@ const MyPage = () => {
                           >
                             <span>Open Document</span>
                           </button>
+                        </div>
+                      </div>
+                      <div className="tab-pane fade" id="tabs_8">
+                        <div className="details">
+                          <h3 className="title" style={{ fontWeight: 700 }}>
+                            Notice
+                          </h3>
+                          {newPackage?.notice?.map((note) => (
+                            <p className="content">
+                              {`${num++}. `}{note.element}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="tab-pane fade" id="tabs_9">
+                        <div className="user-recent-view">
+                          <h2 className="user-details-title">
+                            Available Dates
+                          </h2>
+                          <div className="row">
+                            {newPackage?.available_dates?.map((date) => (
+                              <div className="col-lg-6 d-flex" key={date.id}>
+                                <div className="single-destinations-list style-two">
+                                  <div
+                                    className="details"
+                                    key={date && date.id}
+                                  >
+                                    <h4 className="title">
+                                      {date.travel_dates}
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
                       <div
