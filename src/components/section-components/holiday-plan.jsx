@@ -7,6 +7,8 @@ const HolidayPlan = () => {
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
+      console.log("holiday Victor, it's time for holiday");
+      console.log(res.data);
       setHoliday(res.data);
     });
   }, []);
@@ -39,131 +41,53 @@ const HolidayPlan = () => {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-3 col-sm-6">
-            <div
-              className="single-destinations-list style-two wow animated fadeInUp"
-              data-wow-duration="0.4s"
-              data-wow-delay="0.1s"
-            >
-              <div className="thumb">
-                <img
-                  src={holiday[1] && holiday[1].cover_image.url}
-                  alt="list"
-                />
-              </div>
-              <div className="details">
-                <p className="location">
-                  <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
-                  {holiday[1] &&
-                    holiday[1].cities.map((city) => (
-                      <span key={city.id}> {city.name}, </span>
-                    ))}
-                </p>
-                <h4 className="title">{holiday && holiday[1].name}</h4>
-                <h6 className="content">Starting Price </h6>
-                <div className="tp-price-meta">
-                  <h2>
-                    {holiday[1] && holiday[1].prices[1].starting_price}{" "}
-                    <small>$</small>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-sm-6">
-            <div
-              className="single-destinations-list style-two wow animated fadeInUp"
-              data-wow-duration="0.7s"
-              data-wow-delay="0.2s"
-            >
-              <div className="thumb">
-                <img
-                  src={holiday[1] && holiday[1].cover_image.url}
-                  alt="list"
-                />
-              </div>
-              <div className="details">
-                <p className="location">
-                  <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
-                  {holiday[0] &&
-                    holiday[0].cities.map((city) => (
-                      <span key={city.id}> {city.name}, </span>
-                    ))}
-                </p>
-                <h4 className="title">{holiday && holiday[0].name}</h4>
-                <h6 className="content">Starting Price </h6>
-                <div className="tp-price-meta">
-                  <h2>
-                    {holiday[0] && holiday[0].prices[1].starting_price}
-                    <small>$</small>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-sm-6">
-            <div
-              className="single-destinations-list style-two wow animated fadeInUp"
-              data-wow-duration="0.9s"
-              data-wow-delay="0.3s"
-            >
-              <div className="thumb">
-                <img
-                  src={holiday[1] && holiday[1].cover_image.url}
-                  alt="list"
-                />
-              </div>
-              <div className="details">
-                <p className="location">
-                  <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
-                  {holiday[0] &&
-                    holiday[0].cities.map((city) => (
-                      <span key={city.id}> {city.name}, </span>
-                    ))}
-                </p>
-                <h4 className="title">{holiday && holiday[0].name}</h4>
-                <h6 className="content">Starting Price </h6>
-                <div className="tp-price-meta">
-                  <h2>
-                    {holiday[0] && holiday[0].prices[1].starting_price}
-                    <small>$</small>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-sm-6">
-            <div
-              className="single-destinations-list style-two wow animated fadeInUp"
-              data-wow-duration="1.1s"
-              data-wow-delay="0.4s"
-            >
-              <div className="thumb">
-                <img
-                  src={holiday[1] && holiday[1]?.cover_image.url}
-                  alt="list"
-                />
-              </div>
-              <div className="details">
-                <p className="location">
-                  <img src={publicUrl + "assets/img/icons/1.png"} alt="map" />
-                  {holiday[0] &&
-                    holiday[0].cities.map((city) => (
-                      <span key={city.id}> {city.name}, </span>
-                    ))}
-                </p>
-                <h4 className="title">{holiday && holiday[0].name}</h4>
-                <h6 className="content">Starting Price </h6>
-                <div className="tp-price-meta">
-                  <h2>
-                    {holiday[0] && holiday[0].prices[1].starting_price}
-                    <small>$</small>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="row justify-content-center">
+          {holiday &&
+            holiday?.map((vac) => {
+              if (vac.isPromo === true) {
+                return (
+                  <div className="col-lg-3 col-sm-6" key={vac.id}>
+                    <div
+                      className="single-destinations-list style-two wow animated fadeInUp"
+                      data-wow-duration="0.4s"
+                      data-wow-delay="0.1s"
+                    >
+                      <div className="thumb">
+                        <img
+                          src={vac && vac.cover_image.url}
+                          alt="list"
+                          style={{
+                            width: "100%",
+                            height: "280px",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                      <div className="details">
+                        <p className="location">
+                          <img
+                            src={publicUrl + "assets/img/icons/1.png"}
+                            alt="map"
+                          />
+                          {vac &&
+                            vac?.cities?.map((city) => (
+                              <span key={city.id}> {city.name}, </span>
+                            ))}
+                        </p>
+                        <h4 className="title">{vac && vac.name}</h4>
+                        <h6 className="content">Starting Price </h6>
+                        <div className="tp-price-meta">
+                          <h2>
+                            {vac && vac.prices[1].starting_price}
+                            <small>$</small>
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            })}
         </div>
       </div>
     </div>
