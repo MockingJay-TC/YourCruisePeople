@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 const HolidayPlan = () => {
   const [holiday, setHoliday] = useState("");
@@ -50,6 +51,7 @@ const HolidayPlan = () => {
                       data-wow-duration="0.4s"
                       data-wow-delay="0.1s"
                     >
+                      {/* <div class="card-header bg-info">PROMO</div> */}
                       <div className="thumb">
                         <img
                           src={vac && vac.cover_image.url}
@@ -67,17 +69,35 @@ const HolidayPlan = () => {
                             src={publicUrl + "assets/img/icons/1.png"}
                             alt="map"
                           />
-                          {vac &&
-                            vac?.cities?.map((city) => (
-                              <span key={city.id}> {city.name}, </span>
-                            ))}
+                          <div className="row justify-content-center ">
+                            {vac &&
+                              vac?.cities?.map((city) => (
+                                <span key={city.id}>{city.name},</span>
+                              ))}
+                          </div>
                         </p>
-                        <h4 className="title">{vac && vac.name}</h4>
-                        <div className="tp-price-meta">
+
+                        <h4
+                          className="title"
+                          onClick={() => {
+                            localStorage.setItem(
+                              "package",
+                              JSON.stringify(vac)
+                            );
+                          }}
+                        >
+                          <Link to={`/myPage/${vac.slug}`}>
+                            {vac && vac.name}
+                          </Link>
+                        </h4>
+                        <div className="tp-price-meta row justify-content-center">
                           <h2>
                             {vac && vac.prices[1].starting_price}
                             <small>$</small>
                           </h2>
+                          <div class="alert alert-info" role="alert">
+                            35% OFF
+                          </div>
                         </div>
                       </div>
                     </div>

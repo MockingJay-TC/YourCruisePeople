@@ -185,6 +185,42 @@ const MyPage = () => {
                           Terms & Conditions
                         </a>
                       </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          data-toggle="tab"
+                          href="#tabs_6"
+                        >
+                          Package Includes
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          data-toggle="tab"
+                          href="#tabs_7"
+                        >
+                          Package Excludes
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          data-toggle="tab"
+                          href="#tabs_8"
+                        >
+                          Notice
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          data-toggle="tab"
+                          href="#tabs_9"
+                        >
+                          Available Dates
+                        </a>
+                      </li>
 
                       <li className="d-flex center justify-content-around text-center">
                         <a
