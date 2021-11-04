@@ -7,29 +7,33 @@ const Packages = () => {
   const [myPackages, setMyPackages] = useState([]);
   const [myGroups, setPackageGroups] = useState([]);
   const [spinner, setSpinner] = useState(false);
-  useEffect(() => {
+
+  const fetchPackage = () => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
       console.log("Victor is this package");
       console.log(res.data);
       setMyPackages(res.data);
     });
-  }, []);
-
-  useEffect(() => {
+  };
+  const fetchGroup = () => {
     const url = "https://your-cruise-people-cms.herokuapp.com/package-groups";
     Axios.get(url).then((res) => {
       console.log("Victor is this package-groups");
       console.log(res.data);
       setPackageGroups(res.data);
     });
+  };
+  useEffect(() => {
+    fetchGroup();
+    fetchPackage();
   }, []);
 
   return (
     <div className="tour-list-area pd-top-120 viaje-go-top">
       <div className="container">
         {myGroups.map((group) => (
-          <div>
+          <div key={group.id}>
             <h2>{group.name}</h2>
 
             <div className="row justify-content-center">

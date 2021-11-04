@@ -61,26 +61,27 @@ const City = () => {
           </div>
           {/* destinations-details-main-slider End */}
           <div className="row destinations-details-location-name">
-            <div className="col-lg-12">
+            <div className="col-lg-12 mt-5">
               <h3>{city?.name}</h3>
-              <p>Continen</p>
             </div>
             <div className="col-lg-12">
               <p>
                 <strong style={{ fontSize: 20, fontWeight: 600 }}>
-                  {city && city.description
+                  {city && city.description != " No Data"
                     ? city.description.split("**")[1]
-                    : ""}
+                    : city.description}
                 </strong>
                 <br />
-                {city && city.description.split("**")[2]}
+                {city && city.description != "No Data"
+                  ? city.description.split("**")[2]
+                  : city.description}
               </p>
             </div>
           </div>
           {/* destinations-client-review-slider start */}
           <h4 className="single-page-small-title">Other Cities</h4>
           <div className="destinations-client-review-slider tp-common-slider-style">
-            {otherCities.cities &&
+            {otherCities?.cities &&
               otherCities.cities
                 .filter((ele) => {
                   if (ele.id !== city.id) {
@@ -115,22 +116,23 @@ const City = () => {
                           </h4>
                         </Link>
                         <p className="content">
-                          {/* <strong>
-                            {city.description &&
-                              city?.description?.split("**")[1]?.slice(0, 25) +
-                                "..."}
-                          </strong> */}
+                          {/* {city.description != "No Data"
+                            ? city?.description?.split("**")[1]?.slice(0, 25) +
+                              "..."
+                            : city.description} */}
                           <strong style={{ fontSize: 16, fontWeight: 600 }}>
-                            {otherCity.description
+                            {otherCity && otherCity.description != "No Data"
                               ? otherCity?.description
                                   ?.split("**")[1]
-                                  .slice(0, 25) + "..."
-                              : ""}
+                                  ?.slice(0, 25) + "..."
+                              : otherCity.description}
                           </strong>
                           <br />
-                          {otherCity.description &&
-                            otherCity.description.split("**")[2].slice(0, 180) +
-                              "..."}
+                          {otherCity && otherCity.description != "No Data"
+                            ? otherCity?.description
+                                ?.split("**")[2]
+                                ?.slice(0, 180) + "..."
+                            : otherCity?.description}
                         </p>
                       </div>
                     </div>

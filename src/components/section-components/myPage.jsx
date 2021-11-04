@@ -85,7 +85,7 @@ const MyPage = () => {
               <p>
                 Vessel:
                 <Link to="/vessel">
-                  <strong>{ newPackage.vessel && newPackage.vessel.name}</strong>
+                  <strong>{newPackage.vessel && newPackage.vessel.name}</strong>
                 </Link>
               </p>
             </div>
@@ -96,7 +96,7 @@ const MyPage = () => {
           {/* destinations-client-review-slider start */}
           <h4 className="single-page-small-title">Featured Destinations</h4>
           <div className="destinations-client-review-slider tp-common-slider-style">
-            {newPackage?.cities?.map((city) => (
+            {newPackage.cities.map((city) => (
               <div
                 className="d-client-review-slider-item"
                 key={city && city.id}
@@ -122,14 +122,16 @@ const MyPage = () => {
                     </Link>
                     <p className="content">
                       <strong>
-                        {city.description &&
-                          city?.description?.split("**")[1]?.slice(0, 25) +
-                            "..."}
+                        {city.description != "No Data"
+                          ? city?.description?.split("**")[1]?.slice(0, 25) +
+                            "..."
+                          : city.description}
                       </strong>
                       <br />
-                      {city.description &&
-                        city?.description?.split("**")[2]?.slice(0, 180) +
-                          "..."}
+                      {city.description != "No Data"
+                        ? city?.description?.split("**")[2]?.slice(0, 180) +
+                          "..."
+                        : city.description}
                     </p>
                   </div>
                 </div>
@@ -421,7 +423,7 @@ const MyPage = () => {
                       <div
                         class="modal fade"
                         id="openPdf"
-                        tabindex="-1"
+                        tabIndex="-1"
                         role="dialog"
                         aria-labelledby="openPdfModal"
                         aria-hidden="true"
@@ -437,14 +439,14 @@ const MyPage = () => {
                               </h5>
                               <button
                                 type="button"
-                                class="close"
+                                className="close"
                                 data-dismiss="modal"
                                 aria-label="Close"
                               >
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                               <iframe
                                 className="embed-responsive-item"
                                 src={newPackage?.tnc && newPackage.tnc.url}
