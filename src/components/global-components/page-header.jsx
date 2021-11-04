@@ -10,28 +10,32 @@ const Page_header = (props) => {
         return res.json();
       })
       .then((data) => {
-        console.log("doing this");
-        console.log(data);
-        console.log(data.banner_image.url);
         setImage(data);
       });
   }, []);
 
   let HeaderTitle = props.headertitle;
+  let bannerImage = props.bannerImage;
+  console.log(props);
   let Subheader = props.subheader ? props.subheader : HeaderTitle;
 
   return (
     <div
       className="breadcrumb-area jarallax"
-      style={{ backgroundImage: `url(${image && image.banner_image.url})` }}
       // style={{ backgroundImage: `url(${image && image.banner_image.url})` }}
+      style={{
+        backgroundImage: `url(${
+          bannerImage != null
+            ? bannerImage
+            : image && image.banner_image.url
+        })`,
+      }}
     >
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="breadcrumb-inner">
               <h1 className="page-title">{HeaderTitle}</h1>
-             
             </div>
           </div>
         </div>

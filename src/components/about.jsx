@@ -7,14 +7,19 @@ import Team from './section-components/team';
 import Footer from './global-components/footer';
 
 const AboutPage = () => {
-    return <div>
+    return (
+      <div>
         <Navbar />
-        <PageHeader headertitle="About Us"  />
+        <PageHeader
+          headertitle="About Us"
+          bannerImage="https://yourcruisepeople.s3.eu-west-1.amazonaws.com/Mykonos_18_5978e939ee.jpg"
+        />
         <Intro />
         <About />
         {/* <Team /> */}
         <Footer />
-    </div>
+      </div>
+    );
 }
 
 export default AboutPage
