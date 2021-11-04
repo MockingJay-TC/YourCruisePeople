@@ -6,6 +6,8 @@ const MyPage = () => {
   const [filteredPackage, setFilteredPackage] = useState([]);
   const [spinner, setSpinner] = useState(false);
   let num = 1;
+  let fr = 1;
+  let ou = 0;
 
   const [newPackage, setNewPackage] = useState(
     JSON.parse(localStorage.getItem("package")) !== null
@@ -457,6 +459,32 @@ const MyPage = () => {
                           </button>
                         </div>
                       </div>
+                      <div className="tab-pane fade" id="tabs_6">
+                        <div className="details">
+                          <h3 className="title" style={{ fontWeight: 700 }}>
+                            Package Includes
+                          </h3>
+                          {newPackage?.package_includes?.map((fre) => (
+                            <p className="content">
+                              {`${fr++}. `}
+                              {fre.element}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="tab-pane fade" id="tabs_7">
+                        <div className="details">
+                          <h3 className="title" style={{ fontWeight: 700 }}>
+                            Package Excludes
+                          </h3>
+                          {newPackage?.package_excludes?.map((out) => (
+                            <p className="content">
+                              {`${++ou}. `}
+                              {out.element}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
                       <div className="tab-pane fade" id="tabs_8">
                         <div className="details">
                           <h3 className="title" style={{ fontWeight: 700 }}>
@@ -464,16 +492,17 @@ const MyPage = () => {
                           </h3>
                           {newPackage?.notice?.map((note) => (
                             <p className="content">
-                              {`${num++}. `}{note.element}
+                              {`${num++}. `}
+                              {note.element}
                             </p>
                           ))}
                         </div>
                       </div>
                       <div className="tab-pane fade" id="tabs_9">
                         <div className="user-recent-view">
-                          <h2 className="user-details-title">
+                          <h3 className="user-details-title">
                             Available Dates
-                          </h2>
+                          </h3>
                           <div className="row">
                             {newPackage?.available_dates?.map((date) => (
                               <div className="col-lg-6 d-flex" key={date.id}>
