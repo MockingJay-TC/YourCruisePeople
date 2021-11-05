@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ homepage }) => {
   return (
     <div className="banner-area viaje-go-top">
       <div className="banner-slider">
@@ -17,7 +17,7 @@ const Banner = () => {
                   <div className="col-lg-3 col-sm-4">
                     <div className="video-popup-btn s-animate-video">
                       <a
-                        href="https://www.youtube.com"
+                        href="https://www.youtube.com/watch?v=W7eNCMdMP1k"
                         className="video-play-btn mfp-iframe"
                       >
                         <i className="fa fa-play" />
@@ -73,7 +73,7 @@ const Banner = () => {
                   <div className="col-lg-3 col-sm-4">
                     <div className="video-popup-btn s-animate-video">
                       <a
-                        href="https://www.youtube.com"
+                        href="https://www.youtube.com/watch?v=gBGzhYzygp8"
                         className="video-play-btn mfp-iframe"
                       >
                         <i className="fa fa-play" />
@@ -132,7 +132,7 @@ const Banner = () => {
                   <div className="col-lg-3 col-sm-4">
                     <div className="video-popup-btn s-animate-video">
                       <a
-                        href="https://www.youtube.com"
+                        href="https://www.youtube.com/watch?v=0wJ8BZ_Fw5k"
                         className="video-play-btn mfp-iframe"
                       >
                         <i className="fa fa-play" />

@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <Banner />
+      <Banner homepage={homepage} />
       <Intro homepage={homepage} />
       <Video homepage={homepage} />
       <HolidayPlan homepage={homepage} />

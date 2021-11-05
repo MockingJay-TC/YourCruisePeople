@@ -1,20 +1,20 @@
 import React from "react";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
-import Packages from "./section-components/packages";
+import Package from "./section-components/package";
 import Subscribe from "./section-components/subscribe";
 import Footer from "./global-components/footer";
 
-const TourListPageV2 = () => {
+const Packages = () => {
   return (
     <div>
       <Navbar />
       <PageHeader headertitle="Packages" />
-      <Packages />
+      <Package />
       <Subscribe />
       <Footer />
     </div>
   );
 };
 
-export default TourListPageV2;
+export default Packages;

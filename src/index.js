@@ -6,7 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import HomeV1 from "./components/home-v1";
+// import HomeV1 from "./components/home-v1";
 import HomePage from "./components/home-page";
 import AboutUs from "./components/about";
 import Packages from "./components/packages";
@@ -24,7 +24,7 @@ class Root extends Component {
         <div>
           <Switch>
             {/* <Route exact path="/" component={HomeV1} /> */}
-            <Route path="/home-page" component={HomePage} />
+            <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutUs} />
             <Route path="/packages" component={Packages} />
             <Route path="/myPage" component={MyPage} />

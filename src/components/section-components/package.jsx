@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 
-const Packages = () => {
+const Package = () => {
   let publicUrl = process.env.PUBLIC_URL + "/";
   const [myPackages, setMyPackages] = useState([]);
   const [myGroups, setPackageGroups] = useState([]);
@@ -118,4 +118,4 @@ const Packages = () => {
     </div>
   );
 };
-export default Packages;
+export default Package;

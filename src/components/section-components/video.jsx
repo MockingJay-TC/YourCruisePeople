@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Video = ({ homepage }) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
-  console.log(homepage);
 
   return (
     <div
