@@ -3382,13 +3382,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   transform: scale(1.3);
 }
 .banner-slider .banner-slider-item.banner-bg-1:after {
-  background-image: url("../../assets/img/banner/3.jpg");
+  background-image: url("https://yourcruisepeople.s3.eu-west-1.amazonaws.com/virtuosa_slider_sm_d608d6a4a3.jpg");
 }
 .banner-slider .banner-slider-item.banner-bg-2:after {
-  background-image: url("../../assets/img/banner/2.jpg");
+  background-image: url("https://yourcruisepeople.s3.eu-west-1.amazonaws.com/ycp_home_slider_2_107bc83b49.jpg");
 }
 .banner-slider .banner-slider-item.banner-bg-3:after {
-  background-image: url("../../assets/img/banner/1.jpg");
+  background-image: url("https://yourcruisepeople.s3.eu-west-1.amazonaws.com/ycp_home_slider_1_86b59ca6eb.jpg");
 }
 .banner-slider .banner-slider-item:before {
   content: "";

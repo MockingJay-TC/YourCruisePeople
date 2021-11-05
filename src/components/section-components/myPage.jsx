@@ -431,8 +431,10 @@ const MyPage = () => {
                                       {price.description}
                                     </h4>
                                     <div className="tp-price-meta">
-                                      Staring From{" "}
-                                      <h2>$ {price.starting_price}</h2>
+                                      <h4> {price.price_title}</h4>
+                                      <h2 style={{ fontSize: "32px" }}>
+                                        ${price.starting_price}
+                                      </h2>
                                     </div>
                                   </div>
                                 </div>
@@ -465,7 +467,7 @@ const MyPage = () => {
                             Package Includes
                           </h3>
                           {newPackage?.package_includes?.map((fre) => (
-                            <p className="content">
+                            <p className="content" style={{ fontSize: "20px" }}>
                               {`${fr++}. `}
                               {fre.element}
                             </p>
@@ -478,7 +480,7 @@ const MyPage = () => {
                             Package Excludes
                           </h3>
                           {newPackage?.package_excludes?.map((out) => (
-                            <p className="content">
+                            <p className="content" style={{ fontSize: "20px" }}>
                               {`${++ou}. `}
                               {out.element}
                             </p>
@@ -491,7 +493,7 @@ const MyPage = () => {
                             Notice
                           </h3>
                           {newPackage?.notice?.map((note) => (
-                            <p className="content">
+                            <p className="content" style={{ fontSize: "20px" }}>
                               {`${num++}. `}
                               {note.element}
                             </p>
@@ -511,7 +513,10 @@ const MyPage = () => {
                                     className="details"
                                     key={date && date.id}
                                   >
-                                    <h4 className="title">
+                                    <h4
+                                      className="title"
+                                      style={{ color: "#f3941e" }}
+                                    >
                                       {date.travel_dates}
                                     </h4>
                                   </div>
