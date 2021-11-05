@@ -15,7 +15,6 @@ const MyPage = () => {
       : []
   );
 
-  console.log(newPackage + "Victor is doing well");
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
@@ -32,8 +31,6 @@ const MyPage = () => {
     element._id !== null ? element._id : " "
   );
 
-  let publicUrl = process.env.PUBLIC_URL + "/";
-  let imagealt = "image";
 
   const data = {
     _id: package_id,
@@ -405,7 +402,8 @@ const MyPage = () => {
                           </h3>
                           <p className="content">
                             {newPackage.vessel.description &&
-                              newPackage.vessel.description.slice(0, 600) +
+                              // newPackage.vessel.description.slice(0, 0) +
+                              newPackage.vessel.description.slice(0,600) +
                                 "..."}
                           </p>
                           <Link to="/vessel" className="btn btn-yellow">

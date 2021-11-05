@@ -73,103 +73,47 @@ const Vessel = () => {
             <div className="col-lg-12">
               <p className="mb-5">{vessel.description}</p>
 
-              <p>
-                <strong style={{ fontSize: 24, fontWeight: 600 }}>
-                  {vessel && vessel.more_details.split("**")[1]}
-                </strong>
-                <br />
-                {vessel && vessel.more_details.split("**")[2]}
-              </p>
-              <div className="user-recent-view">
-                <div className="row mb-5">
-                  {vessel.inside_cabin &&
-                    vessel.inside_cabin.map((cab) => {
-                      return (
-                        <div className="col-sm-3 mb-5" key={cab.id}>
-                          <div className="single-destinations-list style-two">
-                            <div className="thumb">
-                              <img
-                                src={cab.url}
-                                alt="img"
-                                style={{
-                                  objectFit: "cover",
-                                }}
-                              />
-                              {/* 387 x 258 */}
+              {vessel.vessel_cabin &&
+                vessel.vessel_cabin.map((cab) => {
+                  return (
+                    <div className="user-recent-view">
+                      <p>
+                        <strong style={{ fontSize: 24, fontWeight: 600 }}>
+                          {cab && cab.title}
+                        </strong>
+                        <br />
+                        {cab && cab.description}
+                        {/* {cab?.images[0]?.url} */}
+                      </p>
+                      <div className="row mb-5">
+                        {cab &&
+                          cab?.image?.map((room) => (
+                            <div className="col-sm-3  mb-5" key={cab.id}>
+                              <div className="single-destinations-list style-two">
+                                <div className="thumb">
+                                  <img
+                                    src={room?.url}
+                                    alt="img"
+                                    style={{
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-              <p>
-                <strong style={{ fontSize: 24, fontWeight: 600 }}>
-                  {vessel && vessel.more_details.split("**")[3]}
-                </strong>
-                <br />
-                {vessel && vessel.more_details.split("**")[4]}
-              </p>
-              <div className="user-recent-view">
-                <div className="row mb-5">
-                  {vessel.outside_cabin &&
-                    vessel.outside_cabin.map((cab) => {
-                      return (
-                        <div className="col-sm-3 mb-5" key={cab.id}>
-                          <div className="single-destinations-list style-two">
-                            <div className="thumb">
-                              <img
-                                src={cab.url}
-                                alt="img"
-                                style={{
-                                  objectFit: "cover",
-                                }}
-                              />
-                              {/* 387 x 258 */}
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-              <p>
-                <strong style={{ fontSize: 24, fontWeight: 600 }}>
-                  {vessel && vessel.more_details.split("**")[5]}
-                </strong>
-                <br />
-                {vessel && vessel.more_details.split("**")[6]}
-              </p>
-              <div className="user-recent-view">
-                <div className="row mb-5">
-                  {vessel.grande_suite &&
-                    vessel.grande_suite.map((cab) => {
-                      return (
-                        <div className="col-sm-3 mb-5" key={cab.id}>
-                          <div className="single-destinations-list style-two">
-                            <div className="thumb">
-                              <img
-                                src={cab.url}
-                                alt="img"
-                                style={{
-                                  objectFit: "cover",
-                                }}
-                              />
-                              {/* 387 x 258 */}
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-              <p>
+                          ))}
+                        {/* 387 x 258 */}
+                      </div>
+                    </div>
+                  );
+                })}
+              {/* <p>
                 <strong style={{ fontSize: 24, fontWeight: 600 }}>
                   {vessel && vessel.more_details.split("**")[7]}
                 </strong>
                 <br />
                 {vessel && vessel.more_details.split("**")[8]}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

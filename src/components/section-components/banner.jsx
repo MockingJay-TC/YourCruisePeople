@@ -96,7 +96,7 @@ const Banner = ({ homepage }) => {
                       <div className="col-sm-4 s-animate-4">
                         <div className="tp-price-meta">
                           <p>5 Star All-Inclusive Cruise and Hotels</p>
-                          <h2>Cruise</h2>
+                          <h2>Celestyal Crystal</h2>
                           <p className="tp-price-meta-details">
                             {/* Cruises <span>to choice</span> */}
                           </p>
@@ -155,7 +155,7 @@ const Banner = ({ homepage }) => {
                       <div className="col-sm-4 s-animate-4">
                         <div className="tp-price-meta">
                           <p>5 Star All-Inclusive Cruise and Hotels</p>
-                          <h2>Cruise</h2>
+                          <h2>Celetyal Olympia</h2>
                           <p className="tp-price-meta-details">
                             {/* Hotels <span>to choice</span> */}
                           </p>

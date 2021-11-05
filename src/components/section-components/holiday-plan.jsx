@@ -80,21 +80,21 @@ const HolidayPlan = ({ homepage }) => {
 
                       <h4
                         className="title row justify-content-center"
-                        onClick={() => {
-                          localStorage.setItem("package", JSON.stringify(vac));
-                        }}
+                        // onClick={() => {
+                        //   localStorage.setItem("package", JSON.stringify(vac));
+                        // }}
                       >
-                        <Link to={`/myPage/${vac.slug}`}>
+                        {/* <Link to={`/myPage/${vac.slug}`}> */}
                           {vac && vac.name}
-                        </Link>
+                        {/* </Link> */}
                       </h4>
                       <div className="tp-price-meta row justify-content-center">
                         <h2>
                           {vac && vac.starting_price}
                           <small>$</small>
                         </h2>
-                        <div class="alert alert-info" role="alert">
-                          35% OFF
+                        <div class="alert alert-danger" role="alert">
+                          {vac && vac.promo_figure}% OFF
                         </div>
                       </div>
                     </div>
