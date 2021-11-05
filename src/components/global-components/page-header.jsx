@@ -23,12 +23,7 @@ const Page_header = (props) => {
     <div
       className="breadcrumb-area jarallax"
       // style={{ backgroundImage: `url(${image && image.banner_image.url})` }}
-      style={{
-        backgroundImage: `url(${
-          bannerImage != null
-            ? bannerImage
-            : image && image.banner_image.url
-        })`,
+      style={{backgroundImage:`url(${bannerImage != null ? bannerImage : image && image.banner_image.url})`,
       }}
     >
       <div className="container">

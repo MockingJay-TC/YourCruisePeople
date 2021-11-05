@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Axios from "axios";
 
-const Video = (props) => {
+const Video = ({ homepage }) => {
   let publicUrl = process.env.PUBLIC_URL + "/";
-  const [about, setAbout] = useState("");
-  const myVideo = "https://www.youtube.com/watch?v=GG-vJLwIYng";
-  const myImage =
-    "https://bucket-wonchunii.s3.eu-west-1.amazonaws.com/cruise-people/santorini_full_9092297778.jpg";
-
-  useEffect(() => {
-    const url = "https://your-cruise-people-cms.herokuapp.com/about";
-    Axios.get(url).then((res) => {
-      console.log(res.data);
-      setAbout(res.data);
-    });
-  }, []);
-
-  let newText = `${about && about.message}`;
-  newText = newText.slice(0, 253) + "...";
-  console.log(newText);
-  let Image = props.image;
-  let Video_url = props.video_url;
+  console.log(homepage);
 
   return (
     <div
@@ -39,7 +21,9 @@ const Video = (props) => {
               <h2 className="title">
                 What Do You Know <br /> About US
               </h2>
-              <p>{newText}</p>
+              <p>
+                {homepage ? homepage?.about_message.slice(0, 253) + "..." : " "}
+              </p>
               <Link className="btn btn-yellow" to="/about">
                 <span>
                   Read More
@@ -55,11 +39,11 @@ const Video = (props) => {
           >
             <div className="video-popup-wrap">
               <div className="thumb">
-                <img src={Image ? Image : myImage} />
+                <img src={homepage ? homepage?.about_image?.url : ""} />
               </div>
               <div className="video-popup-btn">
                 <a
-                  href={Video_url ? Video_url : myVideo}
+                  href={homepage ? homepage?.about_video : ""}
                   className="video-play-btn mfp-iframe"
                 >
                   <i className="fa fa-play" />

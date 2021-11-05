@@ -7,6 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 import HomeV1 from "./components/home-v1";
+import HomePage from "./components/home-page";
 import AboutUs from "./components/about";
 import Packages from "./components/packages";
 import GalleryDetails from "./components/gallery-details";
@@ -22,7 +23,8 @@ class Root extends Component {
       <HashRouter basename="/">
         <div>
           <Switch>
-            <Route exact path="/" component={HomeV1} />
+            {/* <Route exact path="/" component={HomeV1} /> */}
+            <Route path="/home-page" component={HomePage} />
             <Route path="/about" component={AboutUs} />
             <Route path="/packages" component={Packages} />
             <Route path="/myPage" component={MyPage} />
