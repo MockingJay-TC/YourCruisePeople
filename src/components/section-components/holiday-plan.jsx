@@ -8,9 +8,8 @@ const HolidayPlan = ({ homepage }) => {
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/packages";
     Axios.get(url).then((res) => {
-      console.log("holiday Victor, it's time for holiday");
-      console.log(res.data);
       setHoliday(res.data);
+      console.log(res.data);
     });
   }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";
@@ -80,13 +79,20 @@ const HolidayPlan = ({ homepage }) => {
 
                       <h4
                         className="title row justify-content-center"
-                        // onClick={() => {
-                        //   localStorage.setItem("package", JSON.stringify(vac));
-                        // }}
+                        onClick={() => {
+                          holiday.map((plan) => {
+                            if (plan.id === vac.id) {
+                              localStorage.setItem(
+                                "package",
+                                JSON.stringify(plan)
+                              );
+                            }
+                          });
+                        }}
                       >
-                        {/* <Link to={`/myPage/${vac.slug}`}> */}
+                        <Link to={`/package-details/${vac.slug}`}>
                           {vac && vac.name}
-                        {/* </Link> */}
+                        </Link>
                       </h4>
                       <div className="tp-price-meta row justify-content-center">
                         <h2>
