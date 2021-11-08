@@ -13,7 +13,7 @@ import Packages from "./components/packages";
 import GalleryDetails from "./components/gallery-details";
 import Faq from "./components/faq";
 import Contact from "./components/contact";
-import MyPage from "./components/myPage";
+import PackageDetails from "./components/packageDetails";
 import City from "./components/city";
 import Vessel from "./components/vessel";
 
@@ -27,7 +27,7 @@ class Root extends Component {
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutUs} />
             <Route path="/packages" component={Packages} />
-            <Route path="/myPage" component={MyPage} />
+            <Route path="/package-details" component={PackageDetails} />
             <Route path="/vessel" component={Vessel} />
             <Route path="/city" component={City} />
             <Route path="/gallery-details" component={GalleryDetails} />

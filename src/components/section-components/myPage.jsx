@@ -31,7 +31,6 @@ const MyPage = () => {
     element._id !== null ? element._id : " "
   );
 
-
   const data = {
     _id: package_id,
     name: name,
@@ -123,8 +122,7 @@ const MyPage = () => {
                     <p className="content">
                       <strong>
                         {city.description != "No Data"
-                          ? city?.description?.split("**")[1]?.slice(0, 25) +
-                            "..."
+                          ? city?.description?.split("**")[1]?.slice(0, 25)
                           : city.description}
                       </strong>
                       <br />
@@ -403,7 +401,7 @@ const MyPage = () => {
                           <p className="content">
                             {newPackage.vessel.description &&
                               // newPackage.vessel.description.slice(0, 0) +
-                              newPackage.vessel.description.slice(0,600) +
+                              newPackage.vessel.description.slice(0, 600) +
                                 "..."}
                           </p>
                           <Link to="/vessel" className="btn btn-yellow">

@@ -5,15 +5,15 @@ const GalleryDetails = () => {
   const [gallery, setGallery] = useState(
     JSON.parse(localStorage.getItem("gall")) !== null
       ? JSON.parse(localStorage.getItem("gall"))
-      : []
+      : " "
   );
   const [spinner, setSpinner] = useState(false);
   useEffect(() => {
     const url = "https://your-cruise-people-cms.herokuapp.com/galleries";
     Axios.get(url).then((res) => {
-      localStorage.setItem("gall", JSON.stringify(res.data[0].images));
-      setGallery(res.data[0].images);
-      console.log(res.data[0].images);
+      localStorage.setItem("gall", JSON.stringify(res.data));
+      setGallery(res.data);
+      console.log(res.data);
     });
   }, []);
   let publicUrl = process.env.PUBLIC_URL + "/";

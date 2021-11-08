@@ -82,7 +82,9 @@ const Package = () => {
                                     );
                                   }}
                                 >
-                                  <Link to={`/myPage/${myPackage.slug}`}>
+                                  <Link
+                                    to={`/package-details/${myPackage.slug}`}
+                                  >
                                     {myPackage && myPackage.name}
                                   </Link>
                                 </h4>
