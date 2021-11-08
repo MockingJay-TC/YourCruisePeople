@@ -155,7 +155,7 @@ const Banner = ({ homepage }) => {
                       <div className="col-sm-4 s-animate-4">
                         <div className="tp-price-meta">
                           <p>5 Star All-Inclusive Cruise and Hotels</p>
-                          <h2>Celetyal Olympia</h2>
+                          <h2>Celestyal Olympia</h2>
                           <p className="tp-price-meta-details">
                             {/* Hotels <span>to choice</span> */}
                           </p>
