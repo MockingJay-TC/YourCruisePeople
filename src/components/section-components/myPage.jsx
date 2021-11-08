@@ -611,18 +611,18 @@ const MyPage = () => {
                       />
                     </div>
                     <div className="details">
-                      <div className="tp-review-meta">
+                      {/* <div className="tp-review-meta">
                         <i className="ic-yellow fa fa-star" />
                         <i className="ic-yellow fa fa-star" />
                         <i className="ic-yellow fa fa-star" />
                         <i className="ic-yellow fa fa-star" />
                         <i className="fa fa-star" />
                         <span>4.0</span>
-                      </div>
+                      </div> */}
                       <h3 className="title">{pack.name}</h3>
                       <p className="content">
                         {pack.description &&
-                          pack.description.description_text.slice(0, 230) +
+                          pack.description.description_text.slice(0, 220) +
                             "..."}
                       </p>
                       <Link
@@ -644,7 +644,7 @@ const MyPage = () => {
                 </div>
               ))}
           </div>
-          <div
+          {/* <div
             className="col-xl-5 col-lg-6 wow animated fadeInLeft mx-auto pt-5"
             data-wow-duration="1s"
             data-wow-delay="0.3s"
@@ -666,7 +666,7 @@ const MyPage = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
