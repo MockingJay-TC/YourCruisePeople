@@ -104,10 +104,10 @@ const Footer_v1 = () => {
                     <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link to="#">Destination</Link>
+                    <Link to="/gallery-details">Gallery</Link>
                   </li>
                   <li>
-                    <Link to="#">Blog</Link>
+                    <Link to="/packages">Packages</Link>
                   </li>
                   <li>
                     <Link to="/contact">Contact</Link>
