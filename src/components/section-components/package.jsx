@@ -39,7 +39,7 @@ const Package = () => {
             <div className="row justify-content-center">
               {myPackages &&
                 myPackages.map((myPackage) => {
-                  if (myPackage?.package_group?.name == group.name) {
+                  if (myPackage?.package_group?.name === group.name) {
                     return (
                       <>
                         <div

@@ -19,7 +19,7 @@ const GalleryDetails = () => {
     <div className="gallery-area pd-top-108">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-7">
+          <div className="col-lg-8">
             <div className="section-title text-center">
               <h2 className="title">LIFE is BETTER at SEA. EXPERIENCE it!</h2>
             </div>

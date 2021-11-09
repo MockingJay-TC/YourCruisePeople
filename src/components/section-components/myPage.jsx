@@ -463,7 +463,7 @@ const MyPage = () => {
                             Package Includes
                           </h3>
                           {newPackage?.package_includes?.map((fre) => (
-                            <p className="content" style={{ fontSize: "20px" }}>
+                            <p className="content" style={{ fontSize: "18px" }}>
                               {`${fr++}. `}
                               {fre.element}
                             </p>
@@ -476,7 +476,7 @@ const MyPage = () => {
                             Package Excludes
                           </h3>
                           {newPackage?.package_excludes?.map((out) => (
-                            <p className="content" style={{ fontSize: "20px" }}>
+                            <p className="content" style={{ fontSize: "18px" }}>
                               {`${++ou}. `}
                               {out.element}
                             </p>
@@ -489,7 +489,7 @@ const MyPage = () => {
                             Notice
                           </h3>
                           {newPackage?.notice?.map((note) => (
-                            <p className="content" style={{ fontSize: "20px" }}>
+                            <p className="content" style={{ fontSize: "18px" }}>
                               {`${num++}. `}
                               {note.element}
                             </p>
