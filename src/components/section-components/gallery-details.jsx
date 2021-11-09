@@ -31,8 +31,8 @@ const GalleryDetails = () => {
             <div className="gallery-filter-area row">
               <div className="gallery-sizer col-1" />
               {/* gallery-item */}
-              {gallery
-                ? gallery.images.map((pic) => (
+              {gallery && gallery?.images
+                ? gallery?.images?.map((pic) => (
                     <div
                       className="tp-gallery-item col-md-4 col-12"
                       key={pic.id}
@@ -48,7 +48,7 @@ const GalleryDetails = () => {
                       </div>
                     </div>
                   ))
-                : ""}
+                : []}
             </div>
           </div>
         </div>
